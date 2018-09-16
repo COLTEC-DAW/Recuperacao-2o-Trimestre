@@ -15,4 +15,14 @@ Route::get('/', function () {
     return view('login');
 });
 
-Route::get('posts', 'PostController@index');
+
+Route::get('/registrar', 'UsuarioController@registrar');
+
+Route::get('/Home', 'UsuarioController@home');
+
+Route::post('/guardarRegistro', 'UsuarioController@GuardarRegistro');
+
+Route::post('/confereLogin', 'UsuarioController@ConfereLogin');
+
+
+

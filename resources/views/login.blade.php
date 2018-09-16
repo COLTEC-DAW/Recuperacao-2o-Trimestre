@@ -52,19 +52,18 @@
                     <h2>Faça seu login</h2>
                 </div>             
                 <div id="formulario" class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                    <form>
+                    <form action="{{URL::to('/confereLogin')}}" method="post">
                         <div class="form-group">
-                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Login">
+                            <input type="text" class="form-control" name="login" placeholder="E-mail">
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Senha">
+                            <input type="password" class="form-control" name="senha" placeholder="Senha">
                         </div>
+                        <button type="submit" value="confirmar" class="btn btn-primary btn-lg btn-block">Entrar</button>
+                        <a href="{{URL::to('/registrar')}}">Registrar</a>
                     </form>
                 </div>
-                <div id="buttons_box" class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                    <button type="submit" class="btn btn-primary btn-lg btn-block">Entrar</button>
-                    <button type="submit" class="btn btn-success btn-lg btn-block">Cadastrar-se</button>
-                </div>        
+                     
             </div>     
         </div>
     </div>
