@@ -26,11 +26,11 @@ class UsuarioController extends Controller
             'senha.size' => 'Campo deve ter no máximo 8 caracteres'
         ];
 
-        $validacao = Validator::make($request->all(),$rules=[],$messages, [
+        $validacao = Validator::make($request->all(), [
             'nome' => 'required',
             'email' => 'required',
             'senha' => 'required|max:8', 
-        ]);
+        ],$messages);
 
     
         if ($validacao->fails()) {
@@ -41,7 +41,6 @@ class UsuarioController extends Controller
             $nome=$request->input('nome');
             $email=$request->input('email');
             $senha=htmlspecialchars($request->input('senha'));
-            //$loginsRegistrados = $array[$request->input('email')];
             
             DB::insert('INSERT INTO usuarios(nome,e_mail,senha) VALUES(?,?,?)',[$nome,$email,$senha]);
 
