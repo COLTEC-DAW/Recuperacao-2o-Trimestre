@@ -18,7 +18,10 @@ class UsuarioController extends Controller
 
     public function GuardarRegistro(request $request){
 
-       
+        $nome=$request->input('nome');
+        $email=$request->input('email');
+        $senha=htmlspecialchars($request->input('senha'));
+
         $messages = [
             'nome.required' => 'Campo Vazio',
             'email.required' => 'Campo Vazio',
@@ -38,9 +41,6 @@ class UsuarioController extends Controller
                         ->withErrors($validacao)
                         ->withInput();
         }else{
-            $nome=$request->input('nome');
-            $email=$request->input('email');
-            $senha=htmlspecialchars($request->input('senha'));
             
             DB::insert('INSERT INTO usuarios(nome,e_mail,senha) VALUES(?,?,?)',[$nome,$email,$senha]);
 
