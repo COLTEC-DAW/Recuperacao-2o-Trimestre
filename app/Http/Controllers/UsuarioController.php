@@ -5,11 +5,22 @@ namespace App\Http\Controllers;
 use Validator;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\URL;
-use Illuminate\Support\Facades\DB;
+use App\cadastro;
 
 class UsuarioController extends Controller
 {
- 
+    
+    private $cadastro;
+
+    public function __construct(cadastro $cadastro){
+        $this->cadastro=$cadastro;
+    }
+
+    public function home()
+    {
+        return view('resposta');
+    }
+
     public function registrar()
     {
         return view('cadastro');
@@ -22,31 +33,20 @@ class UsuarioController extends Controller
         $email=$request->input('email');
         $senha=htmlspecialchars($request->input('senha'));
 
-        $messages = [
-            'nome.required' => 'Campo Vazio',
-            'email.required' => 'Campo Vazio',
-            'senha.required' => 'Campo Vazio',
-            'senha.size' => 'Campo deve ter no máximo 8 caracteres'
-        ];
+        $this->validate($request, $this->cadastro->rules, $this->cadastro->messages);
 
-        $validacao = Validator::make($request->all(), [
-            'nome' => 'required',
-            'email' => 'required',
-            'senha' => 'required|max:8', 
-        ],$messages);
+        $insert = $this->cadastro->create([
 
-    
-        if ($validacao->fails()) {
-            return action('UsuarioController@registrar')
-                        ->withErrors($validacao)
-                        ->withInput();
-        }else{
-            
-            DB::insert('INSERT INTO usuarios(nome,e_mail,senha) VALUES(?,?,?)',[$nome,$email,$senha]);
+            'name'      => $nome,
+            'e-mail'    => $email,
+            'password'  => $senha,
 
-            return back();
-        }
+        ]);
         
+        if($insert)
+            return redirect('/');
+        else
+            return redirect()->back();
     }
 
     public function ConfereLogin(request $request){
@@ -60,15 +60,14 @@ class UsuarioController extends Controller
           echo"<script language='javascript' type='text/javascript'>alert('Login e/ou senha incorretos');window.location.href='/';</script>";
           die();
         }else{
-            function home()
-            {
-                return view('resposta');
-            }
+            
             }
               
             setcookie("login",$login);
             header("Location:{{URL::to('/Home')}}");
         
         }
+
+        
 }
 
