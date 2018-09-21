@@ -55,7 +55,7 @@
                     <form action="{{URL::to('/confereLogin')}}" method="post">
                         <div class="form-group">
                             <div class="input-group-prepend">
-                                <div class="input-group-text"><span class="glyphicon glyphicon-user"></span></div>
+                                <span class="glyphicon glyphicon-user"></span>
                             </div>
                             <input type="text" class="form-control" name="login" placeholder="E-mail">
                         </div>
