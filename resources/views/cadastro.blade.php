@@ -70,15 +70,15 @@
                             <button type="reset"  id="botao_cancelarCadastro" class="btn btn-danger btn-lg btn-sm">Cancelar</button>
                         </div>    
                     </form>
-                
-                    @if( isset($errors) && count($errors) > 0 )
-                        <div class=" alert alert-danger">
-                            @foreach ( $errors->all() as $error )
-                                <p>{{$error}}</p>
-                            @endforeach
-                        </div>
-                    @endif
-            </div>     
+            </div>
+
+            @if( isset($errors) && count($errors) > 0 )
+                <div class=" alert alert-danger">
+                    @foreach ( $errors->all() as $error )
+                        <p>{{$error}}</p>
+                    @endforeach
+                </div>
+            @endif     
         </div>
     </div>
 
