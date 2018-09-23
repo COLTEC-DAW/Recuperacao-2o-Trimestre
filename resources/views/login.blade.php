@@ -54,15 +54,9 @@
                 <div id="formulario" class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                     <form action="{{URL::to('/confereLogin')}}" method="post">
                         <div class="form-group">
-                            <div class="input-group-prepend">
-                                <span class="glyphicon glyphicon-user"></span>
-                            </div>
                             <input type="text" class="form-control" name="login" placeholder="E-mail">
                         </div>
                         <div class="form-group">
-                            <div class="input-group-prepend">
-                                <div class="input-group-text"><span class="glyphicon glyphicon-lock"></span></div>
-                            </div>
                             <input type="password" class="form-control" name="senha" placeholder="Senha">
                         </div>
                         <button type="submit" value="confirmar" class="btn btn-primary btn-lg btn-block">Entrar</button>

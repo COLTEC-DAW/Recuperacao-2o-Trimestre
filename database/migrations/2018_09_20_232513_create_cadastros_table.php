@@ -16,7 +16,7 @@ class CreateCadastrosTable extends Migration
         Schema::create('cadastros', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name','45');
-            $table->string('e-mail')->unique();
+            $table->string('e-mail');
             $table->string('password','8');
             $table->timestamps();
         });
