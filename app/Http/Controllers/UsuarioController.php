@@ -56,7 +56,7 @@ class UsuarioController extends Controller
           die();
         }
         else{
-            setcookie("login",$login);
+            // setcookie("login",$login);
             function home()
             {
                 return view('resposta');
