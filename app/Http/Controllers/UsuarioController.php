@@ -51,15 +51,16 @@ class UsuarioController extends Controller
 
     public function ConfereLogin(request $request){
 
-        $login=$request->input('login');
-        $senha=htmlspecialchars($request->input('senha'));
-        $confirmar=$request->input('confirmar');
+        return redirect('/Home');
 
-        $verifica = DB::table('cadastros')->selectRaw('e-mail * ? and password * ?', [$login, $senha])->get();
-        dd($verifica);
+        // $login=$request->input('login');
+        // $senha=htmlspecialchars($request->input('senha'));
+
+        // $verifica = DB::table('cadastros')->selectRaw('e-mail * ? and password * ?', [$login, $senha])->get();
+        // dd($verifica);
 
         // if($verifica)
-        //      return redirect('/Home');
+        //      
         // else
         //      die();
 
