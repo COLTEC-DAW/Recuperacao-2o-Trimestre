@@ -56,7 +56,6 @@ class UsuarioController extends Controller
         $confirmar=$request->input('confirmar');
 
         $verifica = DB::table('cadastros')->selectRaw('e-mail * ? and password * ?', [$login, $senha])->get();
-        dd($verifica);
 
         if($verifica)
              return redirect('/Home');
