@@ -22,6 +22,10 @@ class UsuarioController extends Controller
         return view('cadastro');
     }
 
+    public function home()
+    {
+        return view('resposta');
+    }
 
     public function GuardarRegistro(request $request){
 
@@ -57,10 +61,7 @@ class UsuarioController extends Controller
         }
         else{
             // setcookie("login",$login);
-            function home()
-            {
-                return view('resposta');
-            }
+            return redirect('/Home');
                     
         }
         
