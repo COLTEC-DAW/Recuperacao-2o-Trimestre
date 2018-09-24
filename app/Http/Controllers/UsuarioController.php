@@ -51,7 +51,7 @@ class UsuarioController extends Controller
         $senha=htmlspecialchars($request->input('senha'));
         $confirmar=$request->input('confirmar');
 
-        $verifica=DB::select('SELECT *  FROM cadastros WHERE e_mail = ? AND senha = ? ', [$login,$senha]);
+        $verifica=DB::select('SELECT *  FROM cadastros WHERE e-mail = ? AND password = ? ', [$login,$senha]);
         if (mysql_num_rows($verifica)<=0){
           die();
         }
