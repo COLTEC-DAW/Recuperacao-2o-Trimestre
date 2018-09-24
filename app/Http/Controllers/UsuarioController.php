@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Validator;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\URL;
+use Illuminate\Support\Facades\DB;
 use App\cadastro;
 
 class UsuarioController extends Controller
@@ -14,11 +15,6 @@ class UsuarioController extends Controller
 
     public function __construct(cadastro $cadastro){
         $this->cadastro=$cadastro;
-    }
-
-    public function home()
-    {
-        return view('resposta');
     }
 
     public function registrar()
@@ -55,19 +51,20 @@ class UsuarioController extends Controller
         $senha=htmlspecialchars($request->input('senha'));
         $confirmar=$request->input('confirmar');
 
-        DB::select('SELECT *  FROM usuarios WHERE e_mail = ? AND senha = ? ', [$login,$senha]);
+        $verifica=DB::select('SELECT *  FROM cadastros WHERE e_mail = ? AND senha = ? ', [$login,$senha]);
         if (mysql_num_rows($verifica)<=0){
-          echo"<script language='javascript' type='text/javascript'>alert('Login e/ou senha incorretos');window.location.href='/';</script>";
           die();
-        }else{
-            
-            }
-              
-            setcookie("login",$login);
-            header("Location:{{URL::to('/Home')}}");
-        
         }
-
+        else{
+            setcookie("login",$login);
+            function home()
+            {
+                return view('resposta');
+            }
+                    
+        }
         
+    }
+
 }
 
