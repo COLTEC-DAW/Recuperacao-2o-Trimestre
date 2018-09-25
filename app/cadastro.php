@@ -10,7 +10,7 @@ class cadastro extends Model
 
     public $rules = [
         'nome'      => 'required|min:3|max:45',
-        'email'     => 'required|min:3|max:45|email',
+        'email'     => 'required|min:3|max:45|email|unique:e-mail',
         'senha'     => 'required|min:3|max:8',
     ];
 
@@ -19,7 +19,7 @@ class cadastro extends Model
         'nome.min'          => 'Campo Nome no mínimo 3 caracteres',
         'nome.max'          => 'Campo Nome no máximo 45 caracteres',
         'email.required'    => 'Campo E-mail é de preenchimento obrigatório',
-        // 'email.unique'      => 'Esse e-mail já existe',
+        'email.unique'      => 'Esse e-mail já existe',
         'email.min'         => 'Campo E-mail deve ter no mínimo 3 caracteres',
         'email.max'         => 'Campo E-mail deve ter no máximo 45 caracteres',
         'email.email'       => 'O E-mail deve ser válido',

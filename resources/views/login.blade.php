@@ -60,6 +60,7 @@
                         <div class="form-group">
                             <input type="password" class="form-control" name="senha" placeholder="Senha">
                         </div>
+                        <input type="hidden" name="_token" value="{{csrf_token()}}">
                         <button type="submit" value="confirmar" class="btn btn-primary btn-lg btn-block">Entrar</button>
                         <a href="{{URL::to('/registrar')}}">Registrar</a>
                     </form>
