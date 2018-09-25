@@ -52,6 +52,7 @@ class UsuarioController extends Controller
     public function ConfereLogin(request $request){
 
         return redirect('/Home');
+    
 
         // $login=$request->input('login');
         // $senha=htmlspecialchars($request->input('senha'));
