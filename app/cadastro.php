@@ -8,6 +8,7 @@ class cadastro extends Model
 {
     protected $fillable = ['name','e-mail','password'];
 
+
     public $rules = [
         'nome'      => 'required|min:3|max:45',
         'email'     => 'required|min:3|max:45|email',

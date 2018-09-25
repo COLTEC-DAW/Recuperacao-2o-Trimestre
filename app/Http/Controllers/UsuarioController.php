@@ -54,7 +54,7 @@ class UsuarioController extends Controller
         $login=$request->input('login');
         $senha=htmlspecialchars($request->input('senha'));
 
-        $query = cadastro::whereRaw('e-mail as e = ? and password = ?', [$login,$senha])->get();
+        $query = cadastro::whereRaw('e'-'mail = ? and password = ?', [$login,$senha])->get();
 
         if($query)
             return redirect('/Home');
