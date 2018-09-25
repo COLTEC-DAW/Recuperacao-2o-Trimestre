@@ -51,20 +51,15 @@ class UsuarioController extends Controller
 
     public function ConfereLogin(request $request){
 
-        return redirect('/Home');
-    
+        $login=$request->input('login');
+        $senha=htmlspecialchars($request->input('senha'));
 
-        // $login=$request->input('login');
-        // $senha=htmlspecialchars($request->input('senha'));
+        $query = cadastro::whereRaw('e-mail = ? and password = ?', [$login,$senha])->get();
 
-        // $verifica = DB::table('cadastros')->selectRaw('e-mail * ? and password * ?', [$login, $senha])->get();
-        // dd($verifica);
-
-        // if($verifica)
-        //      
-        // else
-        //      die();
-
+        if($query)
+            return redirect('/Home');
+        else
+            return redirect()->back();
         
     }
 
