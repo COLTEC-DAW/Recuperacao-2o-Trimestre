@@ -58,7 +58,7 @@ class UsuarioController extends Controller
         $this->validate($request, $this->cadastro->rulesLogin, $this->cadastro->messagesLogin);
 
         $orders = DB::table('cadastros')
-                ->selectRaw('Email = ? and Password = ?', [$login,$senha])
+                ->selectRaw('Email = ? AND Password = ?', [$login,$senha])
                 ->get();
 
         if($query)
