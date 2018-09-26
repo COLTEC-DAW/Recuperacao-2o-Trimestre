@@ -33,7 +33,7 @@ class UsuarioController extends Controller
         $email=$request->input('email');
         $senha=htmlspecialchars($request->input('senha'));
 
-        $this->validate($request, $this->cadastro->rules, $this->cadastro->messages);
+        $this->validate($request, $this->cadastro->rulesRegistro, $this->cadastro->messagesRegistro);
 
         $insert = $this->cadastro->create([
 
@@ -53,20 +53,17 @@ class UsuarioController extends Controller
 
         $login=$request->input('login');
         $senha=htmlspecialchars($request->input('senha'));
-        $confirmar=$request->input('confirmar');
 
-        DB::select('SELECT *  FROM usuarios WHERE e_mail = ? AND senha = ? ', [$login,$senha]);
-        if (mysql_num_rows($verifica)<=0){
-          echo"<script language='javascript' type='text/javascript'>alert('Login e/ou senha incorretos');window.location.href='/';</script>";
-          die();
-        }else{
-            
-            }
-              
-            setcookie("login",$login);
-            header("Location:{{URL::to('/Home')}}");
+        $this->validate($request, $this->cadastro->rulesLogin, $this->cadastro->messagesLogin);
+
+        $query = cadastro::whereRaw('e-mail = ? and password = ?', [$login,$senha])->get();
+
+        if($query)
+            return redirect('/Home');
+        else
+            return redirect()->back();
         
-        }
+    }
 
         
 }
