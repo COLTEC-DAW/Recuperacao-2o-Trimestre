@@ -37,9 +37,9 @@ class UsuarioController extends Controller
 
         $insert = $this->cadastro->create([
 
-            'name'      => $nome,
-            'e-mail'    => $email,
-            'password'  => $senha,
+            'Name'      => $nome,
+            'Email'     => $email,
+            'Password'  => $senha,
 
         ]);
         
@@ -57,7 +57,7 @@ class UsuarioController extends Controller
 
         $this->validate($request, $this->cadastro->rulesLogin, $this->cadastro->messagesLogin);
 
-        $query = cadastro::whereRaw('e-mail = ? and password = ?', [$login,$senha])->get();
+        $query = cadastro::whereRaw('Email = ? and Password = ?', [$login,$senha])->get();
 
         if($query)
             return redirect('/Home');
