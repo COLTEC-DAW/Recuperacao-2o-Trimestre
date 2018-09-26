@@ -36,7 +36,7 @@ class cadastro extends Model
 
     public $messagesLogin = [
         
-        'login.required'    => 'Campo Login é de preenchimento obrigatório',
+        'login.required'    => 'Campo E-mail é de preenchimento obrigatório',
         // 'email.unique'      => 'Esse e-mail já existe',
         'login.min'         => 'Campo E-mail deve ter no mínimo 3 caracteres',
         'login.max'         => 'Campo E-mail deve ter no máximo 45 caracteres',
