@@ -62,7 +62,7 @@ class UsuarioController extends Controller
         if($query)
             return redirect('/Home');
         else
-            return redirect()->back();
+            return redirect('/');
         
     }
 
