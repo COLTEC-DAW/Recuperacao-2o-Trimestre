@@ -9,13 +9,13 @@ class cadastro extends Model
     protected $fillable = ['name','e-mail','password'];
 
 
-    public $rules = [
+    public $rulesRegistro = [
         'nome'      => 'required|min:3|max:45',
         'email'     => 'required|min:3|max:45|email',
         'senha'     => 'required|min:3|max:8',
     ];
 
-    public $messages = [
+    public $messagesRegistro = [
         'nome.required'     => 'Campo Nome é de preenchimento obrigatório',
         'nome.min'          => 'Campo Nome no mínimo 3 caracteres',
         'nome.max'          => 'Campo Nome no máximo 45 caracteres',
@@ -28,4 +28,22 @@ class cadastro extends Model
         'senha.min'         => 'Campo Senha deve ter no mínimo 3 caracteres',
         'senha.max'         => 'Campo Senha deve ter no máximo 8 caracteres',
     ];
+
+    public $rulesLogin = [
+        'login'     => 'required|min:3|max:45|email',
+        'senha'     => 'required|min:3|max:8',
+    ];
+
+    public $messagesLogin = [
+        
+        'login.required'    => 'Campo Login é de preenchimento obrigatório',
+        // 'email.unique'      => 'Esse e-mail já existe',
+        'login.min'         => 'Campo E-mail deve ter no mínimo 3 caracteres',
+        'login.max'         => 'Campo E-mail deve ter no máximo 45 caracteres',
+        'login.email'       => 'O E-mail deve ser válido',
+        'senha.required'    => 'Campo Senha é de preenchimento obrigatório',
+        'senha.min'         => 'Campo Senha deve ter no mínimo 3 caracteres',
+        'senha.max'         => 'Campo Senha deve ter no máximo 8 caracteres',
+    ];
+
 }

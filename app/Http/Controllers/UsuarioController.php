@@ -24,7 +24,7 @@ class UsuarioController extends Controller
 
     public function home()
     {
-        return view('resposta');
+        return view('home');
     }
 
     public function GuardarRegistro(request $request){
@@ -33,7 +33,7 @@ class UsuarioController extends Controller
         $email=$request->input('email');
         $senha=htmlspecialchars($request->input('senha'));
 
-        $this->validate($request, $this->cadastro->rules, $this->cadastro->messages);
+        $this->validate($request, $this->cadastro->rulesRegistro, $this->cadastro->messagesRegistro);
 
         $insert = $this->cadastro->create([
 
@@ -53,6 +53,8 @@ class UsuarioController extends Controller
 
         $login=$request->input('login');
         $senha=htmlspecialchars($request->input('senha'));
+
+        $this->validate($request, $this->cadastro->rulesLogin, $this->cadastro->messagesLogin);
 
         $query = cadastro::whereRaw('e-mail = ? and password = ?', [$login,$senha])->get();
 
