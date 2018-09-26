@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Validator;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\URL;
+use Illuminate\Support\Facades\DB;
 use App\cadastro;
 
 class UsuarioController extends Controller
@@ -16,16 +17,15 @@ class UsuarioController extends Controller
         $this->cadastro=$cadastro;
     }
 
-    public function home()
-    {
-        return view('resposta');
-    }
-
     public function registrar()
     {
         return view('cadastro');
     }
 
+    public function home()
+    {
+        return view('home');
+    }
 
     public function GuardarRegistro(request $request){
 
@@ -54,6 +54,7 @@ class UsuarioController extends Controller
         $login=$request->input('login');
         $senha=htmlspecialchars($request->input('senha'));
 
+
         $this->validate($request, $this->cadastro->rulesLogin, $this->cadastro->messagesLogin);
 
         $query = cadastro::whereRaw('e-mail = ? and password = ?', [$login,$senha])->get();
@@ -65,6 +66,8 @@ class UsuarioController extends Controller
         
     }
 
-        
+
+
+      
 }
 

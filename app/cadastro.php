@@ -24,8 +24,8 @@ class cadastro extends Model
         'email.max'         => 'Campo E-mail deve ter no máximo 45 caracteres',
         'email.email'       => 'O E-mail deve ser válido',
         'senha.required'    => 'Campo Senha é de preenchimento obrigatório',
-        'senha.min'         => 'Campo Senha no mínimo 3 caracteres',
-        'senha.max'         => 'Campo Senha no máximo 8 caracteres',
+        'senha.min'         => 'Campo Senha deve ter no mínimo 3 caracteres',
+        'senha.max'         => 'Campo Senha deve ter no máximo 8 caracteres',
     ];
 
     public $rulesLogin = [
@@ -43,4 +43,6 @@ class cadastro extends Model
         'senha.min'         => 'Campo Senha deve ter no mínimo 3 caracteres',
         'senha.max'         => 'Campo Senha deve ter no máximo 8 caracteres',
     ];
+
+    
 }

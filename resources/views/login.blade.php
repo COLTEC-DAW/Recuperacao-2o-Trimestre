@@ -1,3 +1,4 @@
+
 <html>
 <head>
     <meta charset="UTF-8">
@@ -26,7 +27,7 @@
         #login_box{
             background-color: #EBEBEB;
             border: solid #E8E8E8;
-            border-radius: 3px;
+            border-radius: 5px;
         }
 
         #formulario{
@@ -59,6 +60,7 @@
                         <div class="form-group">
                             <input type="password" class="form-control" name="senha" placeholder="Senha">
                         </div>
+                        <input type="hidden" name="_token" value="{{csrf_token()}}">
                         <button type="submit" value="confirmar" class="btn btn-primary btn-lg btn-block">Entrar</button>
                         <a href="{{URL::to('/registrar')}}">Registrar</a>
                     </form>

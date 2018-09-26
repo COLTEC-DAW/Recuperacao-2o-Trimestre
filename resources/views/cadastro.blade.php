@@ -26,7 +26,7 @@
         #cadastro_box{
             background-color: #EBEBEB;
             border: solid #E8E8E8;
-            border-radius: 3px;
+            border-radius: 5px;
         }
 
         #formulario{
