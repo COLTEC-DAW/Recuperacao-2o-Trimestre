@@ -59,16 +59,14 @@ class UsuarioController extends Controller
 
         $query=DB::select('select Name from cadastros where Email = ? and Password = ? ', [$login,$senha]);
 
-        if(count($query))
-            return redirect('/Home');
-        else
+        if(count($query)){
+            $usuario = $request->cookie('nome',$query);
+            return redirect('/Home')->with('nome', $usuario);
+        }   
+        else{
             return redirect('/');
-            
-        
-    }
-
-
-
-      
+        }
+                    
+    }      
 }
 

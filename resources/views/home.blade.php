@@ -23,7 +23,7 @@
             </form>
         </div>
         
-        <h5 id="titleuser">Olá, ADM!</h5>
+        <h5 id="titleuser">Olá, $nome</h5>
         <button class="btn btn-outline-success" type="button">Log Out</button>
     </nav>
 
