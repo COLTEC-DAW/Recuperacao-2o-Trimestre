@@ -70,7 +70,6 @@ class UsuarioController extends Controller
         
     }
 
-<<<<<<< HEAD
     public function adicionarObra(){
         return view('adicionarObra');
     }
