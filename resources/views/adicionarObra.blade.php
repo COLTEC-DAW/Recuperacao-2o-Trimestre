@@ -17,7 +17,7 @@
             margin-top: 5%;
         }
 
-        #container_login{
+        #container_add_obra{
             min-height: 100%;
             display: flex;
             align-items: center;
@@ -50,30 +50,30 @@
                        
             <div id="cadastro_box" class="row">
 
-                    <div id="bienvenido" class="d-flex justify-content-center col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                        <h2>Digite as informações</h2>
-                    </div>  
-                    <form action="{{URL::to('/salvarObra')}}" method="post" id="formulario" class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                        <div class="form-group">
-                            <input type="text" class="form-control" id="formGroupExampleInput" name="nome" value="{{old('nome')}}" placeholder="Nome">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" id="formGroupExampleInput" name="resumo" value="{{old('resumo')}}" placeholder="Resumo">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" id="formGroupExampleInput2" name="editora"  placeholder="Editora">
-                        </div>
-                        <div class="form-group">
-                            <input type="number" min="1" class="form-control" id="formGroupExampleInput2" name="num_exemplares"  placeholder="Número de exemplares">
-                        </div>
+                <div id="bienvenido" class="d-flex justify-content-center col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <h2>Digite as informações</h2>
+                </div>  
+                <form action="{{URL::to('/salvarObra')}}" method="post" id="formulario" class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="formGroupExampleInput" name="nome" value="{{old('nome')}}" placeholder="Nome">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="formGroupExampleInput" name="resumo" value="{{old('resumo')}}" placeholder="Resumo">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="formGroupExampleInput2" name="editora"  placeholder="Editora">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" min="1" class="form-control" id="formGroupExampleInput2" name="num_exemplares"  placeholder="Número de exemplares">
+                    </div>
+                    
+                    <input type="hidden" name="_token" value="{{csrf_token()}}">
 
-                            <input type="hidden" name="_token" value="{{csrf_token()}}">
-
-                        <div id="buttons_box" >
-                            <button type="submit" id="botao_confirmarCadastro" class="btn btn-primary btn-lg btn-sm">Pronto!</button>
-                            <button type="reset"  id="botao_cancelarCadastro" class="btn btn-danger btn-lg btn-sm">Cancelar</button>
-                        </div>    
-                    </form>
+                    <div id="buttons_box" >
+                        <button type="submit" id="botao_confirmarCadastro" class="btn btn-primary btn-lg btn-sm">Pronto!</button>
+                        <button type="reset"  id="botao_cancelarCadastro" class="btn btn-danger btn-lg btn-sm">Cancelar</button>
+                    </div>    
+                </form>
             </div>
 
             @if( isset($errors) && count($errors) > 0 )

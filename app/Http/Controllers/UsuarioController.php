@@ -13,11 +13,9 @@ class UsuarioController extends Controller
 {
     
     private $cadastro;
-    private $obras;
 
     public function __construct(cadastro $cadastro, obras $obras){
-        $this->cadastro=$cadastro;
-        $this->obras=$obras;
+        $this->cadastro=$cadastro;       
     }
 
     public function registrar()
@@ -70,8 +68,6 @@ class UsuarioController extends Controller
             return redirect('/');
         }
     }
-   
-
-
+    
 }
 
