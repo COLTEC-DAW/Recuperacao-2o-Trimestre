@@ -70,33 +70,7 @@ class UsuarioController extends Controller
             return redirect('/');
         }
     }
-    public function adicionarObra(){
-        return view('adicionarObra');
-    }
-
-    public function salvarObra(request $request){
-
-        $nome=$request->input('nome');
-        $resumo=$request->input('resumo');
-        $editora=$request->input('editora');
-        $num_exemplares=$request->input('num_exemplares');
-
-       // $this->validate($request, $this->cadastro->rulesRegistro, $this->cadastro->messagesRegistro);
-
-        $insert = $this->obras->create([
-
-            'nome'              => $nome,
-            'resumo'            => $resumo,
-            'editora'           => $editora,
-            'num_exemplares'    => $num_exemplares,
-
-        ]);
-        
-        if($insert)
-            return redirect('/');
-        else
-            return redirect()->back();
-    }
+   
 
 
 }
