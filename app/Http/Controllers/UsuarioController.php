@@ -59,12 +59,13 @@ class UsuarioController extends Controller
 
         $query = DB::table('cadastros')
                 ->selectRaw('Email = ? AND Password = ?', [$login,$senha])
-                ->first();
+                ->get();
 
         if($query==NULL||$query=='0')
-            return redirect('/Home');
-        else
             return redirect('/');
+        else
+            return redirect('/Home');
+            
         
     }
 
