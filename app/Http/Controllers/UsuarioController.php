@@ -61,7 +61,7 @@ class UsuarioController extends Controller
                 ->selectRaw('Email = ? AND Password = ?', [$login,$senha])
                 ->first();
 
-        if($query)
+        if($query==NULL||$query=='0')
             return redirect('/Home');
         else
             return redirect('/');
