@@ -63,15 +63,13 @@ class UsuarioController extends Controller
         $query=DB::select('select Name from cadastros where Email = ? and Password = ? ', [$login,$senha]);
 
         if(count($query)){
-            $usuario = $request->cookie('nome',$query);
-            return redirect('/Home')->with('nome', $usuario);
+            /*$usuario = $request->cookie('nome',$query);*/
+            return redirect('/Home');/*->with('nome', $usuario);*/
         }   
         else{
             return redirect('/');
-            
-        
+        }
     }
-}
     public function adicionarObra(){
         return view('adicionarObra');
     }
@@ -87,10 +85,10 @@ class UsuarioController extends Controller
 
         $insert = $this->obras->create([
 
-            'nome'      => $nome,
-            'resumo'    => $resumo,
-            'editora'  => $editora,
-            'num_exemplares' => $num_exemplares,
+            'nome'              => $nome,
+            'resumo'            => $resumo,
+            'editora'           => $editora,
+            'num_exemplares'    => $num_exemplares,
 
         ]);
         
