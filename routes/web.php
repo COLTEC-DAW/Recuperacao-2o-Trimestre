@@ -23,5 +23,7 @@ Route::post('/guardarRegistro', 'UsuarioController@GuardarRegistro');
 
 Route::post('/confereLogin', 'UsuarioController@ConfereLogin');
 
+Route::get('/adicionarObra', 'UsuarioController@adicionarObra');
 
+Route::post('/salvarObra', 'UsuarioController@salvarObra');
 

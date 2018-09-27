@@ -38,10 +38,10 @@
             <ul class="list-unstyled components">
                 <p>Funcionalidades</p>
                 <li class="active">
-                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Adcionar</a>
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Adicionar</a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
                         <li>
-                            <a href="#">Adcionar Obra</a>
+                            <a href="/adicionarObra">Adicionar Obra</a>
                         </li>
                     </ul>
                 </li>
