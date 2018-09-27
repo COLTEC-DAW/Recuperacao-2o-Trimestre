@@ -57,11 +57,9 @@ class UsuarioController extends Controller
 
         $this->validate($request, $this->cadastro->rulesLogin, $this->cadastro->messagesLogin);
 
-        $query = DB::table('cadastros')
-                ->selectRaw('Email = ? AND Password = ?', [$login,$senha])
-                ->get();
+        $query=DB::select('SELECT *  FROM cadastros WHERE Email = ? AND Password = ? ', [$login,$senha]);
 
-        if($query==NULL||$query=='0')
+        if(mysql_num_rows($query)<=0)
             return redirect('/');
         else
             return redirect('/Home');
