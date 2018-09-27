@@ -60,9 +60,9 @@ class UsuarioController extends Controller
         $query=DB::select('select *  from cadastros where Email = ? and Password = ? ', [$login,$senha]);
 
         if(count($query))
-            return redirect('/');
-        else
             return redirect('/Home');
+        else
+            return redirect('/');
             
         
     }
