@@ -3,14 +3,12 @@
 namespace App\Http\Controllers;
 
 use Validator;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\URL;
-// use Illuminate\Support\Facades\DB;
+use Illuminate\Http\Request;
 use App\obras;
 
 class ObrasController extends Controller
 {
-    
     private $obras;
 
     public function __construct(obras $obras){
@@ -45,7 +43,4 @@ class ObrasController extends Controller
         else
             return redirect()->back();
     }
-
-
 }
-
