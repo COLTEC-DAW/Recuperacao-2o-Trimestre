@@ -187,7 +187,7 @@
         </div>
         
         <h5 id="titleuser">Olá, Usuário</h5>
-        <button class="btn btn-outline-success" type="button">Log Out</button>
+        <button href="/sair" class="btn btn-outline-success" type="button">Log Out</button>
     </nav>
 
                 
@@ -220,7 +220,7 @@
 
                 
                 <li>
-                    <a href="#">Sair</a>
+                    <a href="/sair">Sair</a>
                 </li>
             </ul>
         </nav>

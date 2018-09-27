@@ -16,14 +16,14 @@ Route::get('/', function () {
 });
 
 Route::get('/registrar', 'UsuarioController@registrar');
-
-Route::get('/Home', 'UsuarioController@home');
-
 Route::post('/guardarRegistro', 'UsuarioController@GuardarRegistro');
-
 Route::post('/confereLogin', 'UsuarioController@ConfereLogin');
 
-Route::get('/adicionarObra', 'ObrasController@adicionarObra');
+Route::middleware(['auth'])->group(function () {
+    Route::get('/Home', 'UsuarioController@home');
+    Route::get('/sair', 'UsuarioController@LogingOut');
+    Route::get('/adicionarObra', 'ObrasController@adicionarObra');
+    Route::post('/salvarObra', 'ObrasController@salvarObra');
+});
 
-Route::post('/salvarObra', 'ObrasController@salvarObra');
 

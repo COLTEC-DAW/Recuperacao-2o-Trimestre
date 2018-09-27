@@ -47,6 +47,22 @@
 <body>
 
     <div class="container-fluid">
+        
+        @if (session('wrong'))
+        
+            <div class="alert alert-danger">
+                    {{ session('wrong') }}
+            </div>
+        
+        @endif
+        
+        @if (session('success'))
+        
+            <div class="alert alert-success">
+                    {{ session('success') }}
+            </div>
+        
+        @endif
         <div id="container_login" class="align-self-center col-xl-4 offset-xl-4 col-lg-4 offset-lg-4 col-md-4 offset-md-4 col-sm-4 offset-sm-4 col-12 ">
             <div id="login_box" class="row">
                 <div id="bienvenido" class="d-flex justify-content-center col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
