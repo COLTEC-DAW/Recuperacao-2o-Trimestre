@@ -19,11 +19,11 @@ Route::get('/registrar', 'UsuarioController@registrar');
 Route::post('/guardarRegistro', 'UsuarioController@GuardarRegistro');
 Route::post('/confereLogin', 'UsuarioController@ConfereLogin');
 
-Route::middleware(['auth'])->group(function () {
-    Route::get('/Home', 'UsuarioController@home');
-    Route::get('/sair', 'UsuarioController@LogingOut');
-    Route::get('/adicionarObra', 'ObrasController@adicionarObra');
-    Route::post('/salvarObra', 'ObrasController@salvarObra');
-});
+/*Route::middleware(['auth'])->group(function () {
+});*/
 
+Route::get('/Home', 'UsuarioController@home');
+Route::get('/sair', 'UsuarioController@LogingOut');
+Route::get('/adicionarObra', 'ObrasController@adicionarObra');
+Route::post('/salvarObra', 'ObrasController@salvarObra');
 
