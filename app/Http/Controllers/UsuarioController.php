@@ -57,7 +57,7 @@ class UsuarioController extends Controller
 
         $this->validate($request, $this->cadastro->rulesLogin, $this->cadastro->messagesLogin);
 
-        $query=DB::select('select *  from cadastros where Email = ? and Password = ? ', [$login,$senha]);
+        $query=DB::select('select Name from cadastros where Email = ? and Password = ? ', [$login,$senha]);
 
         if(count($query))
             return redirect('/Home');
