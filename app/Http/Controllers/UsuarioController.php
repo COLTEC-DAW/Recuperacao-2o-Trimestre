@@ -68,7 +68,7 @@ class UsuarioController extends Controller
 
         if (Auth::attempt($credentials)) {
             // Authentication passed...
-            return redirect('/Home');
+            return redirect()->intended('/Home');
         }
         else{
             $request->session()->flash('wrong', 'E-mail ou Senha inválido');
