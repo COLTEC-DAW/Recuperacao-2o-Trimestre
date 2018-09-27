@@ -6,12 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class cadastro extends Model
 {
-    protected $fillable = ['name','e-mail','password'];
-
+    protected $fillable = ['Name','Email','Password'];
 
     public $rulesRegistro = [
         'nome'      => 'required|min:3|max:45',
-        'email'     => 'required|min:3|max:45|email',
+        'email'     => 'required|min:3|max:45|email|unique:cadastros,Email',
         'senha'     => 'required|min:3|max:8',
     ];
 
@@ -20,7 +19,7 @@ class cadastro extends Model
         'nome.min'          => 'Campo Nome no mínimo 3 caracteres',
         'nome.max'          => 'Campo Nome no máximo 45 caracteres',
         'email.required'    => 'Campo E-mail é de preenchimento obrigatório',
-        // 'email.unique'      => 'Esse e-mail já existe',
+        'email.unique'      => 'E-mail já existente',
         'email.min'         => 'Campo E-mail deve ter no mínimo 3 caracteres',
         'email.max'         => 'Campo E-mail deve ter no máximo 45 caracteres',
         'email.email'       => 'O E-mail deve ser válido',
@@ -37,7 +36,6 @@ class cadastro extends Model
     public $messagesLogin = [
         
         'login.required'    => 'Campo E-mail é de preenchimento obrigatório',
-        // 'email.unique'      => 'Esse e-mail já existe',
         'login.min'         => 'Campo E-mail deve ter no mínimo 3 caracteres',
         'login.max'         => 'Campo E-mail deve ter no máximo 45 caracteres',
         'login.email'       => 'O E-mail deve ser válido',
@@ -46,4 +44,5 @@ class cadastro extends Model
         'senha.max'         => 'Campo Senha deve ter no máximo 8 caracteres',
     ];
 
+    
 }

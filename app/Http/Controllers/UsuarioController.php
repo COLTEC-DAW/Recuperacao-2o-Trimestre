@@ -40,9 +40,9 @@ class UsuarioController extends Controller
 
         $insert = $this->cadastro->create([
 
-            'name'      => $nome,
-            'e-mail'    => $email,
-            'password'  => $senha,
+            'Name'      => $nome,
+            'Email'     => $email,
+            'Password'  => $senha,
 
         ]);
         
@@ -57,17 +57,20 @@ class UsuarioController extends Controller
         $login=$request->input('login');
         $senha=htmlspecialchars($request->input('senha'));
 
+
         $this->validate($request, $this->cadastro->rulesLogin, $this->cadastro->messagesLogin);
 
-        $query = cadastro::whereRaw('e-mail = ? and password = ?', [$login,$senha])->get();
+        $query=DB::select('select Name from cadastros where Email = ? and Password = ? ', [$login,$senha]);
 
-        if($query)
+        if(count($query))
             return redirect('/Home');
         else
-            return redirect()->back();
+            return redirect('/');
+            
         
     }
 
+<<<<<<< HEAD
     public function adicionarObra(){
         return view('adicionarObra');
     }
@@ -97,5 +100,10 @@ class UsuarioController extends Controller
     }
 
 
+=======
+
+
+      
+>>>>>>> 543463c53f949c92b8be72b8b9b2ba4c4073462a
 }
 

@@ -64,9 +64,9 @@
                         <button type="submit" value="confirmar" class="btn btn-primary btn-lg btn-block">Entrar</button>
                         <a href="{{URL::to('/registrar')}}">Registrar</a>
                     </form>
-                </div>     
-            </div>
-
+                </div>    
+            </div>    
+            
             @if( isset($errors) && count($errors) > 0 )
                 <div class=" alert alert-danger">
                     @foreach ( $errors->all() as $error )
@@ -74,7 +74,7 @@
                     @endforeach
                 </div>
             @endif  
-
+ 
         </div>
     </div>
 
