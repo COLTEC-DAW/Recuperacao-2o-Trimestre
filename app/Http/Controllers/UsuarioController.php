@@ -15,7 +15,7 @@ class UsuarioController extends Controller
     
     private $cadastro;
 
-    public function __construct(cadastro $cadastro, obras $obras){
+    public function __construct(cadastro $cadastro){
         $this->cadastro=$cadastro;       
     }
 
