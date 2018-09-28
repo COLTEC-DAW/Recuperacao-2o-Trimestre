@@ -17,7 +17,7 @@ class CreateCadastrosTable extends Migration
             $table->increments('id');
             $table->string('Name','45');
             $table->string('Email');
-            $table->string('Password','8');
+            $table->string('Password');
             $table->timestamps();
         });
     }
