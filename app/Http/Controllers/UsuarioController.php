@@ -57,42 +57,42 @@ class UsuarioController extends Controller
 
     public function ConfereLogin(request $request){
 
-        /*
+        
         $login=$request->input('login');
         $senha=htmlspecialchars($request->input('senha'));
-        */
+        
         
         $this->validate($request, $this->cadastro->rulesLogin, $this->cadastro->messagesLogin);
 
-        $credentials = $request->only('login', 'senha');
+        // $credentials = $request->only('login', 'senha');
 
-        if (Auth::attempt($credentials)) {
-            // Authentication passed...
-            return redirect()->intended('/Home');
-        }
-        else{
-            $request->session()->flash('wrong', 'E-mail ou Senha inválido');
-            return redirect()->back();
-        }
+        // if (Auth::attempt($credentials)) {
+        //     // Authentication passed...
+        //     return redirect()->intended('/Home');
+        // }
+        // else{
+        //     $request->session()->flash('wrong', 'E-mail ou Senha inválido');
+        //     return redirect()->back();
+        // }
             
 
-        /*
+        
         $query=DB::select('select Name from cadastros where Email = ? and Password = ? ', [$login,$senha]);
 
         if(count($query)){
-            /*$usuario = $request->cookie('nome',$query);
-            return redirect('/Home');/*->with('nome', $usuario);
+            // $usuario = $request->cookie('nome',$query);
+            return redirect('/Home');//->with('nome', $usuario);
         }   
         else{
             return redirect('/');
         }
-        */
+        
         
     }
 
-    public function LogingOut(){
-        Auth::logout();
-    }
+    // public function LogingOut(){
+    //     Auth::logout();
+    // }
     
 }
 
