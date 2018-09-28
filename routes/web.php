@@ -24,6 +24,7 @@ Route::post('/confereLogin', 'UsuarioController@ConfereLogin');
 
 Route::get('/Home', 'UsuarioController@home');
 Route::get('/sair', 'UsuarioController@LogingOut');
-Route::get('/adicionarObra', 'ObrasController@adicionarObra');
-Route::post('/salvarObra', 'ObrasController@salvarObra');
+
+//Route::get('/adicionarObra', 'ObrasController@adicionarObra');
+//Route::post('/salvarObra', 'ObrasController@salvarObra');
 
