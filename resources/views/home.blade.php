@@ -186,7 +186,7 @@
             </form>
         </div>
         
-        <h5 id="titleuser">Olá, <?php echo $_COOKIE["usuario"]?></h5>
+        <h5 id="titleuser">Bom dia!</h5>
         <button href="/sair" class="btn btn-outline-success" type="button">Log Out</button>
     </nav>
 
