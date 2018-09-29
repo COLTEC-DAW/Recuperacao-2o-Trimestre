@@ -227,46 +227,41 @@
 
         <div id="content">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container-fluid">
-                        
+                <div class="container-fluid">                  
                     <button type="button" id="sidebarCollapse" class="btn btn-info">
                         <span>Menu</span>
                     </button>
-                     
                 </div>
             </nav>
         </div>
-    
-    </div>
 
-    <div class="container-fluid">
+        <div class="container-fluid">
         
-        @if (session('inserido'))
+            @if (session('inserido'))
 
-        <div class="alert alert-success col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                {{ session('inserido') }}
-        </div>
-
-        @endif
-
-        <h1 id="title">Últimas Obras</h1>
-        <br/>
-
-        @foreach($obras as $obra)
-            <div class="list-group col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
-                    <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">{{$obra->nome}}</h5>
-                        <small>{{$obra->created_at}}</small>
-                    </div>
-                    <p class="mb-1">{{$obra->resumo}}</p>
-                    <small>{{$obra->editora}}</small>
-                </a>
+            <div class="alert alert-success col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    {{ session('inserido') }}
             </div>
-        @endforeach
-    </div>
 
-    
+            @endif
+
+            <h1 id="title">Últimas Obras</h1>
+            <br/>
+
+            @foreach($obras as $obra)
+                <div class="list-group col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">{{$obra->nome}}</h5>
+                            <small>{{$obra->created_at}}</small>
+                        </div>
+                        <p class="mb-1">{{$obra->resumo}}</p>
+                        <small>{{$obra->editora}}</small>
+                    </a>
+                </div>
+            @endforeach
+        </div>
+    </div>
 
      <!-- jQuery CDN - Slim version (=without AJAX) -->
      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
