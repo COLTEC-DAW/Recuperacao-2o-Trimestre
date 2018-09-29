@@ -61,9 +61,10 @@ class UsuarioController extends Controller
         $this->validate($request, $this->cadastro->rulesLogin, $this->cadastro->messagesLogin);
     
         $query=DB::select('select Name from cadastros where Email = ? and Password = ? ', [$login,$senha]);
+        $name=strval($query);
 
         if(count($query)){
-            setcookie("usuario","$query");
+            setcookie("usuario","$name");
             return redirect('/Home');
         }   
         else{
