@@ -46,6 +46,15 @@
 <body>
 
     <div class="container-fluid">
+
+        @if (session('wrong'))
+        
+            <div class="alert alert-danger">
+                    {{ session('wrong') }}
+            </div>
+    
+        @endif
+
         <div id="container_add_obra" class="align-self-center col-xl-4 offset-xl-4 col-lg-4 offset-lg-4 col-md-4 offset-md-4 col-sm-4 offset-sm-4 col-12 ">
                        
             <div id="cadastro_box" class="row">

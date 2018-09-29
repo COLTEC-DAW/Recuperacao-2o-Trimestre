@@ -228,7 +228,15 @@
         <div id="content">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
+
+                    @if (session('inserido'))
         
+                        <div class="alert alert-success">
+                                {{ session('inserido') }}
+                        </div>
+
+                    @endif
+                        
                     <button type="button" id="sidebarCollapse" class="btn btn-info">
                         
                         <span>Menu</span>

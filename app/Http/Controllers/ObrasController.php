@@ -17,6 +17,11 @@ class ObrasController extends Controller
         $this->obras=$obras;
     }
 
+    public function home()
+    {
+        return view('home');
+    }
+
     public function adicionarObra(){
         return view('adicionarObra');
     }
@@ -39,9 +44,12 @@ class ObrasController extends Controller
 
         ]);
         
-        if($insert)
+        if($insert){
+            $request->session()->flash('inserido', 'Obra cadastrada com sucesso!');
             return redirect('/Home');
+        }
         else
+            $request->session()->flash('wrong', 'Falha ao inserir obra');
             return redirect()->back();
     }
 
