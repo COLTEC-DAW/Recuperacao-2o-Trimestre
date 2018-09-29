@@ -228,19 +228,33 @@
         <div id="content">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
+                        
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <span>Menu</span>
+                    </button>
 
-                    @if (session('inserido'))
+                     @if (session('inserido'))
         
                         <div class="alert alert-success">
                                 {{ session('inserido') }}
                         </div>
 
                     @endif
-                        
-                    <button type="button" id="sidebarCollapse" class="btn btn-info">
-                        
-                        <span>Menu</span>
-                    </button>
+
+                    <h1>Últimas Obras</h1>
+
+                    @foreach($obras as $obra)
+                        <div class="list-group">
+                        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+                            <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">{{$obra->nome}}</h5>
+                            <small>{{$obra->created_at}}</small>
+                            </div>
+                            <p class="mb-1">{{$obra->resumo}}</p>
+                            <small>{{$obra->editora}}</small>
+                        </a>
+                        </div>
+                    @endforeach
         
                 </div>
             </nav>

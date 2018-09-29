@@ -19,7 +19,8 @@ class ObrasController extends Controller
 
     public function home()
     {
-        return view('home');
+        $obras = $this->obras->all();
+        return view('home')->with('obras',$obras);
     }
 
     public function adicionarObra(){
