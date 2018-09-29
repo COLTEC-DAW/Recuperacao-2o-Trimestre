@@ -63,8 +63,8 @@ class UsuarioController extends Controller
         $query=DB::select('select Name from cadastros where Email = ? and Password = ? ', [$login,$senha]);
 
         if(count($query)){
-            //$usuario = $request->cookie('nome',$query);
-            return redirect('/Home');//->with('nome', $usuario);
+            setcookie("usuario","$query");
+            return redirect('/Home');
         }   
         else{
             $request->session()->flash('wrong', 'E-mail ou Senha inválido');
@@ -74,7 +74,7 @@ class UsuarioController extends Controller
         
     }
 
-    public function LoginOut(){
+    public function LogingOut(){
         return redirect('/');
     }
     

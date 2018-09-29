@@ -186,7 +186,7 @@
             </form>
         </div>
         
-        <h5 id="titleuser">Olá, Usuário</h5>
+        <h5 id="titleuser">Olá, <?php echo $_COOKIE["usuario"]?></h5>
         <button href="/sair" class="btn btn-outline-success" type="button">Log Out</button>
     </nav>
 
@@ -239,6 +239,7 @@
         
             @if (session('inserido'))
 
+            <br/>
             <div class="alert alert-success col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                     {{ session('inserido') }}
             </div>
@@ -283,7 +284,7 @@
 
     });
     
-
+    $('div.alert').delay(5000).slideUp(300);
     </script>
 
 </body>
