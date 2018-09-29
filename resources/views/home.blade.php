@@ -259,6 +259,7 @@
                         <small>{{$obra->editora}}</small>
                     </a>
                 </div>
+                <br/>
             @endforeach
         </div>
     </div>

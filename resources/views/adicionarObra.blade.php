@@ -70,10 +70,10 @@
                         <input type="text" class="form-control" id="formGroupExampleInput" name="resumo" value="{{old('resumo')}}" placeholder="Resumo">
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" id="formGroupExampleInput2" name="editora"  placeholder="Editora">
+                        <input type="text" class="form-control" id="formGroupExampleInput2" name="editora" value="{{old('editora')}}" placeholder="Editora">
                     </div>
                     <div class="form-group">
-                        <input type="number" min="1" class="form-control" id="formGroupExampleInput2" name="num_exemplares"  placeholder="Número de exemplares">
+                        <input type="number" min="1" class="form-control" id="formGroupExampleInput2" name="num_exemplares" value="{{old('num_exemplares')}} placeholder="Número de exemplares">
                     </div>
                     
                     <input type="hidden" name="_token" value="{{csrf_token()}}">
