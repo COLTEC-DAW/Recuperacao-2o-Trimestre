@@ -21,7 +21,9 @@ class UsuarioController extends Controller
 
     public function registrar()
     {
-        return view('cadastro');
+        $title = 'Registrar';
+
+        return view('cadastro',compact('title'));
     }
 
 
@@ -65,8 +67,8 @@ class UsuarioController extends Controller
 
         if(count($query)){
             //setcookie("usuario","$name");
-            //$title = "Página Inicial";
-            return redirect('/Home');
+            $title = 'Página Inicial';
+            return redirect('/Home')->with('title',$title);
         }   
         else{
             $request->session()->flash('wrong', 'E-mail ou Senha inválido');

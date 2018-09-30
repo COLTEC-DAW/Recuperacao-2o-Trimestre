@@ -25,7 +25,8 @@ class ObrasController extends Controller
     }
 
     public function adicionarObra(){
-        return view('adicionarObra');
+        $title = 'Adicionar Obra';
+        return view('adicionarObra',compact('title'));
     }
 
     public function salvarObra(request $request){
