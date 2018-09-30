@@ -256,7 +256,7 @@
                             <h5 class="mb-1">{{$obra->nome}}</h5>
                             <small>{{$obra->created_at}}</small>
                         </div>
-                        <small>Editora: {{$obra->autor}}</small>
+                        <small>Autor:{{$obra->autor}}</small>
                         <p class="mb-1">{{$obra->resumo}}</p>
                         <small>Editora: {{$obra->editora}}</small>
                     </a>
