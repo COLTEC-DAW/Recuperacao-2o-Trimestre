@@ -10,6 +10,55 @@
 </head>
 <body>
 
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#"><h5><b>MyReads COLTEC</b></h5></a>
+        <ul class="navbar-nav mr-auto "></ul>   
+        
+        <div class="search-container">
+            <form action="{{URL::to('/pesquisar')}}">
+                <input type="text" placeholder="Buscar obras por nome, autor e editora" name="busca">
+                <button id="searchbutton" type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+        
+        <h5 id="titleuser">Bom dia!</h5>
+        <a href="/sair" class="btn btn-outline-success" type="button">Log Out</a>
+    </nav>
+
+                
+    <div class="wrapper">
+        <!-- Sidebar -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Menu Principal</h3>
+            </div>
+    
+            <ul class="list-unstyled components">
+                <p>Funcionalidades</p>
+                <li class="active">
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Adicionar</a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
+                            <a href="/adicionarObra">Adicionar Obra</a>
+                        </li>
+                    </ul>
+                </li>                
+                <li>
+                    <a href="/sair">Sair</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div id="content">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">                  
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <span>Menu</span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+
     <div class="container-fluid">
         <h1>Resultados da Pesquisa</h1>
 
@@ -28,6 +77,28 @@
         <br/>
         @endforeach
     </div>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <!-- jQuery Custom Scroller CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <script>
+    
+    $(document).ready(function () {
+
+        $('#sidebarCollapse').on('click', function () {
+            $('#sidebar').toggleClass('active');
+        });
+
+    });
+    
+    $('div.alert').delay(5000).slideUp(300);
+    </script>
 
 </body>
 </html>
