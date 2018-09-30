@@ -16,6 +16,7 @@ class CreateObrasTable extends Migration
         Schema::create('obras', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nome','45');
+            $table->string('autor','45');
             $table->text('resumo');
             $table->string('editora', '45');
             $table->integer('num_exemplares');

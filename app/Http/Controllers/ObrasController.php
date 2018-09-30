@@ -29,16 +29,18 @@ class ObrasController extends Controller
 
     public function salvarObra(request $request){
 
-        $nome=$request->input('nome');
-        $resumo=$request->input('resumo');
-        $editora=$request->input('editora');
-        $num_exemplares=$request->input('num_exemplares');
+        $nome=htmlspecialchars($request->input('nome'));
+        $autor=htmlspecialchars($request->input('autor'));
+        $resumo=htmlspecialchars($request->input('resumo'));
+        $editora=htmlspecialchars($request->input('editora'));
+        $num_exemplares=htmlspecialchars($request->input('num_exemplares'));
 
         $this->validate($request, $this->obras->rulesObras, $this->obras->messagesObras);
 
         $insert = $this->obras->create([
 
             'nome'              => $nome,
+            'autor'             => $autor,
             'resumo'            => $resumo,
             'editora'           => $editora,
             'num_exemplares'    => $num_exemplares,

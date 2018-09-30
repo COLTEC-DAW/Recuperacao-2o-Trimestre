@@ -67,6 +67,9 @@
                         <input type="text" class="form-control" id="formGroupExampleInput" name="nome" value="{{old('nome')}}" placeholder="Nome">
                     </div>
                     <div class="form-group">
+                        <input type="text" class="form-control" id="formGroupExampleInput" name="autor" value="{{old('autor')}}" placeholder="Autor">
+                    </div>
+                    <div class="form-group">
                         <input type="text" class="form-control" id="formGroupExampleInput" name="resumo" value="{{old('resumo')}}" placeholder="Resumo">
                     </div>
                     <div class="form-group">

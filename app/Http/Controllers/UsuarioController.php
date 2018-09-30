@@ -27,8 +27,8 @@ class UsuarioController extends Controller
 
     public function GuardarRegistro(request $request){
 
-        $nome=$request->input('nome');
-        $email=$request->input('email');
+        $nome=htmlspecialchars($request->input('nome'));
+        $email=htmlspecialchars($request->input('email'));
         $senha=htmlspecialchars($request->input('senha'));
 
         $this->validate($request, $this->cadastro->rulesRegistro, $this->cadastro->messagesRegistro);
