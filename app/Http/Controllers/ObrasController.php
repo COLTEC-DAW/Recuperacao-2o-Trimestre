@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Validator;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\URL;
+use Illuminate\Support\Facades\DB;
 use App\obra;
 
 class ObrasController extends Controller
@@ -54,6 +55,15 @@ class ObrasController extends Controller
         else
             $request->session()->flash('wrong', 'Falha ao inserir obra');
             return redirect()->back();
+    }
+
+    public function buscarObras(request $request){
+        $pesquisa = htmlspecialchars($request->input('busca'));
+        
+        $resultados = DB::table('obras')
+                        ->whereRaw('nome like ? or autor like ? or editora like ?', [$pesquisa])
+                        ->get();
+        return view('pesquisaresposta', ['respostas'=>$resultados]);
     }
 
 }

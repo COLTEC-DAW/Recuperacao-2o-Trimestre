@@ -24,3 +24,4 @@ Route::get('/adicionarObra', 'ObrasController@adicionarObra');
 Route::post('/salvarObra', 'ObrasController@salvarObra');    
 
 Route::get('/Home', 'ObrasController@home');
+Route::get('/pesquisar', 'ObrasController@buscarObras');
