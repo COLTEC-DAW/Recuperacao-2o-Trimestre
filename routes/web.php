@@ -12,8 +12,8 @@
 */
 
 Route::get('/', function () {
-    $title = 'Entrar';
-    return view('login',compact('title'));
+    //$title = 'Entrar';
+    return view('login');
 });
 
 Route::get('/registrar', 'UsuarioController@registrar');
