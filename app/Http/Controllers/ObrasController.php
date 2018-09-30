@@ -61,7 +61,7 @@ class ObrasController extends Controller
         $pesquisa = htmlspecialchars($request->input('busca'));
         
         $resultados = DB::table('obras')
-                        ->whereRaw('nome like ? or autor like ? or editora like ?', [$pesquisa])
+                        ->whereRaw('nome like ? or autor like ? or editora like ?', [$pesquisa,$pesquisa,$pesquisa])
                         ->get();
         return view('pesquisaresposta', ['respostas'=>$resultados]);
     }
