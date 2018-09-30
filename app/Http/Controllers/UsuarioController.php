@@ -65,7 +65,8 @@ class UsuarioController extends Controller
 
         if(count($query)){
             //setcookie("usuario","$name");
-            return redirect('/Home');
+            $title = "Página Inicial";
+            return redirect('/Home', ['title'=>$title]);
         }   
         else{
             $request->session()->flash('wrong', 'E-mail ou Senha inválido');
