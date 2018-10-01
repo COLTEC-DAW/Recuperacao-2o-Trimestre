@@ -7,7 +7,7 @@
 
         @foreach($respostas as $resposta)
         <div class="list-group col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start card">
                 <div class="d-flex w-100 justify-content-between">
                     <h5 class="mb-1">{{$resposta->nome}}</h5>
                     <small>{{$resposta->created_at}}</small>
