@@ -17,10 +17,10 @@
         <br/>
 
         @foreach($obras as $obra)
-            <div class="list-group col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+            <div class="list-group col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 card">
+                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
                     <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">{{$obra->nome}}</h5>
+                        <h4 class="mb-1">{{$obra->nome}}</h4>
                         <small>{{$obra->created_at}}</small>
                     </div>
                     <small>Autor:{{$obra->autor}}</small>
