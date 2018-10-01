@@ -1,6 +1,6 @@
 
  <nav class="navbar navbar-dark bg-dark">
-    <button class="navbar-toggler" id="botaomenu" type="button" data-toggle="collapse" data-target="#sidebar" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" id="botaomenu" type="button" data-target="#sidebar" >
       <span class="navbar-toggler-icon"></span>
     </button>
     <a class="navbar-brand" href="{{URL::to('/Home')}}"><h5><b>MyReads COLTEC</b></h5></a>
