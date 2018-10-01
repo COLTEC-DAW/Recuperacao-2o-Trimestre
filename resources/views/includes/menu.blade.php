@@ -7,7 +7,7 @@
 
     <div id="custom-search-input">
         <div class="input-group">
-            <form action="{{URL::to('/pesquisar')}}" method="post" id="formsearch">
+            <form action="{{URL::to('/pesquisar')}}" id="formsearch">
                 <input name="busca" type="text" class="form-control input-lg" placeholder="Nome,autor e editora..." />
             </form>
         </div>
