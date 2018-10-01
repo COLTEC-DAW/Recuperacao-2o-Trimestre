@@ -11,7 +11,7 @@
     
     $(document).ready(function () {
 
-        $('#sidebarCollapse').on('click', function () {
+        $('#botaomenu').on('click', function () {
             $('#sidebar').toggleClass('active');
         });
 

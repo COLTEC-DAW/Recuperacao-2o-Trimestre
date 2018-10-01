@@ -136,6 +136,10 @@
             box-shadow: none;
         }
 
+        #formsearch{
+            margin: 0px;
+        }
+
         /*Estilização dos Componentes da Lista*/
         .card {
             box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -153,7 +157,7 @@
     <div class="wrapper">
 
         @include('includes.sidebar')
-        @include('includes.botaomenu')
+        
 
         <div class="container-fluid">
             @yield('content')
