@@ -2,15 +2,11 @@
         <a class="navbar-brand" href="{{URL::to('/Home')}}"><h5><b>MyReads COLTEC</b></h5></a>
         <ul class="navbar-nav mr-auto "></ul>   
               
-        <div class="row">
-            <div class="col-md-12 col-lg-12">
-                <div id="custom-search-input">
-                    <div class="input-group col-md-12 ">
-                        <form action="{{URL::to('/pesquisar')}}" method="post">
-                            <input name="busca" type="text" class="form-control input-lg" placeholder="Nome,autor e editora..." />
-                        </form>
-                    </div>
-                </div>
+        <div id="custom-search-input">
+            <div class="input-group col-md-12 ">
+                <form action="{{URL::to('/pesquisar')}}" method="post">
+                    <input name="busca" type="text" class="form-control input-lg" placeholder="Nome,autor e editora..." />
+                </form>
             </div>
         </div>
         
