@@ -121,55 +121,42 @@
             margin-right: 2%;
         }
 
-        /* Search Bar */
+        
+        /*Search Bar*/
 
-        .navbar .search-container {
-            float: right;
+        #custom-search-input{
+            padding: 3px;
+            border: solid 1px #E4E4E4;
+            border-radius: 6px;
+            background-color: #fff;
         }
 
-        .navbar input[type=text] {
-            padding: 6px;
-            margin-top: 8px;
-            font-size: 17px;
-            border: none;
+        #custom-search-input input{
+            border: 0;
+            box-shadow: none;
         }
 
-        .navbar .search-container button {
-            float: right;
-            padding: 6px 10px;
-            margin-top: 8px;
-            margin-right: 16px;
-            background: #ddd;
-            font-size: 17px;
-            border: none;
-            cursor: pointer;
+        #custom-search-input button{
+            margin: 2px 0 0 0;
+            background: none;
+            box-shadow: none;
+            border: 0;
+            color: #666666;
+            padding: 0 8px 0 10px;
+            border-left: solid 1px #ccc;
         }
 
-        .navbar .search-container button:hover {
-            background: #ccc;
+        #custom-search-input button:hover{
+            border: 0;
+            box-shadow: none;
+            border-left: solid 1px #ccc;
         }
 
-        @media screen and (max-width: 600px) {
-            .navbar .search-container {
-            float: none;
-            }
-            .navbar a, .navbar input[type=text], .navbar .search-container button {
-            float: none;
-            display: block;
-            text-align: left;
-            width: 100%;
-            margin: 0;
-            padding: 14px;
-            }
-            .navbar input[type=text] {
-            border: 1px solid #ccc;  
-            }
+        #custom-search-input .glyphicon-search{
+            font-size: 23px;
         }
 
-        #searchbutton{
-            height: 37px;
-        }
-
+        /*Estilização dos Componentes da Lista*/
         .card {
             box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
             transition: 0.3s;

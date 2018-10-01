@@ -1,13 +1,23 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="{{URL::to('/Home')}}"><h5><b>MyReads COLTEC</b></h5></a>
         <ul class="navbar-nav mr-auto "></ul>   
-        
-        <div class="search-container">
-            <form action="{{URL::to('/pesquisar')}}">
-                <input type="text" placeholder="Buscar obras por nome, autor e editora" name="busca">
-                <button id="searchbutton" type="submit"><i class="fa fa-search"></i></button>
-            </form>
-        </div>
+              
+            <div class="row">
+                <div class="col-md-6">
+                    <div id="custom-search-input">
+                        <div class="input-group col-md-12">
+                            <form action="{{URL::to('/pesquisar')}}" method="post">
+                                <input name="busca" type="text" class="form-control input-lg" placeholder="Nome,autor e editora..." />
+                                <span class="input-group-btn">
+                                    <button class="btn btn-info btn-lg" type="button">
+                                        <i class="glyphicon glyphicon-search"></i>
+                                    </button>
+                                </span>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
         
         <h5 id="titleuser">Bom dia!</h5>
         <a href="/sair" class="btn btn-outline-success" type="button">Log Out</a>
