@@ -105,7 +105,6 @@
             </p>  
         </div>
         <div id="box" class="container-fluid col-sm-4 col-md-4 col-lg-4">
-            <a id="registrar" href="{{URL::to('/registrar')}}">Registrar</a>
 
             <form action="{{URL::to('/confereLogin')}}" method="post">
                 <div class="form-group">   
@@ -119,6 +118,7 @@
                 
                 <button type="submit" value="confirmar" class="btn btn-primary">Entrar</button>
             </form>
+            <a id="registrar" href="{{URL::to('/registrar')}}">Registrar</a>
         </div>
     </div>
     @include('includes.footer')
