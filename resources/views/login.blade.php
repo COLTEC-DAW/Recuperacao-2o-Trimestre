@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <title>MyReds COLTEC</title>
+    <title>MyReads COLTEC</title>
 
     <style>
     
@@ -118,7 +118,6 @@
                 
                 <button type="submit" value="confirmar" class="btn btn-primary">Entrar</button>
                 <br/>
-                <p>ou</p>
                 <br/>
                 <a id="registrar" href="{{URL::to('/registrar')}}">Registrar</a>
             </form>
