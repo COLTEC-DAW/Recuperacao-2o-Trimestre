@@ -13,7 +13,7 @@
         </div>
     </div>
 
-    <h5 id="titleuser">Bom dia! <?php echo $_SESSION["logado"] ?></h5>
+    <h5 id="titleuser">Bom dia!</h5>
     <a href="/sair" id="logoutButton" class="btn btn-outline-success" type="button">Log Out</a>
 </nav>
 
