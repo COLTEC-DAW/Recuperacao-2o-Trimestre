@@ -45,6 +45,8 @@
             margin-bottom: 10%;
         }
 
+    /*Footer*/
+
         #footer{
             font-family: 'Roboto Condensed', sans-serif;
             font-size: 130%;
@@ -65,7 +67,12 @@
             padding-left: 0px;
             color: #59595C;
         }
-
+    
+        #registrar{
+            text-decoration: none;
+            text-align:right;
+            color: white;
+        }
     </style>
 
 </head>
@@ -98,19 +105,19 @@
             </p>  
         </div>
         <div id="box" class="container-fluid col-sm-4 col-md-4 col-lg-4">
+            <a id="registrar" href="{{URL::to('/registrar')}}">Registrar</a>
+
             <form action="{{URL::to('/confereLogin')}}" method="post">
-                <div class="form-group">
-                     
+                <div class="form-group">   
                     <input type="text" class="form-control" name="login" value="{{old('login')}}" placeholder="E-mail">
                 </div>
                 <div class="form-group">
-                    
                     <input type="password" class="form-control" name="senha" placeholder="Senha">
                 </div>
+
                 <input type="hidden" name="_token" value="{{csrf_token()}}">
+                
                 <button type="submit" value="confirmar" class="btn btn-primary">Entrar</button>
-                <br/>
-                <a href="{{URL::to('/registrar')}}">Registrar</a>
             </form>
         </div>
     </div>

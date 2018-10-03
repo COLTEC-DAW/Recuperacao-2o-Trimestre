@@ -38,6 +38,30 @@
         #buttons_box{
             margin-bottom: 10%;
         }
+    
+    /*Footer*/
+
+        #footer{
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 130%;
+            background-color: #C1C1C7;
+            padding-bottom: 30px;
+            position:fixed;
+            bottom:0;
+            width:100%;
+            padding: 10;
+            vertical-align: middle;
+        }
+        #logoFooter{
+            height: 60px;
+            width: 80px;
+        }
+        #container_contentFooter{
+            padding-right: 48px;
+            padding-left: 0px;
+            color: #59595C;
+        }
+
     </style>
 </head>
 <body>

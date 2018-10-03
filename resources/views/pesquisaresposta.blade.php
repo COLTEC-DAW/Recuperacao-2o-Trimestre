@@ -9,12 +9,10 @@
         <div class="list-group col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
             <a href="#" class="list-group-item list-group-item-action flex-column align-items-start card">
                 <div class="d-flex w-100 justify-content-between">
-                    <h5 class="mb-1">{{$resposta->nome}}</h5>
+                    <h4 class="mb-1">{{$resposta->nome}}</h4>
                     <small>{{$resposta->created_at}}</small>
                 </div>
-                <small>Autor:{{$resposta->autor}}</small>
-                <p class="mb-1">{{$resposta->resumo}}</p>
-                <small>Editora: {{$resposta->editora}}</small>
+                <p class="mb-1">{{$resposta->resumo}}</p>     
             </a>
         </div>
         <br/>
