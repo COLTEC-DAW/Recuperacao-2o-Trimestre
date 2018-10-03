@@ -1,5 +1,6 @@
 <?php
 
+
 namespace App\Http\Controllers;
 
 use Validator;
@@ -66,8 +67,8 @@ class UsuarioController extends Controller
         //$name=strval($query);
 
         if(count($query)){
-            //setcookie("usuario","$name");
-            $title = 'Página Inicial';
+            //$_SESSION["logado"]=$query;
+            //$title = 'Página Inicial';
             return redirect('/Home');
         }   
         else{

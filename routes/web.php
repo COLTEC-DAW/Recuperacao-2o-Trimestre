@@ -12,7 +12,6 @@
 */
 
 Route::get('/', function () {
-    //$title = 'Entrar';
     return view('login');
 });
 
@@ -26,3 +25,4 @@ Route::post('/salvarObra', 'ObrasController@salvarObra');
 
 Route::get('/Home', 'ObrasController@home');
 Route::get('/pesquisar', 'ObrasController@buscarObras');
+

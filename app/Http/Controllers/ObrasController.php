@@ -67,4 +67,8 @@ class ObrasController extends Controller
         return view('pesquisaresposta', ['respostas'=>$resultados]);
     }
 
+    public function verObra($id){
+    
+    }
+
 }

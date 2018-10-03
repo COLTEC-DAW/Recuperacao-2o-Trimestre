@@ -165,7 +165,7 @@
         </div>
 
     </div>
-
+    @include('includes.footer')
     @include('includes.scripts')
 </body>
 </html>
