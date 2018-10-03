@@ -117,8 +117,11 @@
                 <input type="hidden" name="_token" value="{{csrf_token()}}">
                 
                 <button type="submit" value="confirmar" class="btn btn-primary">Entrar</button>
+                <br/>
+                <p>ou</p>
+                <br/>
+                <a id="registrar" href="{{URL::to('/registrar')}}">Registrar</a>
             </form>
-            <a id="registrar" href="{{URL::to('/registrar')}}">Registrar</a>
         </div>
     </div>
     @include('includes.footer')
