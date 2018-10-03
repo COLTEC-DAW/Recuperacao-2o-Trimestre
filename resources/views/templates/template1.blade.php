@@ -170,7 +170,7 @@
             
         #logoutButton{
             color:white;
-            border-radius:3px;
+            border-radius:3px !important;
             border: solid white;
             background-color:#343a40;
         }
