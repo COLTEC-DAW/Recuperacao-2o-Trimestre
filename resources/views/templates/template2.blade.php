@@ -50,15 +50,8 @@
             bottom:0;
             width:100%;
             padding: 10;
-            vertical-align: middle;
-        }
-        #logoFooter{
-            height: 60px;
-            width: 80px;
         }
         #container_contentFooter{
-            padding-right: 48px;
-            padding-left: 0px;
             color: #59595C;
         }
         /*Botão Logout*/
