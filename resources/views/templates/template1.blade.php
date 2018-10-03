@@ -152,26 +152,36 @@
 
         /*Footer*/
 
-            #footer{
-                font-family: 'Roboto Condensed', sans-serif;
-                font-size: 130%;
-                background-color: #C1C1C7;
-                padding-bottom: 30px;
-                position:fixed;
-                bottom:0;
-                width:100%;
-                padding: 10;
-                vertical-align: middle;
-            }
-            #logoFooter{
-                height: 60px;
-                width: 80px;
-            }
-            #container_contentFooter{
-                padding-right: 48px;
-                padding-left: 0px;
-                color: #59595C;
-            }
+        #footer{
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 130%;
+            background-color: #C1C1C7;
+            padding-bottom: 30px;
+            position:fixed;
+            bottom:0;
+            width:100%;
+            padding: 10;
+            vertical-align: middle;
+        }
+        #container_contentFooter{
+            padding-right: 48px;
+            padding-left: 0px;
+            color: #59595C;
+        }
+
+        /*Botão Logout*/
+            
+        #logoutButton{
+            color:white;
+            border-radius:3px;
+            border: solid white;
+            background-color:#343a40;
+        }
+        #logoutButton:hover{
+            color:#343a40;
+            background-color:white;
+            transition: 0.3s;
+        } 
 
     </style>
 </head>

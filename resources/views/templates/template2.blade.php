@@ -39,7 +39,7 @@
             margin-bottom: 10%;
         }
     
-    /*Footer*/
+        /*Footer*/
 
         #footer{
             font-family: 'Roboto Condensed', sans-serif;
@@ -61,6 +61,19 @@
             padding-left: 0px;
             color: #59595C;
         }
+        /*Botão Logout*/
+            
+        #logoutButton{
+            color:white;
+            border-radius:3px;
+            border: solid white;
+            background-color:#343a40;
+        }
+        #logoutButton:hover{
+            color:#343a40;
+            background-color:white;
+            transition: 0.3s;
+        } 
 
     </style>
 </head>

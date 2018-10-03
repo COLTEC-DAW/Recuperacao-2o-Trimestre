@@ -1,10 +1,10 @@
 
- <nav class="navbar navbar-dark bg-dark">
+ <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="{{URL::to('/Home')}}">MyReads COLTEC</a>
     <button class="navbar-toggler" id="botaomenu" type="button" data-target="#sidebar" >
       <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand" href="{{URL::to('/Home')}}"><h5><b>MyReads COLTEC</b></h5></a>
-
+   
     <div id="custom-search-input">
         <div class="input-group">
             <form action="{{URL::to('/pesquisar')}}" id="formsearch">
