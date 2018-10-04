@@ -10,7 +10,7 @@
         <ul class="navbar-nav mr-auto"> 
         </ul>
         <form class="form-inline my-2 my-lg-0" action="{{URL::to('/pesquisar')}}" id="formsearch">
-            <input class="form-control mr-sm-2" type="busca" placeholder="Nome,autor e editora..." aria-label="Search">
+            <input class="form-control mr-sm-2" name="busca" placeholder="Nome,autor e editora..." aria-label="Search">
         </form>
         <span id="ola" class="navbar-text">
             Olá,usuário!
