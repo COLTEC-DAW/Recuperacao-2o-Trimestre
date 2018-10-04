@@ -39,14 +39,34 @@
         #buttons_box{
             margin-bottom: 10%;
         }
+        /*Botão Logout*/
+            
+        #logoutButton{
+            color:white;
+            border-radius:3px !important;
+            border: solid white;
+            background-color:#343a40;
+        }
+        #logoutButton:hover{
+            color:#343a40;
+            background-color:white;
+            transition: 0.3s;
+        } 
+        
+        /*Texto de Boas-Vindas*/
+        
+        #ola{
+            padding: 0 2%;
+        }
             
     </style>
 
 </head>
 <body>
 
+    @include('includes.menu')
     <div class="container-fluid">
-        @include('includes.menu')
+        
         
         @if (session('wrong'))
         
