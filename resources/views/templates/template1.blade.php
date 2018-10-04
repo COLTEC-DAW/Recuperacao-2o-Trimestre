@@ -15,11 +15,6 @@
         //Estilização da Sidebar
         //*/
          
-        .wrapper {
-        display: flex;
-        align-items: stretch;
-        }
-
         @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 
 
@@ -33,7 +28,7 @@
             font-size: 1.1em;
             font-weight: 300;
             line-height: 1.7em;
-            color: #999;    
+            color: #999;
         }
 
         a, a:hover, a:focus {
@@ -41,24 +36,49 @@
             text-decoration: none;
             transition: all 0.3s;
         }
-
+        .wrapper {
+            display: flex;
+            width: 100%;
+            align-items: stretch;
+        }
+        #sidebar.active {
+            margin-left: -250px;
+        }
+        a[data-toggle="collapse"] {
+            position: relative;
+        }
+        .dropdown-toggle::after {
+            display: block;
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+        }
+        @media (max-width: 768px) {
+            #sidebar {
+                margin-left: -250px;
+            }
+            #sidebar.active {
+                margin-left: 0;
+            }
+        }
         #sidebar {
             min-width: 250px;
             max-width: 250px;
             min-height: 100vh;
-            background: #7386D5;
+            background: #0C4C46;
             color: #fff;
             transition: all 0.3s;
         }
 
         #sidebar .sidebar-header {
             padding: 20px;
-            background: #6d7fcc;
+            background: #234C48;
         }
 
         #sidebar ul.components {
             padding: 20px 0;
-            border-bottom: 1px solid #47748b;
+            border-bottom: 1px solid #234C48;
         }
 
         #sidebar ul p {
@@ -72,44 +92,18 @@
             display: block;
         }
         #sidebar ul li a:hover {
-            color: #7386D5;
+            color: #0C4C46;
             background: #fff;
         }
 
         #sidebar ul li.active > a, a[aria-expanded="true"] {
             color: #fff;
-            background: #6d7fcc;
+            background: #08302C;
         }
-
-        #sidebar.active {
-            margin-left: -250px;
-        }
-
-        a[data-toggle="collapse"] {
-            position: relative;
-        }
-
-        .dropdown-toggle::after {
-            display: block;
-            position: absolute;
-            top: 50%;
-            right: 20px;
-            transform: translateY(-50%);
-        }
-
-        @media (max-width: 768px) {
-            #sidebar {
-                margin-left: -250px;
-            }
-            #sidebar.active {
-                margin-left: 0;
-            }
-        }
-
         ul ul a {
             font-size: 0.9em !important;
             padding-left: 30px !important;
-            background: #6d7fcc;
+            background: #0C4C46;
         }
 
         .container_cadastrar{
@@ -163,6 +157,12 @@
             background-color:white;
             transition: 0.3s;
         } 
+        
+        /*Texto de Boas-Vindas*/
+        
+        #ola{
+            padding: 0 2%;
+        }
 
     </style>
 </head>
