@@ -1,6 +1,13 @@
 @extends('templates.template2')
 
 @section('content')
+    @if( isset($errors) && count($errors) > 0 )
+        <div class=" alert alert-danger">
+            @foreach ( $errors->all() as $error )
+                <p>{{$error}}</p>
+            @endforeach
+        </div>
+    @endif   
     <div id="container_login" class="align-self-center col-xl-4 offset-xl-4 col-lg-4 offset-lg-4 col-md-4 offset-md-4 col-sm-4 offset-sm-4 col-12 ">          
         <div id="box" class="row">
             <div id="bienvenido" class="d-flex justify-content-center col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
@@ -25,14 +32,6 @@
                     </div>    
                 </form>
             </div>          
-        </div>
-
-        @if( isset($errors) && count($errors) > 0 )
-            <div class=" alert alert-danger">
-                @foreach ( $errors->all() as $error )
-                    <p>{{$error}}</p>
-                @endforeach
-            </div>
-        @endif     
+        </div>  
     </div>
 @endsection

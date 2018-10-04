@@ -21,7 +21,8 @@
             align-items: center;
             font-family: 'Roboto Condensed', sans-serif;
             color: whitesmoke;
-            font-size: 400%;   
+            font-size: 400%;
+            padding-left:3% !important;   
         }
 
         #box{
@@ -78,28 +79,28 @@
 </head>
 <body>
     <div id="container_login" class="row">
-        <div id="bienvenido" class="container-fluid col-sm-8 col-md-8 col-lg-8">
-                @if (session('wrong'))
-                    <br/>
-                    <div class="alert alert-danger">
-                            {{ session('wrong') }}
-                    </div>
-                @endif
-            
-                @if (session('success'))
-                    <br/>
-                    <div class="alert alert-success">
-                            {{ session('success') }}
-                    </div>
-                @endif
-                
-                @if( isset($errors) && count($errors) > 0 )
-                    <div class=" alert alert-danger">
-                        @foreach ( $errors->all() as $error )
-                            <p>{{$error}}</p>
-                        @endforeach
-                    </div>
-                @endif  
+        @if (session('wrong'))
+            <br/>
+            <div class="alert alert-danger">
+                    {{ session('wrong') }}
+            </div>
+        @endif
+    
+        @if (session('success'))
+            <br/>
+            <div class="alert alert-success">
+                    {{ session('success') }}
+            </div>
+        @endif
+        
+        @if( isset($errors) && count($errors) > 0 )
+            <div class=" alert alert-danger">
+                @foreach ( $errors->all() as $error )
+                    <p>{{$error}}</p>
+                @endforeach
+            </div>
+        @endif
+        <div id="bienvenido" class="container-fluid col-sm-8 col-md-8 col-lg-8">  
             <p>
                 MyReads, a biblioteca compartilhada perfeita pra você.
             </p>  

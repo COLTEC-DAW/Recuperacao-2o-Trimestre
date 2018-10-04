@@ -150,22 +150,6 @@
             box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
         }
 
-        /*Footer*/
-
-        #footer{
-            font-family: 'Roboto Condensed', sans-serif;
-            font-size: 130%;
-            background-color: #C1C1C7;
-            padding-bottom: 30px;
-            position:fixed;
-            bottom:0;
-            width:100%;
-            padding: 10;
-        }
-        #container_contentFooter{
-            color: #59595C;
-        }
-
         /*Botão Logout*/
             
         #logoutButton{
@@ -196,7 +180,6 @@
         </div>
 
     </div>
-    @include('includes.footer')
     @include('includes.scripts')
 </body>
 </html>
