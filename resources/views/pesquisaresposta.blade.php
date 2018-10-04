@@ -12,7 +12,11 @@
                     <h4 class="mb-1">{{$resposta->nome}}</h4>
                     <small>{{$resposta->created_at}}</small>
                 </div>
-                <p class="mb-1">{{$resposta->resumo}}</p>     
+                <p class="mb-1">{{$resposta->resumo}}</p> 
+                <div class="d-flex w-100 justify-content-between">
+                    <small>Editora: {{$resposta->editora}}</small>
+                    <small>N° Exemplares: {{$resposta->num_exemplares}}</small>
+                </div>    
             </a>
         </div>
         <br/>

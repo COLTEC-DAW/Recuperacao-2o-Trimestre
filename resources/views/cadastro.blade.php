@@ -1,7 +1,5 @@
 @extends('templates.template2')
 
-@include('includes.menu')
-
 @section('content')
     @if( isset($errors) && count($errors) > 0 )
         <div class=" alert alert-danger">
@@ -37,3 +35,5 @@
         </div>  
     </div>
 @endsection
+
+@include('includes.scripts')

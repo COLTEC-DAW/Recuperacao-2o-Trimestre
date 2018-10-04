@@ -46,7 +46,8 @@
 <body>
 
     <div class="container-fluid">
-
+        @include('includes.menu')
+        
         @if (session('wrong'))
         
             <div class="alert alert-danger">
@@ -97,7 +98,7 @@
  
         </div>
     </div>
-
+    @include('includes.scripts')
 
 </body>
 </html>

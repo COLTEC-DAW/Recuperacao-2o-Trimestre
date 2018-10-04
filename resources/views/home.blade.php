@@ -23,7 +23,11 @@
                         <h4 class="mb-1">{{$obra->nome}}</h4>
                         <small>{{$obra->created_at}}</small>
                     </div>
-                    <p class="mb-1">{{$obra->resumo}}</p>
+                    <p class="mb-1">Autor: {{$obra->autor}}</p>
+                    <div class="d-flex w-100 justify-content-between">
+                        <small>Editora: {{$obra->editora}}</small>
+                        <small>N° Exemplares: {{$obra->num_exemplares}}</small>
+                    </div>
                 </a>
             </div>
             <br/>
