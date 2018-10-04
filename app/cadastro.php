@@ -6,13 +6,27 @@ use Illuminate\Database\Eloquent\Model;
 
 class cadastro extends Model
 {
+    /*//
+    // Essa model é responsável pelo cadastro de novos usuários, 
+    // e é também através dela que fazemos a verificação de usuário 
+    // no UsuarioController.
+    // Ela é a representação da migration 2018_09_20_232513_create_cadastros_table
+    // A migration se encontra dentro de database/migrations
+    //*/
+
+    /*Campos que podem ser preenchidos na tabela de cadastro*/
+
     protected $fillable = ['Name','Email','Password'];
+
+    /*Regras que são aplicadas aos campos de formulário do registro*/
 
     public $rulesRegistro = [
         'nome'      => 'required|min:3|max:45',
         'email'     => 'required|min:3|max:45|email|unique:cadastros,Email',
         'senha'     => 'required|min:3|max:8',
     ];
+
+    /*Mensagens definidas conforme cada parâmetro de regra acima */
 
     public $messagesRegistro = [
         'nome.required'     => 'Campo Nome é de preenchimento obrigatório',
@@ -28,10 +42,14 @@ class cadastro extends Model
         'senha.max'         => 'Campo Senha deve ter no máximo 8 caracteres',
     ];
 
+    /*Regras que são aplicadas aos campos de formulário de login*/
+
     public $rulesLogin = [
         'login'     => 'required|min:3|max:45|email',
         'senha'     => 'required|min:3|max:8',
     ];
+
+    /*Mensagens definidas conforme cada parâmetro de regra acima */
 
     public $messagesLogin = [
         

@@ -6,6 +6,9 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateObrasTable extends Migration
 {
+
+    /*Cria a tabela de obras no banco de dados configurado*/
+
     /**
      * Run the migrations.
      *

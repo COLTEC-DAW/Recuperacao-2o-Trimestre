@@ -6,6 +6,8 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateCadastrosTable extends Migration
 {
+    /*Cria a tabela de cadastros no banco de dados configurado*/
+
     /**
      * Run the migrations.
      *

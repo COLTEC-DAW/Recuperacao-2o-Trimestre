@@ -6,7 +6,19 @@ use Illuminate\Database\Eloquent\Model;
 
 class obra extends Model
 {
+
+    /*//
+    // Essa model é responsável pelo cadastro de novas obras,
+    // ela é manipulada no ObrasControllers.
+    //Ela é a representação da migration 2018_09_28_212707_create_obras_table
+    // A migration se encontra dentro de database/migrations
+    //*/
+
+    /*Campos que podem ser preenchidos na tabela de obras*/
+
     protected $fillable = ['nome','autor','resumo','editora', 'num_exemplares'];
+
+    /*Regras que são aplicadas aos campos de formulário do registro de novas obras*/
 
     public $rulesObras = [
         'nome'              =>'required|min:1|max:45|unique:obras,nome',
@@ -15,6 +27,8 @@ class obra extends Model
         'editora'           =>'required|min:1|max:45',
         'num_exemplares'    =>'required|integer',
     ];
+
+    /*Mensagens definidas conforme cada parâmetro de regra acima */
 
     public $messagesObras = [
 
@@ -34,7 +48,5 @@ class obra extends Model
         'editora.max'                => 'O nome da editora pode conter no máximo 45 caracteres',
         'num_exemplares.required'    => 'Número de exemplares requerido',
         'num_exemplares.integer'     => 'O número de exemplares deve ser inteiro',
-        
-
     ];
 }
