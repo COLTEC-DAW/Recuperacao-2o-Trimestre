@@ -17,5 +17,5 @@
 
     });
     
-    $('div.alert').delay(5000).slideUp(300);
+    setTimeout(function() {$('div.alert').fadeOut('fast');}, 9000);
     </script>
