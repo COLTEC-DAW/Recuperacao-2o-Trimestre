@@ -78,28 +78,28 @@
 
 </head>
 <body>
-    <div id="container_login" class="row">
-        @if (session('wrong'))
-            <br/>
-            <div class="alert alert-danger">
-                    {{ session('wrong') }}
-            </div>
-        @endif
+    @if (session('wrong'))
+        <br/>
+        <div class="alert alert-danger">
+                {{ session('wrong') }}
+        </div>
+    @endif
+
+    @if (session('success'))
+        <br/>
+        <div class="alert alert-success">
+                {{ session('success') }}
+        </div>
+    @endif
     
-        @if (session('success'))
-            <br/>
-            <div class="alert alert-success">
-                    {{ session('success') }}
-            </div>
-        @endif
-        
-        @if( isset($errors) && count($errors) > 0 )
-            <div class=" alert alert-danger">
-                @foreach ( $errors->all() as $error )
-                    <p>{{$error}}</p>
-                @endforeach
-            </div>
-        @endif
+    @if( isset($errors) && count($errors) > 0 )
+        <div class=" alert alert-danger">
+            @foreach ( $errors->all() as $error )
+                <p>{{$error}}</p>
+            @endforeach
+        </div>
+    @endif
+    <div id="container_login" class="row">
         <div id="bienvenido" class="container-fluid col-sm-8 col-md-8 col-lg-8">  
             <p>
                 MyReads, a biblioteca compartilhada perfeita pra você.
