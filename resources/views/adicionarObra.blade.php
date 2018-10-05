@@ -111,7 +111,7 @@
 
                     <div id="buttons_box" >
                         <button type="submit" id="botao_confirmarCadastro" class="btn btn-primary btn-lg btn-sm">Pronto!</button>
-                        <button type="reset"  id="botao_cancelarCadastro" class="btn btn-danger btn-lg btn-sm">Cancelar</button>
+                        <a href="/Home" class="btn btn-danger btn-lg btn-sm">Cancelar</a>
                     </div>    
                 </form>
             </div>
