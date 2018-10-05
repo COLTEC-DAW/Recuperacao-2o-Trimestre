@@ -11,18 +11,22 @@
 |
 */
 
+// Rota inicial, direciona pra tela de login
 Route::get('/', function () {
     return view('login');
 });
 
+// Rotas referentes ao controlador de usuários 'UsuarioController', 
+// o primeiro parâmetro recebe a extensão que será
+// digitada na barra e o segundo redireciona pra função
+// dentro do controlador. 
 Route::get('/registrar', 'UsuarioController@registrar');
+Route::get('/sair', 'UsuarioController@LogingOut');
 Route::post('/guardarRegistro', 'UsuarioController@GuardarRegistro');
 Route::post('/confereLogin', 'UsuarioController@ConfereLogin');
 
-Route::get('/sair', 'UsuarioController@LogingOut');
+// Rotas referentes ao controlador de obras
 Route::get('/adicionarObra', 'ObrasController@adicionarObra');
-Route::post('/salvarObra', 'ObrasController@salvarObra');    
-
 Route::get('/Home', 'ObrasController@home');
 Route::get('/pesquisar', 'ObrasController@buscarObras');
-
+Route::post('/salvarObra', 'ObrasController@salvarObra');

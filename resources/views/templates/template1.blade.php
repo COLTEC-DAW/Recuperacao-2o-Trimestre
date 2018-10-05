@@ -161,7 +161,7 @@
         /*Texto de Boas-Vindas*/
         
         #ola{
-            padding: 0 2%;
+            margin: 0 2%;
         }
 
     </style>
