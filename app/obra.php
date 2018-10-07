@@ -23,7 +23,7 @@ class obra extends Model
     public $rulesObras = [
         'nome'              =>'required|min:1|max:45|unique:obras,nome',
         'autor'             =>'required|min:1|max:45',
-        'resumo'            =>'required|min:10|max:30|unique:obras,resumo',
+        'resumo'            =>'required|min:1|max:80|unique:obras,resumo',
         'editora'           =>'required|min:1|max:45',
         'num_exemplares'    =>'required|integer',
     ];
@@ -41,8 +41,8 @@ class obra extends Model
         'autor.max'                  => 'O nome do autor pode conter no máximo 45 caracteres',
         'resumo.required'            => 'O livro deve conter um resumo',
         'resumo.unique'              => 'Esse resumo já existe',
-        'resumo.min'                 => 'O resumo deve conter no mínimo 10 caracteres',
-        'resumo.max'                 => 'O resumo pode conter no máximo 30 caracteres',
+        'resumo.min'                 => 'O resumo deve conter no mínimo 1 caracteres',
+        'resumo.max'                 => 'O resumo pode conter no máximo 80 caracteres',
         'editora.required'           => 'Uma editora deve estar relacionada ao livro',
         'editora.min'                => 'O nome da editora deve conter no mínimo 1 caracteres',
         'editora.max'                => 'O nome da editora pode conter no máximo 45 caracteres',
