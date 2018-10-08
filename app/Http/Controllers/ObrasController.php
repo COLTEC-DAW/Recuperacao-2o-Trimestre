@@ -42,10 +42,8 @@ class ObrasController extends Controller
             //s
     }
 
-    public function ListaLivro(obras $obrasp){
-        $obras = $obrasp->all();
-
-        return view('home', compact('obrasp'));
+    public function ListaLivro(){
+        $obras = $this->obras->all();
+        return view('home')->with('obras', $obras);
     }
-
 }

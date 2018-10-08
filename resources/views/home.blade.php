@@ -26,7 +26,7 @@
                             <td>{{$obras->exemplares}}</td>
                         </tr>
                         @endforeach
-                    <a href="/cadastrar">Adicionar Obras</a>
+                    <a href="/cadastrar"><br>Adicionar Obras</a>
                 </div>
             </div>
         </div>
