@@ -11,7 +11,6 @@
 |
 */
 
-Route::resource('home', 'ObrasController');
 
 Route::get('/', function () {
     return view('welcome');
