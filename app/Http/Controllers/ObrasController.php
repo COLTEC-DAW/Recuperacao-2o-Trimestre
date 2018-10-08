@@ -17,7 +17,7 @@ class ObrasController extends Controller
     }
 
     public function __construct(obras $livros){
-        $this->livros = $obras;
+        $this->obras = $livros;
     }
 
     public function NovoCadastro(request $request){
