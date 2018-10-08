@@ -16,7 +16,7 @@
 
                     You are logged in!
 
-                    <a href="/cadastrarlivro">Adicionar Obras</a>
+                    <a href="/cadastrar">Adicionar Obras</a>
                 </div>
             </div>
         </div>
