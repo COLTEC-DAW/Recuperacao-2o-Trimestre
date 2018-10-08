@@ -22,3 +22,5 @@ Route::get('/', 'HomeController@index')->name('home');
 Route::post('/cadastrarlivro', 'ObrasController@NovoCadastro');
 
 Route::get('/cadastrar', 'ObrasController@cadastrarObra');
+
+Route::post('/', 'ObrasController@ListaLivro');
