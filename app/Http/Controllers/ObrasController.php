@@ -13,7 +13,7 @@ class ObrasController extends Controller
     private $obras;
 
     public function cadastrarObra(){
-        return view(cadastrobras);
+        return view('cadastrobras');
     }
 
     public function __construct(obras $livros){
