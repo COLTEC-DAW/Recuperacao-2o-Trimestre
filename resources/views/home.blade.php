@@ -15,6 +15,8 @@
                     @endif
 
                     You are logged in!
+
+                    <a href="/cadastrarlivro">Adicionar Obras</a>
                 </div>
             </div>
         </div>
