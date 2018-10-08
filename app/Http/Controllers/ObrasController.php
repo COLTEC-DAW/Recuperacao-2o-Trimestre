@@ -41,4 +41,11 @@ class ObrasController extends Controller
             return redirect()->back(); 
             //s
     }
+
+    public function ListaLivro(obras $obrasp){
+        $obras = $obrasp->all();
+
+        return view('home', compact('obrasp'));
+    }
+
 }
