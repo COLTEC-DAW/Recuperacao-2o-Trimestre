@@ -39,11 +39,10 @@ class ObrasController extends Controller
             return redirect('/home');
         else
             return redirect()->back(); 
-            //s
     }
 
     public function ListaLivro(){
         $obras = $this->obras->all();
-        return view('home', compact('obras'));
+        return view('home')->with('obras', $obras);
     }
 }
