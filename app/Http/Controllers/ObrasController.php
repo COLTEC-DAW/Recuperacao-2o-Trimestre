@@ -38,7 +38,7 @@ class ObrasController extends Controller
         if($insert)
             return redirect('/home');
         else
-            return redirect('/cadastrobras')
-            //return redirect()->back();
-    } 
+            return redirect()->back(); 
+            //s
+    }
 }

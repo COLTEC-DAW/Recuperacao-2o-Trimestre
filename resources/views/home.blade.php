@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
+                <div class="panel-heading">Página home</div>
 
                 <div class="panel-body">
                     @if (session('status'))
@@ -14,8 +14,18 @@
                         </div>
                     @endif
 
-                    You are logged in!
-
+                    <table>
+                        <tr>
+                        </tr>
+                        @foreach($obrasp as $obras)
+                        <tr>
+                            <td>{{$obras->nome}}</td>
+                            <td>{{$obras->resumo}}</td>
+                            <td>{{$obras->autor}}</td>
+                            <td>{{$obras->editora}}</td>
+                            <td>{{$obras->exemplares}}</td>
+                        </tr>
+                        @endforeach
                     <a href="/cadastrar">Adicionar Obras</a>
                 </div>
             </div>
