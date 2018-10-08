@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\DB;
 use App\obras;
+use App\Models\obras;
 
 class ObrasController extends Controller
 {
@@ -44,5 +45,10 @@ class ObrasController extends Controller
     public function ListaLivro(){
         $obras = $this->obras->all();
         return view('home')->with('obras', $obras);
+    }
+
+    public function PesquisaLivro(request $request){
+
+    
     }
 }
