@@ -11,12 +11,14 @@
 |
 */
 
-Route::get('/registrar', 'UsuarioController@registrar');
-Route::get('/sair', 'UsuarioController@LogingOut');
-Route::post('/guardarRegistro', 'UsuarioController@GuardarRegistro');
-Route::post('/confereLogin', 'UsuarioController@ConfereLogin');
-// Rotas referentes ao controlador de obras
-Route::get('/adicionarObra', 'ObrasController@adicionarObra');
-Route::get('/Home', 'ObrasController@home');
-Route::get('/pesquisar', 'ObrasController@buscarObras');
-Route::post('/salvarObra', 'ObrasController@salvarObra');
+Route::resource('obras', 'ObrasController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/', 'HomeController@index')->name('home');
+
+Route::post('/cadastrarlivro', 'ObrasController@NovoCadastro');
+
+Route::get('/cadastrar', 'ObrasController@cadastrarObra');
