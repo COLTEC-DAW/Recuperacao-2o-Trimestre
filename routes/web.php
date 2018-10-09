@@ -11,7 +11,7 @@
 |
 */
 
-Route::resource('obras', 'ObrasController@ListaLivro');
+Route::resource('obras', 'ObrasController');
 
 Auth::routes();
 
