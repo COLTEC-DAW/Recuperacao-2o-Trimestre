@@ -17,13 +17,13 @@
                     <table>
                         <tr>
                         </tr>
-                        @foreach($obras as $obrasp)
+                        @foreach($obras as $obrasp => $o)
                         <tr>
-                            <td>{{$obrasp->nome}}</td>
-                            <td>{{$obrasp->resumo}}</td>
-                            <td>{{$obrasp->autor}}</td>
-                            <td>{{$obrasp->editora}}</td>
-                            <td>{{$obrasp->exemplares}}</td>
+                            <td>{{$o->nome}}</td>
+                            <td>{{$o->resumo}}</td>
+                            <td>{{$o->autor}}</td>
+                            <td>{{$o->editora}}</td>
+                            <td>{{$o->exemplares}}</td>
                         </tr>
                         @endforeach
                     <a href="/cadastrar"><br>Adicionar Obras</a>

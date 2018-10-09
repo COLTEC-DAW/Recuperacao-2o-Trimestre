@@ -43,7 +43,7 @@ class ObrasController extends Controller
 
     public function ListaLivro(){
         $obras = $this->obras->all();
-        return view('home')->with('obras', $obras);
+        return view('home')->with(['obras' => $obras]);
     }
 
     public function PesquisaLivro(request $request){
