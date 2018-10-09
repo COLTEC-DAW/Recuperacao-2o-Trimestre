@@ -49,7 +49,7 @@ class ObrasController extends Controller
             'autor'             => $autor,
             'resumo'            => $resumo,
             'editora'           => $editora,
-            'exemplares'        => $exemplares,
+            'num_exemplares'    => $num_exemplares,
         ]);
         
         /*Verifica se a inserção foi feita e redireciona pra home com uma mensagem,
