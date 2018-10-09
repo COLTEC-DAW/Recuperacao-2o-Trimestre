@@ -11,25 +11,25 @@
     <form action="{{URL::to('/cadastrarlivro')}}" method="post">
         <div class="form-group">
             <label for="exampleInputEmail1">Nome da Obra</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="nome" >
+            <input type="text" class="form-control" id="1" value="{{old('nome')}}" name="nome" >
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Resumo</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" name="resumo">
+            <input type="text" class="form-control" id="2" value="{{old('resumo')}}" name="resumo">
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Autor</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" name="autor">
+            <input type="text" class="form-control" id="3" value="{{old('autor')}}" name="autor">
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Editora</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" name="editora">
+            <input type="text" class="form-control" id="4" value="{{old('editora')}}" name="editora">
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">N° Exemplares</label>
-            <input type="integer" class="form-control" id="exampleInputPassword1" name="exemplares">
+            <input type="integer" class="form-control" id="5" value="{{old('exemplares')}}" name="exemplares">
         </div>
-        <button type="submit" class="btn btn-primary">Cadastrar</button>
+        <button type="submit" hrefclass="btn btn-primary">Cadastrar</button>
         <a href="/login" class="btn btn-danger btn-lg btn-sm">Cancelar</a>
     </form>
 
