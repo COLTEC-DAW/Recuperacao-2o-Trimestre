@@ -15,6 +15,7 @@
                       </div>
                   </div>
                 </div>
+                <!-- sim -->
             @endforeach
         </div>
 @endsection
