@@ -11,14 +11,19 @@
 |
 */
 
+
+// Rota que passa a variável 'obras' como um resource, ou seja, um recurso que pode ser utilizado em todo o sistema
 Route::resource('obras', 'ObrasController');
 
+// Rotas definidas pelo laravel após o artisan criar o sistema de autenticação
 Auth::routes();
 
-Route::post('/cadastrarlivro', 'ObrasController@NovoCadastro');
+// Rotas da página inicial
+Route::get('/home', 'ObrasController@ListaLivro')->name('home'); // Home
+Route::get('/', 'ObrasController@ListaLivro')->name('home'); // Home
 
-Route::get('/cadastrar', 'ObrasController@cadastrarObra');
+// Rotas do cadastro de livros
+Route::get('/cadastrar', 'ObrasController@cadastrarObra'); // Formulário
+Route::post('/cadastrarlivro', 'ObrasController@NovoCadastro'); // Função que cadastra no sistema
 
-Route::get('/adicionarObra', 'ObrasController@adicionarObra');
-Route::get('/home', 'ObrasController@ListaLivro')->name('home');
-Route::get('/', 'ObrasController@ListaLivro')->name('home');
+// Rota da função de pesquisa!

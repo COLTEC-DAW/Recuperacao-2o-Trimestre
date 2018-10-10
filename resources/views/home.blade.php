@@ -56,9 +56,8 @@
     <div class="row">
         <div class="col-12 col-sm-5 col-md-4 col-xl-2" id="agr">
             <div id="list" class="list-group">
-                <a class="list-group-item list-group-item-action nav-link list-group-item-primary" href="#list-item-2">Cadastrar Obras</a>
-                <a class="list-group-item list-group-item-action nav-link list-group-item-primary" href="#list-item-3">Informações</a>
-                <a class="list-group-item list-group-item-action nav-link list-group-item-primary" href="#list-item-4">Desconectar</a>
+                <a class="list-group-item list-group-item-action nav-link list-group-item-primary" href="/cadastrar">Cadastrar Obras</a>
+                <a class="list-group-item list-group-item-action nav-link list-group-item-primary" href="/">Informações</a>
              </div>
         </div>
     </div>

@@ -12,12 +12,12 @@ class ObrasController extends Controller
     
     private $obras;
 
-    public function cadastrarObra(){
-        return view('cadastrobras');
-    }
-
     public function __construct(obras $livros){
         $this->obras = $livros;
+    }
+
+    public function cadastrarObra(){
+        return view('cadastrobras');
     }
 
     public function NovoCadastro(request $request){
@@ -27,6 +27,8 @@ class ObrasController extends Controller
         $editora = htmlspecialchars($request->input('editora'));
         $exemplares = htmlspecialchars($request->input('exemplares'));
     
+        $this->validate($request, $this->obras->rulesObras, $this->obras->messagesObras);
+
         $insert = $this->obras->create([
             'nome'          =>$nome,
             'resumo'        =>$resumo,
