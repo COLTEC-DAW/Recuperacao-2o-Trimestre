@@ -16,23 +16,6 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 
-<nav class="navbar navbar-inverse">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="/">Biblioteca da Esquina | Gustavinho e Mari</a>
-                </div>
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="/cadastro">Cadastro de Obras</a></li>
-                    <li><a href="/">Informações</a></li>
-                </ul>
-                <form class="form-inline" action = "{{url('/pesquisa')}}" method = "post">
-                    {{ csrf_field() }}
-                    <input  class="form-control mr-sm-2" name="busca" type="search" placeholder="Digite sua busca" aria-label="Search">
-                    <button class="btn s my-2 my-sm-0 btn-primary" id="botao" type="submit">Pesquisar</button>
-                </form>
-            </div>
-        </nav>
-
 <body>
     <div id="app">
         <nav class="navbar navbar-inverse navbar-static-top">
