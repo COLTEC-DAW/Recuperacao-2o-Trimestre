@@ -16,24 +16,19 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 
-<div class="container">
+<nav class="navbar navbar-inverse navbar-static-top">
+            <div class="container">
                 <div class="navbar-header">
                     <a class="navbar-brand" href="{{ url('/home') }}">
                         {{ config('app.name', 'Biblioteca da Esquina | Gustavinho e Mari') }}
                     </a>
                 </div>
-
-</div>
-
-<body>
-    <div id="app">
-        <nav class="navbar navbar-inverse navbar-static-top">
+            </div>
             
-
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="/cadastro">Cadastro de Obras</a></li>
+                        <li class="active"><a href="/pesquisa">Cadastro de Obras</a></li>
                         <li><a href="/">Informações</a></li>
                     </ul>
                     <form class="form-inline" action = "{{url('/pesquisa')}}" method = "post">
@@ -74,6 +69,8 @@
             </div>
         </nav>
 
+<body>
+    <div id="app">
         @yield('content')
     </div>
 
