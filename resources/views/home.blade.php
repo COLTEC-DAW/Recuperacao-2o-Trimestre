@@ -4,7 +4,7 @@
 
         <div class="row">
             @foreach($obras as $obrasp)
-                <div class="col-12 col-md-6 col-lg-4"></div>
+                <div class="col-12 col-md-6 col-lg-3">
                   <div class="card">
                       <div class="card-body">
                           <h5 class="card-title">{{$obrasp->nome}}</h5>
