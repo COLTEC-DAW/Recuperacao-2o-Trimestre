@@ -13,7 +13,7 @@ class CreateObrasTable extends Migration
      */
     public function up()
     {
-        Schema::create('Livros', function (Blueprint $table) {
+        Schema::create('obras', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nome','45');
             $table->text('resumo');
