@@ -37,11 +37,10 @@ class ObrasController extends Controller
         ]);
     
 
-        return redirect('/home');
-       /* if($insert)
+        if($insert)
             return redirect('/home');
         else
-            return redirect()->back();*/ 
+            return redirect()->back();
     }
 
     public function ListaLivro(){
