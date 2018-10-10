@@ -25,16 +25,23 @@
                         </button>
 
                         <div class="collapse navbar-collapse" id="navbarsExample04">
+                            
+                            <form class="form-inline" action = "{{url('/pesquisa')}}" method = "post">
+                                {{ csrf_field() }}
+                                <input  class="form-control mr-sm-2" name="busca" type="search" placeholder="Digite sua busca" aria-label="Search">
+                                <button class="btn s my-2 my-sm-0 btn-primary" id="botao" type="submit">Pesquisar</button>
+                            </form>
+                            
                             <ul class="nav navbar-nav navbar-right">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="/home">Menu</a>
-                            </li>
-                            <li class="nav-item active">
-                                <a class="nav-link" href="/cadastrar">Cadastro de Livros</a>
-                            </li>
-                            <li class="nav-item active">
-                                <a class="nav-link" href="/home">Informações</a>
-                            </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="/home">Menu</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="/cadastrar">Cadastro de Livros</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="/home">Informações</a>
+                                </li>
                             <!-- Authentication Links -->
                             @guest
                                 <li><a href="{{ route('login') }}">Login</a></li>
