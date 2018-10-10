@@ -16,7 +16,14 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 
-<nav class="navbar navbar-inverse navbar-static-top">
+
+
+<body>
+    <div id="app">
+        @yield('content')
+    </div>
+
+    <nav class="navbar navbar-inverse navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
                     <a class="navbar-brand" href="{{ url('/home') }}">
@@ -68,11 +75,6 @@
                 </div>
             </div>
         </nav>
-
-<body>
-    <div id="app">
-        @yield('content')
-    </div>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
