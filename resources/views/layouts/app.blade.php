@@ -20,18 +20,19 @@
                     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
                         <a class="navbar-brand" href="">Biblioteca do Coltec</a>
                         
+                        <form class="nav navbar-nav form-inline" action = "{{url('/pesquisa')}}" method = "post">
+                            {{ csrf_field() }}
+                            <input  class="form-control" name="busca" type="search" placeholder="Digite sua busca" aria-label="Search">
+                            <button class="btn my-0 btn-primary" id="botao" type="submit">Pesquisar</button>
+                        </form>
+
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
 
+
                         <div class="collapse navbar-collapse" id="navbarsExample04">
-                            
-                            <form class="form-inline" action = "{{url('/pesquisa')}}" method = "post">
-                                {{ csrf_field() }}
-                                <input  class="form-control mr-sm-2" name="busca" type="search" placeholder="Digite sua busca" aria-label="Search">
-                                <button class="btn s my-2 my-sm-0 btn-primary" id="botao" type="submit">Pesquisar</button>
-                            </form>
-                            
+
                             <ul class="nav navbar-nav navbar-right">
                                 <li class="nav-item active">
                                     <a class="nav-link" href="/home">Menu</a>
