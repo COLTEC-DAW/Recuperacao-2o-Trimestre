@@ -50,7 +50,8 @@ class ObrasController extends Controller
     }
 
     public function PesquisaLivro(request $request){
-
-    
+        $obrasx = obras::where('nome', 'LIKE', '%' . $request->busca . '%')->get();
+        
+        return view('home')->with(['obras' => $obrasx, 'busca' => $request->busca]);
     }
 }
