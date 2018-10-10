@@ -1,3 +1,7 @@
+@extends('layouts.app')
+
+@section('content')
+
 
     <form action="{{URL::to('/cadastrarlivro')}}" method="post">
         {{ csrf_field() }}
@@ -24,3 +28,5 @@
         <button type="submit" hrefclass="btn btn-primary">Cadastrar a nova obra!</button>
         <a href="/login" class="btn btn-danger btn-lg btn-sm">Cancelar</a>
     </form>
+
+@endsection
