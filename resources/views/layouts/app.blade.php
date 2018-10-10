@@ -10,23 +10,25 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Biblioteca do Gustavinho e Mari') }}</title>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 
-<body>
-    <div id="app">
-        <nav class="navbar navbar-inverse navbar-static-top">
-            <div class="container">
+<div class="container">
                 <div class="navbar-header">
                     <a class="navbar-brand" href="{{ url('/home') }}">
                         {{ config('app.name', 'Biblioteca da Esquina | Gustavinho e Mari') }}
                     </a>
                 </div>
 
-                </div>
+</div>
+
+<body>
+    <div id="app">
+        <nav class="navbar navbar-inverse navbar-static-top">
+            
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
