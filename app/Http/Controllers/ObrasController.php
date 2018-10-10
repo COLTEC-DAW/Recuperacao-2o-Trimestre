@@ -36,10 +36,12 @@ class ObrasController extends Controller
             'exemplares'    =>$exemplares,
         ]);
     
-        if($insert)
+
+        return redirect('/home');
+       /* if($insert)
             return redirect('/home');
         else
-            return redirect()->back(); 
+            return redirect()->back();*/ 
     }
 
     public function ListaLivro(){
