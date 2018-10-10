@@ -40,7 +40,7 @@ class ObrasController extends Controller
         if($insert)
             return redirect('/home');
         else
-            return redirect()->back(); 
+            return redirect('/cadastrar'); 
     }
 
     public function ListaLivro(){
