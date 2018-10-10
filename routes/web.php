@@ -12,11 +12,11 @@
 */
 
 
-// Rota que passa a variável 'obras' como um resource, ou seja, um recurso que pode ser utilizado em todo o sistema
-Route::resource('obras', 'ObrasController');
-
 // Rotas definidas pelo laravel após o artisan criar o sistema de autenticação
 Auth::routes();
+
+// Rota que passa a variável 'obras' como um resource, ou seja, um recurso que pode ser utilizado em todo o sistema
+Route::resource('obras', 'ObrasController');
 
 // Rotas da página inicial
 Route::get('/home', 'ObrasController@ListaLivro')->name('home'); // Home
