@@ -1,3 +1,5 @@
+
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -31,7 +33,7 @@
             <input type="integer" class="form-control" id="5"  name="exemplares">
         </div>
         <button type="submit" hrefclass="btn btn-primary">Cadastrar a nova obra!</button>
-        <a href="/login" class="btn btn-danger btn-lg btn-sm">Cancelar</a>
+        <a href="/home" class="btn btn-danger btn-lg btn-sm">Cancelar</a>
     </form>
 
 
