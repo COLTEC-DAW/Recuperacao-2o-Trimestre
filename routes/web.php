@@ -27,4 +27,4 @@ Route::get('/cadastrar', 'ObrasController@cadastrarObra'); // Formulário
 Route::post('/cadastrarlivro', 'ObrasController@NovoCadastro'); // Função que cadastra no sistema
 
 // Rota da função de pesquisa!
-Route::get('/pesquisa', 'ObrasController@PesquisaLivro');
+Route::post('/pesquisa', 'ObrasController@PesquisaLivro');
