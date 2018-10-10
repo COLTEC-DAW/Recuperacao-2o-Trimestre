@@ -29,7 +29,7 @@
                     Seja bem vindo ao nosso sistema bibliotecário!
                   </span>
                 <form class="form-inline">
-                    <input action = "{{url = '/pesquisa'}}" method = "post" class="form-control mr-sm-2" name="busca" type="search" placeholder="Digite sua busca" aria-label="Search">
+                    <input method = "post" class="form-control mr-sm-2" name="busca" type="search" placeholder="Digite sua busca" aria-label="Search">
                     <button class="btn s my-2 my-sm-0 btn-primary" id="botao" type="submit">Pesquisar</button>
                   </form>
             </nav>
