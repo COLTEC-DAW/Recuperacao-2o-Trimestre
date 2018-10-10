@@ -4,31 +4,17 @@
 
 
             @foreach($obras as $obrasp)
-                <div class="list-group col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start card">
-                        <div class="d-flex w-100 justify-content-between">
-                            <h4 class="mb-1">{{$obrasp->nome}}</h4>
-                        </div>
-                        <p class="mb-1">{{$obrasp->resumo}}</p> 
-                        <br/>
-                        <small>{{$obrasp->autor}}</small>
-                        <div class="d-flex w-100 justify-content-between">
-                            <small>Editora: {{$obrasp->editora}}</small>
-                            <small>N° Exemplares: {{$obrasp->exemplares}}</small>
-                        </div>
-                    </a>
-                </div>
-                <br/>
-            @endforeach
-
-                <div class="card" style="width: 18rem;">
+                <div class="card" style="width: 30rem;">
                     <div class="card-body">
                         <h5 class="card-title">{{$obrasp->nome}}</h5>
                         <h6 class="card-subtitle mb-2 text-muted">{{$obrasp->autor}}</h6>
                         <p class="card-text">{{$obrasp->resumo}}</p>
-                        <small>>Editora {{$obrasp->editora}}</small>
+                        <small>Editora: {{$obrasp->editora}}</small>
                         <small>N° exemplares: {{$obrasp->exemplares}}</small>
                     </div>
                 </div>
+
+                <br>
+            @endforeach
 
 @endsection
