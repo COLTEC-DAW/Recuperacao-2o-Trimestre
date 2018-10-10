@@ -2,9 +2,8 @@
 
 @section('content')
 
-
+        <div class="row">
             @foreach($obras as $obrasp)
-              <div class="row">
                   <div class="card col-12 col-md-6 col-lg-4" style="width: 100rem;">
                       <div class="card-body">
                           <h5 class="card-title">{{$obrasp->nome}}</h5>
@@ -14,7 +13,6 @@
                           <small>N° exemplares: {{$obrasp->exemplares}}</small>
                       </div>
                   </div>
-              </div>
             @endforeach
-
+        </div>
 @endsection
