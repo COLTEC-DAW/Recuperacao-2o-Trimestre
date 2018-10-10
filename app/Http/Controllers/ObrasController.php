@@ -27,7 +27,6 @@ class ObrasController extends Controller
         $editora = htmlspecialchars($request->input('editora'));
         $exemplares = htmlspecialchars($request->input('exemplares'));
     
-        $this->validate($request, $this->obras->rulesObras, $this->obras->messagesObras);
 
         $insert = $this->obras->create([
             'nome'          =>$nome,
@@ -40,7 +39,7 @@ class ObrasController extends Controller
         if($insert)
             return redirect('/home');
         else
-            return redirect('/cadastrar'); 
+            return redirect()->back(); 
     }
 
     public function ListaLivro(){
