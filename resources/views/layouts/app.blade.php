@@ -37,7 +37,7 @@
         <nav class="navbar navbar-inverse navbar-static-top">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="/">Biblioteca da Esquina | Gustavinho e Mari</a>
+                    <a class="navbar-brand" href="/">Biblioteca da Esquina | Gustavinho</a>
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
