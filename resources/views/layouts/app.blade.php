@@ -16,55 +16,56 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 
-<nav class="navbar navbar-inverse navbar-static-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="{{ url('/home') }}">
-                        {{ config('app.name', 'Biblioteca da Esquina | Gustavinho e Mari') }}
-                    </a>
-                </div>
-            </div>
-            
-                <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="/cadastrar">Cadastro de Obras</a></li>
-                        <li><a href="/">Informações</a></li>
-                    </ul>
-                    <form class="form-inline" action = "{{url('/pesquisa')}}" method = "post">
-                        {{ csrf_field() }}
-                        <input  class="form-control mr-sm-2" name="busca" type="search" placeholder="Digite sua busca" aria-label="Search">
-                        <button class="btn s my-2 my-sm-0 btn-primary" id="botao" type="submit">Pesquisar</button>
-                    </form>
 
-                    <!-- Right Side Of Navbar -->
-                    <ul class="nav navbar-nav navbar-right">
-                        <!-- Authentication Links -->
-                        @guest
-                            <li><a href="{{ route('login') }}">Login</a></li>
-                            <li><a href="{{ route('register') }}">Register</a></li>
-                        @else
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
+                    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+                        <a class="navbar-brand" href="">Biblioteca do Coltec</a>
+                        
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
 
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <a href="{{ route('logout') }}"
-                                            onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                            Logout
-                                        </a>
-
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                            {{ csrf_field() }}
-                                        </form>
-                                    </li>
-                                </ul>
+                        <div class="collapse navbar-collapse" id="navbarsExample04">
+                            <ul class="nav navbar-nav navbar-right">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="/home">Menu</a>
                             </li>
-                        @endguest
-                    </ul>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="/cadastrar">Cadastro de Livros</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="/home">Informações</a>
+                            </li>
+                            <!-- Authentication Links -->
+                            @guest
+                                <li><a href="{{ route('login') }}">Login</a></li>
+                                <li><a href="{{ route('register') }}">Register</a></li>
+                            @else
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" v-pre>
+                                        {{ Auth::user()->name }} <span class="caret"></span>
+                                    </a>
+
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a href="{{ route('logout') }}"
+                                                onclick="event.preventDefault();
+                                                        document.getElementById('logout-form').submit();">
+                                                Logout
+                                            </a>
+
+                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                                {{ csrf_field() }}
+                                            </form>
+                                        </li>
+                                    </ul>
+                                </li>
+                            @endguest
+
+                            </ul>
+                        </div>
+                    </nav>
+
+
                 </div>
             </div>
         </nav>
