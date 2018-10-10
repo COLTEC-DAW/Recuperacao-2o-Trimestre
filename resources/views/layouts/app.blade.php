@@ -17,7 +17,7 @@
 </head>
 
 
-                    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
                         <a class="navbar-brand" href="">Biblioteca do Coltec</a>
 
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,13 +35,13 @@
 
                             <ul class="nav navbar-nav navbar-right">
                                 <li class="nav-item active">
-                                    <a class="nav-link" href="/home">Menu</a>
+                                    <a href="/home">Menu</a>
                                 </li>
                                 <li class="nav-item active">
-                                    <a class="nav-link" href="/cadastrar">Cadastro de Livros</a>
+                                    <a href="/cadastrar">Cadastro de Livros</a>
                                 </li>
                                 <li class="nav-item active">
-                                    <a class="nav-link" href="/home">Informações</a>
+                                    <a href="/home">Informações</a>
                                 </li>
                             <!-- Authentication Links -->
                             @guest
