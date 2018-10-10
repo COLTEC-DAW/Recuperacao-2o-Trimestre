@@ -36,9 +36,6 @@
     <div id="app">
         <nav class="navbar navbar-inverse navbar-static-top">
             <div class="container-fluid">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="/">Biblioteca da Esquina | Gustavinho</a>
-                </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
@@ -46,17 +43,7 @@
                         &nbsp;
                     </ul>
 
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="/cadastro">Cadastro de Obras</a></li>
-                        <li><a href="/">Informações</a></li>
-                    </ul>
-                    
-                    <form class="form-inline" action = "{{url('/pesquisa')}}" method = "post">
-                        {{ csrf_field() }}
-                        <input  class="form-control mr-sm-2" name="busca" type="search" placeholder="Digite sua busca" aria-label="Search">
-                        <button class="btn s my-2 my-sm-0 btn-primary" id="botao" type="submit">Pesquisar</button>
-                    </form>
-
+            
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
