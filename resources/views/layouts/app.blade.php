@@ -29,23 +29,7 @@
                     <input  class="form-control mr-sm-2" name="busca" type="search" placeholder="Digite sua busca" aria-label="Search">
                     <button class="btn s my-2 my-sm-0 btn-primary" id="botao" type="submit">Pesquisar</button>
                 </form>
-            </div>
-        </nav>
-
-<body>
-    <div id="app">
-        <nav class="navbar navbar-inverse navbar-static-top">
-            <div class="container-fluid">
-
-                <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="nav navbar-nav">
-                        &nbsp;
-                    </ul>
-
-            
-                    <!-- Right Side Of Navbar -->
-                    <ul class="nav navbar-nav navbar-right">
+                <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @guest
                             <li><a href="{{ route('login') }}">Login</a></li>
@@ -72,13 +56,11 @@
                             </li>
                         @endguest
                     </ul>
-                </div>
             </div>
         </nav>
 
-        @yield('content')
-    </div>
-
+<body>
+    
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
