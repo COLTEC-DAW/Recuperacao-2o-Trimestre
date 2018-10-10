@@ -19,16 +19,6 @@
                     <li><a href="/">Informações</a></li>
                 </ul>
 
-                <form class="form-inline" action = "{{url('/pesquisa')}}" method = "post">
-                {{ csrf_field() }}
-                    <input  class="form-control mr-sm-2" id="botao" name="busca" type="search" placeholder="Digite sua busca" aria-label="Search">
-                    <div class="input-group-btn">
-                        <button class="btn btn-default" type="submit">
-                            <i class="glyphicon glyphicon-search"></i>
-                        </button>
-                    </div>
-                </form>
-
             </div>
         </nav>
 
