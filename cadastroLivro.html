@@ -14,48 +14,47 @@
         <div class="d-flex justify-content-center pb-2">
             <h1 class="text-center">Cadastro de Livros</h1>
         </div>
-        <form class="row g-3">
-            <div class="col-md-6">
-              <label for="inputEmail4" class="form-label">Email</label>
-              <input type="email" class="form-control" id="inputEmail4">
-            </div>
-            <div class="col-md-6">
-              <label for="inputPassword4" class="form-label">Password</label>
-              <input type="password" class="form-control" id="inputPassword4">
-            </div>
-            <div class="col-12">
-              <label for="inputAddress" class="form-label">Address</label>
-              <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-            </div>
-            <div class="col-12">
-              <label for="inputAddress2" class="form-label">Address 2</label>
-              <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-            </div>
-            <div class="col-md-6">
-              <label for="inputCity" class="form-label">City</label>
-              <input type="text" class="form-control" id="inputCity">
+        <form class="row g-3" action="" method="post">
+            <div class="col-md-4">
+              <label for="nomeObra" class="form-label">Título</label>
+              <input type="text" class="form-control" id="nomeObra" name="nomeObra" required>
             </div>
             <div class="col-md-4">
-              <label for="inputState" class="form-label">State</label>
-              <select id="inputState" class="form-select">
-                <option selected>Choose...</option>
-                <option>...</option>
+              <label for="nomeAutor" class="form-label">Autor</label>
+              <input type="text" class="form-control" id="nomeAutor" name="nomeAutor" required>
+            </div>
+            <div class="col-md-4">
+                <label for="nomeEditora" class="form-label">Editora</label>
+                <input type="text" class="form-control" id="nomeEditora" name="nomeEditora" required>
+              </div>
+            <div class="col-12">
+                <label for="sinopseLivro" class="form-label">Sipnose</label>
+                <textarea class="form-control" id="sinopseLivro" rows="3" name="sinopseLivro" placeholder="Escreva uma descrição sucinta sobre a obra" required></textarea>
+            </div>
+            <div class="col-md-4">
+              <label for="numeroExemplares" class="form-label">Numero de Exemplares</label>
+              <input type="number" class="form-control text-center" id="numeroExemplares" name="numeroExemplares" placeholder="Ex: 100" required>
+            </div>
+            <div class="col-md-4">
+              <label for="dataLancamento" class="form-label">Data de Lançamento</label>
+              <input type="date" class="form-control text-center" id="dataLancamento" name="dataLancamento" required>
+            </div>
+            <div class="col-md-4">
+              <label for="generoObra" class="form-label">Gênero</label>
+              <select id="generoObra" name="generoObra" class="form-select" required>
+                <option value="" hidden selected>Escolha...</option>
+                <option>Ação e Aventura </option>
+                <option>Conto</option>
+                <option>Ficção</option>
+                <option>Infantis</option>
+                <option>Mangá</option>
+                <option>Romance</option>
+                <option>Suspense</option>
+                <option>Terror/Horror </option>
               </select>
             </div>
-            <div class="col-md-2">
-              <label for="inputZip" class="form-label">Zip</label>
-              <input type="text" class="form-control" id="inputZip">
-            </div>
             <div class="col-12">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="gridCheck">
-                <label class="form-check-label" for="gridCheck">
-                  Check me out
-                </label>
-              </div>
-            </div>
-            <div class="col-12">
-              <button type="submit" class="btn btn-primary">Sign in</button>
+              <button type="submit" class="btn btn-primary">Cadastrar</button>
             </div>
         </form>
         </div>
