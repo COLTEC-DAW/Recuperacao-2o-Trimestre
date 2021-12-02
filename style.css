@@ -1,0 +1,11 @@
+input,label,textarea{
+    display: block;
+    color: black;
+}
+
+.cadastroDeObra{
+    border: 2px solid;
+    border-radius: 0.25em;
+    padding: 1em;
+}
+
