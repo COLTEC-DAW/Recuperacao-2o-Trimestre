@@ -18,14 +18,6 @@
             $this->DataCadastro = date('d/m/Y H:i');
         }
 
-        function GetLivros(){
-        
-            $FileJson = file_get_contents('./src/repository/Livros.json', true);
-            $decode = json_decode($FileJson, true);
-    
-            return $decode;
-        }
-
         function PostLivro(){
             $FileJson = file_get_contents('./src/repository/Livros.json', true);
             $decode = json_decode($FileJson, true);
