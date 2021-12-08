@@ -1,7 +1,5 @@
 <?php
 
-    include './src/model/book.php';
-
     function SearchBooks(){
 
         if(isset($_GET["procurado"])){
