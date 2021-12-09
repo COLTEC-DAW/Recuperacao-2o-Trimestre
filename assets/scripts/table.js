@@ -1,4 +1,4 @@
-const getLocalStorageBooks = () => JSON.parse(localStorage.getItem('books')) ?? [];
+const getLocalStorageBooks = () => JSON.parse(sessionStorage.getItem('books')) ?? [];
 const getLocalStorageSearch = () => JSON.parse(localStorage.getItem('booksResult')) ?? [];
 
 const createRow = (book, place) => {
@@ -16,9 +16,7 @@ const createRow = (book, place) => {
 }
 
 
-function BuildTable(){
-
-    const books = getLocalStorageBooks();
+function BuildTable(books){
 
     if(document.querySelector('#LivrosContainerHome').hasChildNodes){
         $('#TableHome').DataTable().destroy();
@@ -33,11 +31,16 @@ function BuildTable(){
 }
 
 
-function BuildTableSearch(){
+function BuildTableSearch(books){
     
-    const books = getLocalStorageSearch();
+    if(document.querySelector('#LivrosContainerSearch').hasChildNodes){
+        $('#TableSearch').DataTable().destroy();
+        $('#LivrosContainerSearch').innerHTML = '';
+    }
 
     books.forEach(book => {
-        createRow(book, 'LivrosContainerHome')
+        createRow(book, 'LivrosContainerSearch')
     });
+
+    $('#TableSearch').DataTable();
 }

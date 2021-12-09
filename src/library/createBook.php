@@ -1,6 +1,45 @@
 <?php
     
-    include '../model/book.php';
+    class book{
+
+        public $NomeObra;
+        public $ResumoObra;
+        public $NomeAutor;
+        public $NomeEditora;
+        public $NumExemplares;
+        public $DataCadastro;
+
+        public function __construct($nomeObra, $nomeAutor, $nomeEditora, $resumoObra, $numExemplares){
+
+            date_default_timezone_set('America/Sao_Paulo');
+
+            $this->NomeObra = $nomeObra;
+            $this->NomeAutor = $nomeAutor;
+            $this->NomeEditora = $nomeEditora;
+            $this->ResumoObra = $resumoObra;
+            $this->NumExemplares = $numExemplares;
+            $this->DataCadastro = date('d/m/Y H:i');
+        }
+
+        function PostLivro(){
+            $FileJson = file_get_contents('../repository/Livros.json', true);
+            $decode = json_decode($FileJson, true);
+
+            $newLivro = array(
+                "NomeObra" => $this->NomeObra,
+                "NomeAutor" => $this->NomeAutor,
+                "NomeEditora" => $this->NomeEditora,
+                "ResumoObra" => $this->ResumoObra,
+                "NumExemplares" => $this->NumExemplares,
+                "DataCadastro" => $this->DataCadastro,
+            );
+
+            $decode[] = $newLivro;
+            
+            $FileJson = json_encode($decode, JSON_PRETTY_PRINT);
+            file_put_contents("../repository/Livros.json", $FileJson);
+        }
+    }
 
     if(isset($_POST["NomeObra"]) && isset($_POST["NomeAutor"]) && isset($_POST["NomeEditora"])
         && isset($_POST["ResumoObra"]) && isset($_POST["NumExemplares"]))
@@ -10,5 +49,6 @@
         $novoLivro->PostLivro();
     }
 
-    
+    echo "<a href='/index.php'>voltar</a>";
 ?>
+

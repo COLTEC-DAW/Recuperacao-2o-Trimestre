@@ -1,5 +1,7 @@
 <?php
-    include './src/library/createBook.php'
+    session_start();
+    
+    include './src/library/readBook.php';
 ?>
 
 <!DOCTYPE html>
@@ -34,8 +36,8 @@
                         </svg>
                     </a>
                     <div class="text-end">
-                        <form action="" method="GET" class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-                            <input type="search" class="form-control-dark" placeholder="Search..." aria-label="Search">
+                        <form action="./src/library/searchBooks.php" method="GET" class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+                            <input type="search" class="form-control-dark" placeholder="Search..." name="procurado">
                             <input type="submit" class="btn btn-outline-light me-2" value="Search">
                         </form>
                     </div>
@@ -53,7 +55,7 @@
                 </button>
             </h2>
             
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
+            <div class="row row-cols-12 row-cols-sm-12 row-cols-md-12 row-cols-lg-12 g-4 py-5">
                 <table id="TableHome">
                     <thead>
                         <tr>
@@ -73,7 +75,7 @@
         </div>
 
 
-        <footer class="py-3 my-4 bg-dark text-white">
+        <footer class="py-3 my-4 bg-dark text-white" style="margin-bottom: 0!important;">
             <ul class="nav justify-content-center border-bottom pb-3 mb-3">
                 <li class="nav-item">
                     <a href="https://github.com/PedroHenAssuncao" class="nav-link px-2 text-muted">GitHub Pedro</a>
@@ -139,8 +141,12 @@
 
     <script>
 
+        const UpdateTable = () => {
+            
+            BuildTable(JSON.parse(<?php echo ReadAllBooks();?>));
+        }
 
-
+        UpdateTable();
     </script>
 </body>
 </html>
