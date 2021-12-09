@@ -13,11 +13,13 @@
     <!-- Material Icons -->
     <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
     
+    <!-- Data Table -->
+    <link rel="stylesheet" href="//cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
     <title>Book Box</title>
 </head>
-<body class="container">
+<body>
     
-    <div id="container" class="col-12">
+    <div>
 
         <header class="p-3 bg-dark text-white">
             <div class="container">
@@ -40,7 +42,7 @@
         <div class="container px-4 py-5">
             
             <h2 class="pb-2 border-bottom">Livros
-                <button class="btn btn-outline-dark me-2" style="margin-left: 940px;">
+                <button class="btn btn-outline-dark me-2" style="margin-left: 940px;" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     <span class="material-icons-outlined">
                         add
                     </span>
@@ -48,13 +50,20 @@
             </h2>
             
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
-                <table>
-                    <head>
-
-                    </head>
-                    <body>
+                <table id="TableHome">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Resumo</th>
+                            <th>Autor</th>
+                            <th>Editora</th>
+                            <th>Numero exemplares</th>
+                            <th>Data cadastro</th>
+                        </tr>
+                    </thead>
+                    <tbody id="LivrosContainerHome">
                         
-                    </body>
+                    </tbody>
                 </table>
             </div>
         </div>
@@ -73,10 +82,31 @@
         </footer>
     </div>
 
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Adicionar novo livro</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Jquery -->
     <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
 
     <!-- Script Bootstrap 5 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- Data Tables  -->
+    <script src="//cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
 </body>
 </html>
