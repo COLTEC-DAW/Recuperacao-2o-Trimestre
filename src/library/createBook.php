@@ -1,5 +1,4 @@
 <?php
-    
     class book{
 
         public $NomeObra;
@@ -8,6 +7,7 @@
         public $NomeEditora;
         public $NumExemplares;
         public $DataCadastro;
+        public $AdicionadoPor;
 
         public function __construct($nomeObra, $nomeAutor, $nomeEditora, $resumoObra, $numExemplares){
 
@@ -19,6 +19,7 @@
             $this->ResumoObra = $resumoObra;
             $this->NumExemplares = $numExemplares;
             $this->DataCadastro = date('d/m/Y H:i');
+            $this->AdicionadoPor = $_SESSION["username"];
         }
 
         function PostLivro(){
@@ -32,6 +33,7 @@
                 "ResumoObra" => $this->ResumoObra,
                 "NumExemplares" => $this->NumExemplares,
                 "DataCadastro" => $this->DataCadastro,
+                "AdicionadoPor" => $this->AdicionadoPor,
             );
 
             $decode[] = $newLivro;
@@ -42,12 +44,15 @@
     }
 
     if(isset($_POST["NomeObra"]) && isset($_POST["NomeAutor"]) && isset($_POST["NomeEditora"])
-        && isset($_POST["ResumoObra"]) && isset($_POST["NumExemplares"]))
+        && isset($_POST["ResumoObra"]) && isset($_POST["NumExemplares"])  && isset($_SESSION["username"]))
     {
-        $novoLivro = new book($_POST["NomeObra"], $_POST["NomeAutor"], $_POST["NomeEditora"], $_POST["ResumoObra"], $_POST["NumExemplares"]);
+        $novoLivro = new book($_POST["NomeObra"], $_POST["NomeAutor"], $_POST["NomeEditora"], $_POST["ResumoObra"], $_POST["NumExemplares"], $_SESSION["username"]);
 
         $novoLivro->PostLivro();
     }
-
+    else {
+        echo 'ERRO! Favor tentar novamente!';
+        echo '<br>';
+    }
     echo "<a href='/index.php'>voltar</a>";
 ?>

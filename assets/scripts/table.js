@@ -10,6 +10,7 @@ const createRow = (book, place) => {
         <td>${book.NomeEditora}</td>
         <td>${book.NumExemplares}</td>
         <td>${book.DataCadastro}</td>
+        <td>${book.AdicionadoPor}</td>
     `;
 
     document.querySelector(`#${place}`).appendChild(newRow);

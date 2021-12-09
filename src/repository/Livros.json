@@ -5,7 +5,8 @@
         "NomeEditora": "Leitura",
         "ResumoObra": "Harry Potter",
         "NumExemplares": "1",
-        "DataCadastro": "09\/12\/2021 01:57"
+        "DataCadastro": "09\/12\/2021 01:57",
+        "AdicionadoPor": "Mole"
     },
     {
         "NomeObra": "Coquinho",
@@ -13,14 +14,25 @@
         "NomeEditora": "Coquinho",
         "ResumoObra": "Coquinho",
         "NumExemplares": "1",
-        "DataCadastro": "09\/12\/2021 11:05"
+        "DataCadastro": "09\/12\/2021 11:05",
+        "AdicionadoPor": "Mole"
     },
     {
-        "NomeObra": "a",
-        "NomeAutor": "b",
-        "NomeEditora": "a",
-        "ResumoObra": "a",
+        "NomeObra": "HQ Miranha",
+        "NomeAutor": "Marvel",
+        "NomeEditora": "Panini",
+        "ResumoObra": "HQ do cabe\u00e7a de teia",
         "NumExemplares": "2",
-        "DataCadastro": "09\/12\/2021 11:25"
+        "DataCadastro": "09\/12\/2021 12:31",
+        "AdicionadoPor": "Ivo"
+    },
+    {
+        "NomeObra": "O Velho e o Mar",
+        "NomeAutor": "Ernest Hemingway",
+        "NomeEditora": "N\u00e3o sei",
+        "ResumoObra": "Velhinho pescador",
+        "NumExemplares": "1",
+        "DataCadastro": "09\/12\/2021 16:56",
+        "AdicionadoPor": "Ivin"
     }
 ]
