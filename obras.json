@@ -1,0 +1,34 @@
+[
+    {
+        "nome": "Aventuras de joao",
+        "resumo": "Livro de aventura",
+        "nome_autor": "Matheus Doug",
+        "nome_editora": "Douglanches",
+        "num_exemplares": "2",
+        "data": "2021-12-01"
+    },
+    {
+        "nome": "Aventuras de Doug",
+        "resumo": "Livro de aventura",
+        "nome_autor": "Joao Escritor",
+        "nome_editora": "Douglanches",
+        "num_exemplares": "42",
+        "data": "2021-12-31"
+    },
+    {
+        "nome": "Jonas Brothers",
+        "resumo": "Livro legal e bonito",
+        "nome_autor": "Jonas Brothers",
+        "nome_editora": "Jonas Brothers",
+        "num_exemplares": "10",
+        "data": "2021-12-02"
+    },
+    {
+        "nome": "Php 2",
+        "resumo": "Livro de php",
+        "nome_autor": "Joao Escritor",
+        "nome_editora": "Joao Livros 2021",
+        "num_exemplares": "4",
+        "data": "2021-12-16"
+    }
+]
