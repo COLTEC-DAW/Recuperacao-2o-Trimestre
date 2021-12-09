@@ -2,6 +2,7 @@
     session_start();
 
     include './src/library/readBook.php';
+    include './src/session.php';
 ?>
 
 <!DOCTYPE html>
@@ -43,6 +44,7 @@
                         </form>
                     </div>
                 </div>
+                <?php showSessionState();?>
             </div>
         </header>
 
