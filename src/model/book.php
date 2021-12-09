@@ -19,7 +19,7 @@
         }
 
         function PostLivro(){
-            $FileJson = file_get_contents('./src/repository/Livros.json', true);
+            $FileJson = file_get_contents('../repository/Livros.json', true);
             $decode = json_decode($FileJson, true);
 
             $newLivro = array(
@@ -34,7 +34,7 @@
             $decode[] = $newLivro;
             
             $FileJson = json_encode($decode, JSON_PRETTY_PRINT);
-            file_put_contents("./src/repository/Livros.json", $FileJson);
+            file_put_contents("../repository/Livros.json", $FileJson);
         }
     }
     

@@ -1,3 +1,7 @@
+<?php
+    include './src/library/createBook.php'
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -30,7 +34,7 @@
                         </svg>
                     </a>
                     <div class="text-end">
-                        <form action="" method="get" class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+                        <form action="" method="GET" class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
                             <input type="search" class="form-control-dark" placeholder="Search..." aria-label="Search">
                             <input type="submit" class="btn btn-outline-light me-2" value="Search">
                         </form>
@@ -87,14 +91,35 @@
             <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">Adicionar novo livro</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close btn-outline-danger" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                ...
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <form action="./src/library/createBook.php" method="POST">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="NomeObra" name="NomeObra" placeholder="terra dos coquinhos">
+                        <label for="NomeObra">Nome da Obra</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="ResumoObra" name="ResumoObra" placeholder="muitos coquinhos">
+                        <label for="ResumoObra">Resumo da Obra</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="NomeAutor" name="NomeAutor" placeholder="coquinho">
+                        <label for="NomeAutor">Autor</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="NomeEditora" name="NomeEditora" placeholder="coquinhosGrandes">
+                        <label for="NomeEditora">Editora</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="number" class="form-control" id="NumExemplares" name="NumExemplares" placeholder="coquinhosGrandes">
+                        <label for="NumExemplares">Numero de exemplares</label>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <input type="submit" class="btn btn-outline-success" value="Salvar"></input>
+                    </div>
+                </form>
             </div>
             </div>
         </div>
@@ -108,5 +133,14 @@
 
     <!-- Data Tables  -->
     <script src="//cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+
+    <!-- Funções para gerar tabelas -->
+    <script src="./assets/scripts/table.js"></script>
+
+    <script>
+
+
+
+    </script>
 </body>
 </html>
