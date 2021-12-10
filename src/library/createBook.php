@@ -1,5 +1,10 @@
 <?php
+    include '../pages/rodape.inc';
+    include '../pages/cabecalho.inc';
     session_start(); 
+?>    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <?php 
     class book{
 
         public $NomeObra;
@@ -51,9 +56,14 @@
 
         $novoLivro->PostLivro();
     }
-    else {
-        echo 'ERRO! Favor tentar novamente!';
-        echo '<br>';
-    }
-    echo "<a href='/index.php'>voltar</a>";
+  
+    
+    echo exibeCabecalho();
+    echo '
+    <div style="margin-bottom: 427px!important">
+    <a href="/index.php">voltar</a>
+    </div>
+    ';
+    echo exibeRodape();
 ?>
+
