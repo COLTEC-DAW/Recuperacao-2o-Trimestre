@@ -3,8 +3,8 @@
         "titulo": "Percy Jackson",
         "autor": "Rick Riordan",
         "editora": "Intr\u00ednseca",
-        "sinopse": "A vida do adolescente Percy Jackson, que est\u00e1 sempre pronto para entrar em uma confus\u00e3o, torna-se bem mais complicada quando ele descobre que \u00e9 filho do deus grego Poseidon. Em um campo de treinamento para filhos das divindades, Percy aprende a tirar proveito de seus poderes divinos e se preparea para a maior aventura de sua vida",
-        "numExemplares": "20",
+        "sinopse": "A vida do adolescente Percy Jackson, que est\u00e1 sempre pronto para entrar em uma confus\u00e3o, torna-se bem mais complicadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "numExemplares": "10",
         "dataLancamento": "0060-06-06",
         "genero": "Fic\u00e7\u00e3o"
     },
@@ -13,8 +13,44 @@
         "autor": "J.K Roling",
         "editora": "Alguma",
         "sinopse": "Bruxos.",
-        "numExemplares": "20",
+        "numExemplares": "15",
         "dataLancamento": "0060-06-06",
         "genero": "A\u00e7\u00e3o e Aventura"
+    },
+    {
+        "titulo": "50 tons de cinza",
+        "autor": "E.L. James",
+        "editora": "Alguma",
+        "sinopse": "Muito Sexo",
+        "numExemplares": "35",
+        "dataLancamento": "0600-06-06",
+        "genero": "Conto"
+    },
+    {
+        "titulo": "Como Treinar seu Dragao",
+        "autor": "Cressida Cowell",
+        "editora": "Alguma",
+        "sinopse": "Dragao",
+        "numExemplares": "27",
+        "dataLancamento": "0600-06-06",
+        "genero": "Conto"
+    },
+    {
+        "titulo": "1984",
+        "autor": "George Orwell",
+        "editora": "Schwarcz S.A",
+        "sinopse": "Uma distopia futurista onde os passos das pessoas s\u00e3o controlados pelo governo",
+        "numExemplares": "200",
+        "dataLancamento": "60000-06-06",
+        "genero": "A\u00e7\u00e3o e Aventura"
+    },
+    {
+        "titulo": "Death Note",
+        "autor": "Tsugumi Ohba",
+        "editora": "Panini",
+        "sinopse": "Um estudante de repente encontra um caderno que caiu do c\u00e9u. Trata-se do Death Note, que permite ao seu portador matar qualquer pessoa a partir da mera anota\u00e7\u00e3o.",
+        "numExemplares": "200",
+        "dataLancamento": "0600-06-06",
+        "genero": "Conto"
     }
 ]

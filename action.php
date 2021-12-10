@@ -19,6 +19,7 @@
             $error = "Errro ao Cadastrar Livro, por favor tente novamente!";
         } else{
             $sucess = "Livro Cadastrado com Sucesso!";
+            header ("location: http://localhost/SistemaBibliotecário/index.php"); 
         }
     }
 ?>
