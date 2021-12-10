@@ -1,0 +1,117 @@
+.page{
+    /* display: flex;
+    flex-wrap: wrap; */
+    align-items: center;    
+    text-align: center;
+}
+.livros{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2vh;
+    margin-top: 4vh;
+    align-self: center;
+    margin-top: 50px;
+    position: relative;
+    transform: translateX(10%);
+    justify-content: center;
+}
+
+.livro{
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: black;
+    background-color: cornflowerblue;
+    margin: 10px;
+    text-align: center;
+}
+
+.button{
+    margin: 5px;
+    color: #2c363f;
+}
+.destaque{
+    text-align: center;
+}
+#divBusca{
+    background-color:whitesmoke;
+    border:solid 3px #ffc107;
+    border-radius:10px;
+    width:300px;
+    height:43px;
+    float: right;
+    margin-left: auto;
+    margin-right: 0;
+  }
+  
+  #txtBusca{
+    float:left;
+    background-color:transparent;
+    color: 2c363f;
+    padding-left:5px;
+    font-size:18px;
+    border:none;
+    height:32px;
+    width:191px;
+  }
+  
+  #btnBusca{
+    border:none;
+    font-size: large;
+    float:right;
+    height:37px;
+    border-radius:0 7px 7px 0;
+    width:90px;
+    font-weight:bold;
+    background:#ffc107;
+  }
+.search{
+    font-size: x-large;
+}
+.headerOp{
+    display: flex;
+    align-items:flex-end;
+    width: inherit;
+    margin-bottom: 10px;
+}
+.header{
+    overflow: hidden;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.menu{
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #895b1e;
+}
+.title{
+    color: #fbfef9;
+    text-align: center;
+    margin: 3vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.title {
+    color: #fbfef9;
+    text-decoration: none; /* no underline */
+  }
+  .title:hover{
+    color: #fbfef9;
+    text-decoration: none; /* no underline */
+  }
+
+.inputCreate{
+    width: inherit;
+    margin-top: 2vh;
+    border-radius: 5px;
+}
+#label{
+    width: inherit;
+}
+.field{
+    flex-wrap: wrap;
+    margin: 1vh;
+}

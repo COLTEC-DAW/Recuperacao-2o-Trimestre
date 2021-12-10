@@ -1,0 +1,82 @@
+[
+    {
+        "nome": "Ladrão de Raios",
+        "resumo": "Um menino de doze anos é acusado de roubar o raio de zeus",
+        "autor": "Rick Riordan",
+        "editora": "Instrisica",
+        "numExemplares": "23",
+        "data": "29/09/80"
+    },
+    {
+        "nome": "Mar de Monstros",
+        "resumo": "Um menino de doze anos é acusado de roubar o raio de zeus",
+        "autor": "Rick Riordan",
+        "editora": "Instrisica",
+        "numExemplares": "23",
+        "data": "29/09/80"
+    },
+    {
+        "nome": "Maldição do titã",
+        "resumo": "Um menino de doze anos é acusado de roubar o raio de zeus",
+        "autor": "Rick Riordan",
+        "editora": "Instrisica",
+        "numExemplares": "23",
+        "data": "29/09/80"
+    },
+    {
+        "nome": "Jogos Vorazes",
+        "resumo": "Bla BLa",
+        "autor": "Eliane",
+        "editora": "Rocco",
+        "numExemplares": "45",
+        "data": "08/12/2021"
+    },
+    {
+        "nome": "Em Chamas",
+        "resumo": "Bla BLa",
+        "autor": "Eliane",
+        "editora": "Rocco",
+        "numExemplares": "45",
+        "data": "08/12/2021"
+    },
+    {
+        "nome": "Em Chamas",
+        "resumo": "Em Chamas é o segundo volume da trilogia Jogos Vorazes, baseada nos romances de Suzanne Collins.",
+        "autor": "Eliane",
+        "editora": "Rocco",
+        "numExemplares": "45",
+        "data": "08/12/2021"
+    },
+    {
+        "nome": "A parte que falta",
+        "resumo": "Outra vez, as coisas ficam fora do lugar Quando então, começo a me sentir em casa",
+        "autor": "Shel Silverstein",
+        "editora": "Companhia das Letras",
+        "numExemplares": "3",
+        "data": "2021-12-07"
+    },
+    {
+        "nome": "c# o manual",
+        "resumo": "Uma obra pra você aprender tudo sobre a linguagem da vez",
+        "autor": "Humberto Honda",
+        "editora": "Coltec Edições",
+        "numExemplares": "6",
+        "data": "09/12/2021"
+    }
+,{ 
+"nome":"Harry Potter", 
+"resumo":"JK rowling ataca novamente com seu novo livro do bruxo mais querido do brasil.", 
+"autor":"JK ROWLING", 
+"editora":"Rocco", 
+"numExemplares":"9", 
+"data":"09/12/2021" 
+ } 
+,{ 
+"nome":"Coração de Aço", 
+"resumo":"David, um garoto de 18 anos, quando era criança, viu seu pai ser assassinado pelo Épico mais poderoso de todos, Coração de Aço e ele quer vingança", 
+"autor":"Brendon Sander", 
+"editora":"Intrísinca", 
+"numExemplares":"34", 
+"data":"09/12/2021" 
+ } 
+]
