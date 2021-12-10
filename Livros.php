@@ -11,10 +11,11 @@
         var $genero;
     
         
-        function __construct($titulo, $autor, $editora, $sinope, $numExemplares, $dataLancamento, $genero){
+        function __construct($titulo, $autor, $editora, $sinopse, $numExemplares, $dataLancamento, $genero){
             $this->titulo = $titulo;
             $this->autor = $autor;
             $this->editora = $editora;
+            $this->sinopse = $sinopse;
             $this->numExemplares = $numExemplares;
             $this->dataLancamento = $dataLancamento;
             $this->genero = $genero;

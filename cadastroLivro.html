@@ -14,7 +14,7 @@
         <div class="d-flex justify-content-center pb-2">
             <h1 class="text-center">Cadastro de Livros</h1>
         </div>
-        <form class="row g-3" action="" method="post">
+        <form class="row g-3" action="action.php" method="post">
             <div class="col-md-4">
               <label for="nomeObra" class="form-label">Título</label>
               <input type="text" class="form-control" id="nomeObra" name="nomeObra" required>
@@ -54,7 +54,7 @@
               </select>
             </div>
             <div class="col-12">
-              <button type="submit" class="btn btn-primary">Cadastrar</button>
+              <button type="submit" name="submit" class="btn btn-primary" value="Cadastrar">Cadastrar</button>
             </div>
         </form>
         </div>

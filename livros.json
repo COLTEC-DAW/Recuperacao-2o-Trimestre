@@ -1,0 +1,20 @@
+[
+    {
+        "titulo": "Percy Jackson",
+        "autor": "Rick Riordan",
+        "editora": "Intr\u00ednseca",
+        "sinopse": "A vida do adolescente Percy Jackson, que est\u00e1 sempre pronto para entrar em uma confus\u00e3o, torna-se bem mais complicada quando ele descobre que \u00e9 filho do deus grego Poseidon. Em um campo de treinamento para filhos das divindades, Percy aprende a tirar proveito de seus poderes divinos e se preparea para a maior aventura de sua vida",
+        "numExemplares": "20",
+        "dataLancamento": "0060-06-06",
+        "genero": "Fic\u00e7\u00e3o"
+    },
+    {
+        "titulo": "Hary Potter",
+        "autor": "J.K Roling",
+        "editora": "Alguma",
+        "sinopse": "Bruxos.",
+        "numExemplares": "20",
+        "dataLancamento": "0060-06-06",
+        "genero": "A\u00e7\u00e3o e Aventura"
+    }
+]
