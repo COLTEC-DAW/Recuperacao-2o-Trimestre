@@ -77,6 +77,7 @@
                             <th>Editora</th>
                             <th>Numero exemplares</th>
                             <th>Data cadastro</th>
+                            <th>Adicionado Por:</th>
                         </tr>
                     </thead>
                     <tbody id="LivrosContainerSearch">
