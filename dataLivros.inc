@@ -1,3 +1,0 @@
-<?php 
-    $livros = array("oi");
-?>
