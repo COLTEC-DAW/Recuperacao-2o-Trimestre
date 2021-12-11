@@ -33,9 +33,10 @@
             }
     
             if(!file_put_contents("livros.json", json_encode($saveData,JSON_PRETTY_PRINT), LOCK_EX)){
-                $error = "Errro ao Cadastrar Livro, por favor tente novamente!";
+                setcookie("message","Errro ao Cadastrar Livro, por favor tente novamente!");
+                header ("location: http://localhost/SistemaBibliotecário/index.php"); 
             } else{
-                $sucess = "Livro Cadastrado com Sucesso!";
+                setcookie("message","Livro Cadastrado com Sucesso!");
                 header ("location: http://localhost/SistemaBibliotecário/index.php"); 
             }
         }

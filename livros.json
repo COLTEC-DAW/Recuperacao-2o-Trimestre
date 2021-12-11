@@ -79,5 +79,50 @@
         "numExemplares": "2",
         "dataLancamento": "0060-06-06",
         "genero": "A\u00e7\u00e3o e Aventura"
+    },
+    {
+        "titulo": "a",
+        "autor": "a",
+        "editora": "a",
+        "sinopse": "a",
+        "numExemplares": "1",
+        "dataLancamento": "0001-01-01",
+        "genero": "A\u00e7\u00e3o e Aventura"
+    },
+    {
+        "titulo": "a",
+        "autor": "a",
+        "editora": "a",
+        "sinopse": "a",
+        "numExemplares": "1",
+        "dataLancamento": "0001-01-01",
+        "genero": "Conto"
+    },
+    {
+        "titulo": "a",
+        "autor": "a",
+        "editora": "a",
+        "sinopse": "a",
+        "numExemplares": "1",
+        "dataLancamento": "0001-01-01",
+        "genero": "A\u00e7\u00e3o e Aventura"
+    },
+    {
+        "titulo": "1",
+        "autor": "1",
+        "editora": "1",
+        "sinopse": "1",
+        "numExemplares": "1",
+        "dataLancamento": "0001-01-01",
+        "genero": "A\u00e7\u00e3o e Aventura"
+    },
+    {
+        "titulo": "1",
+        "autor": "1",
+        "editora": "1",
+        "sinopse": "1",
+        "numExemplares": "1",
+        "dataLancamento": "0001-01-01",
+        "genero": "A\u00e7\u00e3o e Aventura"
     }
 ]

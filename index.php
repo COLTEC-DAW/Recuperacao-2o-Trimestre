@@ -21,6 +21,13 @@
         </nav>
     </div>
     <div class="container mb-3">
+        <?php 
+            if(!empty($_COOKIE["message"])){
+                $alerta = $_COOKIE["message"];
+                echo "<div class='alert alert-success' role='alert'>$alerta</div>";
+                setcookie("message", "", time()-3600);
+            }
+        ?>
         <p class="d-none" id="divResultado">Resultados Encontrados: <span id="resultado"></span></p>
         <div class="row row-cols-1 row-cols-md-4 g-4">
             <?php 
@@ -33,7 +40,7 @@
                         <div class="col card-box">
                             <div class="card h-100">
                             <div class="card-header"><?php echo $livro['autor'] ?> - <?php echo $livro['editora'] ?></div>
-                                <img src="./images/screen-7.jpg" class="card-img-top" alt="...">  
+                                <img src="./images/saber.jpg" class="card-img-top" alt="...">  
                                 <div class="card-body">
                                     <h5 class="card-title"><?php echo $livro['titulo'] ?></h5>
                                     <p class="card-text"><?php echo $livro['sinopse'] ?></p>
