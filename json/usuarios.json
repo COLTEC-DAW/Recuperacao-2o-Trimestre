@@ -1,0 +1,68 @@
+[
+    {
+        "nome": "gabriel",
+        "email": "g@g",
+        "nome_usuario": "gabrielR",
+        "senha": "123",
+        "listaExercicios": [
+            {
+                "nome": "programar",
+                "repeticoes": 99999999999999999,
+                "tipo": "Ambos",
+                "equipamento": "Bicicleta",
+                "parte_afetada": "Ambas"
+            },
+            {
+                "nome": "sdhtryjs",
+                "repeticoes": 5,
+                "tipo": "Ambos",
+                "equipamento": "Nenhum",
+                "parte_afetada": "Ambas"
+            },
+            {
+                "nome": "sexo",
+                "repeticoes": 42342352,
+                "tipo": "Ambos",
+                "equipamento": "Nenhum",
+                "parte_afetada": "Ambas"
+            }
+        ]
+    },
+    {
+        "nome": "asfd",
+        "email": "sexo@hotsexo.com",
+        "nome_usuario": "te",
+        "senha": "123",
+        "listaExercicios": [
+            {
+                "nome": "sim",
+                "repeticoes": 25,
+                "tipo": "Anaer\u00f3bico",
+                "equipamento": "Bicicleta",
+                "parte_afetada": "Tronco"
+            }
+        ]
+    },
+    {
+        "nome": "lulu",
+        "email": "lulu@outlook.com",
+        "nome_usuario": "lulu",
+        "senha": "lulu",
+        "listaExercicios": [
+            {
+                "nome": "qwerty",
+                "repeticoes": 3,
+                "tipo": "Ambos",
+                "equipamento": "Bicicleta",
+                "parte_afetada": "Tronco"
+            },
+            {
+                "nome": "erty",
+                "repeticoes": 3,
+                "tipo": "Aer\u00f3bico",
+                "equipamento": "Esteira",
+                "parte_afetada": "Pernas"
+            }
+        ]
+    }
+]

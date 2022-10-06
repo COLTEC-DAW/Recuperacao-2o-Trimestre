@@ -1,80 +1,134 @@
-# Desenvolvimento de Aplicações Web
+# PHP: O Show do Bilhão
 
-**Data de Apresentação: 07/10/2022**
+Nesta série de exercícios iremos praticar o uso da linguagem PHP desenvolvendo uma aplicação web de perguntas e respostas denominado *Show do Bilhão*.
 
-**Valor: 35 pontos**
+O Show do Bilhão é um programa idealizado pela emissora SBT (Sistema Belo-Horizontino de Televisão). Neste programa, um candidato escolhido da audiência é submetido a uma sequência de 5 perguntas de conhecimento geral. A medida em que o candidato responde cada pergunta ele avança no jogo. 
 
-**Trabalho a ser desenvolvido em dupla**
+O jogo termina quando o candidato responde uma pergunta incorretamente. Após o término do jogo o sistema calcula a pontuação final do candidato. Sua pontuação é dada pela quantidade de perguntas respondidas corretamente pelo candidato.
 
-## Recuperação 2o Trimestre
+O proprietário da emissora requisitou que você desenvolvesse uma aplicação web que gerencie as perguntas do jogo. Mais especificamente, esse sistema irá fazer o controle das respostas do jogo
 
-Neste trabalho de recuperação, você deverá utilizar os conhecimentos adquiridos no tópico de PHP para desenvolver um protótipo de um sistema de informação.
-A equipe poderá escolher um dos seguintes tópicos como tema de implementação do sistema:
 
-- Lista de desejos, onde o usuário cadastraria e visualizaria uma lista de itens que ele deseja ganhar/comprar
-- Sistema Acadêmico, onde o aluno cadastraria as disciplinas junto das notas que ele obteve
-- Histórico de viagens, onde o usuário armazenaria uma lista de locais para onde ele viajou
-- Divisor de contas de restaurantes, o sistema calcula---com base no valor e número de pessoas---o valor de uma conta cadastrada no sistema, por pessoa
-- Diário, onde o usuário registra seus pensamentos e reflexões ao longo do dia
-- Livros e filmes favoritos, onde o usuário armazena uma lista de filmes e livros dos quais ele mais gostou de ler/assistir
-- Ficha de academia, onde o usuário cadastra uma lista com os exercícios a serem realizados em uma academia
-- Aplicativo de receitas, onde são armazenados as receitas culináreas do usuário
-- Rastreador de investimentos, onde o usuário cadastraria a lista de ativos que ele tem comprado/investido no momento
-- Histórico de vacinação, onde se cadastraria para um determinado usuário as vacinas que ele já tomou
-- colinha da eleição, onde o usuário cadastra para uma determinada eleição os números de seus candidatos
-- Greengo dictionary, um dicionário com gírias em outras línguas e seu significado em português
-- Palpites da Mega, um sistema que armazenaria os palpites que um usuário fez para seus jogos da mega sena
+## Introdução: Prova de Conceito
 
-Independente do tema, a equipe deverá implementar as seguintes funcionalidades:
+O primeiro passo é elaborar uma prova de conceito para mostrar ao conselho diretor. Implemente uma página em PHP que carregue e exiba as perguntas (Todas na mesma página).
 
-1. Cadastro e login de usuários no sistema
-1. Cadastro de novos itens do sistema
-1. Exibição dos itens do sistema
+Segue alguns requisitos:
+* Você deverá utilizar arrays para armazenar os dados das perguntas:
+    * um vetor para enunciados
+    * uma matriz (vetor de vetores) com as alternativas
+    * um vetor com o índice para a alternativa certa
+* Deverá haver um loop que irá iteragir com cada pergunta para carregá-la e exibi-la na página
 
-Você pode verificar em mais detalhes cada uma das funcionalidades abaixo.
+## Separando uma pergunta por página
 
-### Cadastro e login de usuários
+Agora que a prova de conceito foi implementada, você deverá separar as perguntas de forma a exibir uma por página. Para poder definir qual pergunta será exibida, a página receberá como parâmetro de uma requisição do tipo `GET` o índice de acesso da pergunta que será exibida. Por exemplo, uma requisição para `http://localhost:8080/perguntas.php?id=3` irá carregar na página `perguntas.php` a pergunta armazenada na posição 3 do vetor.
 
-Para o cadastro de usuário, deverão ser fornecidos pelos menos os seguintes atributos:
+Segue alguns requisitos:
+* A pergunta deverá ser recuperada através de uma função chamada `carregaPergunta($id)` que irá acessar o vetor de perguntas, alternativas e respostas, e retornar os dados referentes a pergunta selecionada.
+* A função implementada anteriormente deverá ser armazenada em um partial chamado `perguntas.inc`. Esse partial conterá funções auxiliares que irão manipular as perguntas da página. É importante ressaltar que esse conjunto de funções é fundamental para o funcionamento do sistema.
+* A sua página conterá alguns trechos em HTML que poderão ser reaproveitados em outros momentos, como menu, rodapé, etc. Crie dois arquivos, chamados `menu.inc` e `rodape.inc` que irão armazenar o código HTML do menu e rodapé, e importe-os na página de perguntas. Diferentemente do arquivo `perguntas.inc`, o sistema pode tolerar eventuais problemas de carregamento do menu e rodapé.
 
-- Nome
-- Login
-- Senha
-- Email
+## Checando respostas
 
-O armazenamento do cadastro deverá ser feito em arquivo.
+Agora que as perguntas foram separadas por página. Você deverá implementar a lógica de evolução do jogo. Ao entrar na página inicial do jogo, a primeira pergunta deverá ser carregada. O usuário então seleciona a alternativa que ele julgar correta e submete a resposta. O sistema deverá verificar a resposta do usuário. Caso a resposta esteja correta, o usuário avança para a próxima pergunta. Caso contrário ele deverá ser redirecionado para uma página de game over.
 
-Já para o login, ele deverá ser feito através dos campos `login` e `senha` cadastrados anteriormente.
-A manutenção do login deverá ser feito por meio de sessão, sendo destruída toda vez que o usuário realizar um logout do sistema.
+Segue alguns requisitos:
+* As alternativas para as perguntas deverão ser fornecidas por meio de um formulário, para possibilitar o envio da resposta ao servidor
+* Seu sistema deverá exibir um progresso do jogo (Quantas perguntas ele acertou, por exemplo).
+* Os dados deverão ser enviados através de requisições do tipo `POST`.
 
-### Cadastro de novos itens
+*dica: você precisará enviar entre as requisições um identificador de qual pergunta será mostrada ao usuário. Pesquise sobre __hidden input fields__.*
 
-O usuário---uma vez logado---poderá realizar o cadastro de novos itens por meio de um formulário.
-Esse formulário deverá implementar mecanismos básicos de validação (tipo dos campos, formatação, etc.).
+## Identificando o jogador
 
-Em relação ao item a ser cadastrado, ele deverá ter pelo menos cinco atributos a serem definidos pela equipe de desenvolvimento, e deverão estar necessariamente atrelados ao usuário que os cadastrou.
-Os itens também deverão ser cadastrados em arquivo para posterior exibição.
+Chegou a hora de seu programa identificar o jogador que está participando do jogo. Utilize os conceitos de sessões e cookies para identificar quem está jogando. O jogador que está jogando no momento deverá ser identificado por meio de sessão. Utilize cookies para mostrar ao usuário quando foi a última vez que ele jogou e qual foi sua última pontuação.
 
-### Exibição dos itens do sistema
+Segue alguns requisitos:
+* O jogador não poderá acessar as perguntas se ele não tiver sido identificado antes. Ou seja, você precisará implementar um simples método de autenticação.
+* Deverá haver uma opção para que o jogador se desidentifique do jogo para que outro possa jogar. Ou seja, você precisará implementar uma rotina de logout.
 
-Assim que fizer o login, o usuário ser redirecionado a tela de exibição.
-Esta tela deverá exibir todos os itens cadastrados pelo usuário em formato tabular, onde cada linha apresentará todos os atributos do item cadastrado.
-Por fim, deverá ser implementado uma barra de pesquisa no topo desta página.
-Essa barra deverá realizar a pesquisa com base em um dos atributos do item do sistema.
+## Arquivos
 
-## Entrega
+Agora que a mecânica principal do sistema está funcionando, podemos estender o sistema implementando rotinas para persistência de dados. 
 
-A apresentação do trabalho ocorrerá no dia **07/10/2022**, por meio de uma apresentação no laboratório amarelo.
-**OBS: O código quanto e apresentação serão levados em consideração no momento da avaliação!**
+A persistência pode se dar basicamente por meio de **arquivos** e **banco de dados**. Nesse etapa nós iremos implementar nossa persistência no formato de **arquivos**.  
 
-## Pilha de Tecnologias
+### Parte 01: Usuários
 
-Você estará livre para utilizar as bibliotecas e frameworks que considerar necessários. 
-O uso de tais recursos inclusive é incentivado!!
-**Porém, é fundamental que a equipe saiba explicar o que essa ferramenta faz no sistema, pra que ela serve, e como ela funciona!!**
-Além disso, desenvolvimento do trabalho **deve** englobar os seguintes conceitos:
+Você deverá implementar um módulo de cadastro e autenticação que irá gerenciar os usuários do sistema. Os dados dos usuários deverão ficar armazenados em um único arquivo, chamado `users.txt`.
 
-* HTML
-* PHP: Classes, funções, etc.
-* PHP: Sessões/Cookies
-* PHP: Arquivos
+Os usuários deverão fornecer os seguintes dados para realizar o cadastro (que deverão ser armazenados no arquivo, obviamente):
+
+* Nome
+* E-mail
+* Login
+* Senha
+
+O login deverá ser feito através do login e senha do usuário. Durante o processo de login, o sistema deverá verificar se existe um usuário com este login e, caso exista, verificar se a senha é correta. Caso a autenticação falhe, uma mensagem de erro deverá ser retornada para o usuário.
+
+### Parte 02: Perguntas
+
+As perguntas também deverão ser manipuladas através de um arquivo texto. Você deverá implementar um módulo que irá fazer a leitura das perguntas de um arquivo chamado `perguntas.txt`.
+
+Cada pergunta armazenada no arquivo deverá conter:
+
+* Enunciado
+* Alternativas disponíveis
+* Alternativa correta
+
+### Dicas Gerais
+
+Manipular dados diretamente por meio de arquivos pode dar muito trabalho. Porém, você pode economizar muito trabalho se utilizar uma forma **estrutural** de armazenamento. Entre as formas estruturais disponíveis, o PHP fornece suporte nativo para [`JSON`](https://secure.php.net/manual/pt_BR/book.json.php) e [`XML`](https://www.w3schools.com/php/php_xml_simplexml_read.asp).
+
+Caso você opte pelo formato `JSON`, sugiro a seguinte estruturação para usuários e perguntas:
+
+`usuários.json`
+
+    [   
+        ...
+        {
+            "login": "valor",
+            "senha": "valor",
+            "email": "valor@v.com",
+            "nome": "valor"
+        },
+        {
+            "login": "valor",
+            "senha": "valor",
+            "email": "valor@v.com",
+            "nome": "valor"
+        }, 
+        ...
+    ]
+
+`perguntas.json`
+
+    [
+        ...
+        {
+            "enunciado": "bla bla bla",
+            "alternativas": ["alt1", "alt2", "alt3", ...],
+            "resposta": 1
+        },
+        {
+            "enunciado": "bla bla bla",
+            "alternativas": ["alt1", "alt2", "alt3", ...],
+            "resposta": 1
+        },
+        ...
+    ]
+
+## Modelando os dados no sistema
+
+Agora que os dados do nosso sistema foram modelados estruturalmente dentro dos arquivos, podemos replicar essa estrutura dentro do código do próprio sistema aplicando conceitos de POO.
+
+### Entidades Básicas
+
+Você deverá implementar as classes `User` e `Question` que deverão manipular os usuários e perguntas do sistema. Essas classes deverão possuir atributos para armazenar as informações contidas no arquivo de cada usuário.
+
+### Trafegando objetos no sistema
+
+Agora que os dados do nosso sistema estão encapsulados no formato de objetos, fica muito mais fácil trafegar essas informações entre as páginas e requisições.
+
+Você deverá encontrar os pontos do sistema onde os dados são manipulados separadamente e alterar de forma que esses dados estejam encapsulados em seus respectivos objetos e que a manipulação se dê por meio dos objetos criados.

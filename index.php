@@ -1,67 +1,28 @@
-<!-- forms de registro -->
-
-
-<!-- codigo em php pra manipular o data do form -->
-<!-- acessa a classe registerUser para escrever nela -->
-<?php require("registro.class.php") ?>
-
-<!-- checa se o butao de submit foi clicado -->
-<?php 
-    // se o botao foi clicado passa pelo construtor a senha e o nome
-    // isset: checa se a variavel esta definida
-    // $_POST: acessa dados da pag/coleta os dados enviados
-    /* o $_POST tb age como array - em php um array em vez de ser definido por numero (0, 1, 2, 3) pode ser difinido por strings
-    [
-        'submit' => true,
-        'username' => luiza,
-        'password' => '123'
-    ]
-    */
-    if(isset($_POST['submit'])){
-        $user = new RegistrarUsuario($_POST['username'], $_POST['password']);
-    }
-    if(isset($_POST['lo'])){
-        header("location: login.php");
-    }
-?>
-
-
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro</title>
+    <link href="style.css" rel="stylesheet" media="screen">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+    <title>Gerencie seus exercicios</title>
 </head>
-<body>
-    
-    <!-- 
-        action: para onde os dados do form serao enviados. como n tem nada fica na mesma pagina
-        method: metodo http usado. post significa enviar dados
-        enctype: formato que junta os dados 
-        autocomplete: 
-     -->
-    <form action="" method="post" enctype="multipart/form-data" autocomplete="off">
-        <label> Nome: </label>
-        <input type="text" name="username">
+<body class="container">
+    <h1>Gerenciador de Lista de Exercicios</h1>
 
-        <label> Senha: </label>
-        <input type="password" name="password">
+    <h3>Entre ou cadastre-se para gerenciar seus exercícios de academia</h3>
+    <form action="verifica_login.php" method="post">
+            <label class= "dados" for="user">Usuário:</label>
+            <input type="text" name="user" required><br/><br/>
 
-        <!-- cria um botao do tipo submit, ou seja, que submits form-data -->
-        <button type="submit" name="submit"> Registrar usuário </button>
-        <button type="submit" name="lo"> login </button>
-        <!-- mostra erros de validaçao-->
-        <p class="error">
-            <?php echo @$user->error ?> <!-- @: acessar a variavel -->
-        </p>
-        <!-- mostra que deu certo -->
-        <p class="success">
-            <?php echo @$user->success ?>
-        </p>
+            <label class= "dados" for="password">Senha:</label>
+            <input type="password" name="password" required><br/><br/>
 
+            <button class="btn" type="submit">Entrar</button>
+            <a href="cadastro_usuario.php">Cadastrar</a>
     </form>
-
 </body>
 </html>

@@ -1,0 +1,158 @@
+html {
+    height: 100%;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+td{
+    color: black;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+tr:nth-child(odd){background-color: rgb(184, 181, 181);}
+
+th {
+  background-color: #417e67;
+  color: white;
+}
+.container{
+    width: 50%;
+    height: 100%;
+    margin: auto;
+    background: rgb(5,5,66);
+    background: linear-gradient(0deg, rgba(5,5,66,1) 20%, rgba(80,0,0,1) 80%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-align: center;
+    font-family: 'Secular One', sans-serif;
+}
+
+h1{
+    color: rgb(227, 212, 0);
+    text-align: center;
+    font-size: 70px;
+    text-shadow: 5px 2px rgb(0, 0, 0);
+
+}
+h2{
+    color: rgb(227, 212, 0);
+    text-align: justify;
+    font-size: 22px;
+}
+
+h3{
+    color: rgb(227, 212, 0);
+    text-align: center;
+    font-size: 23px;
+    text-shadow: 5px 2px rgb(0, 0, 0);
+}
+
+h4{
+    color: rgb(227, 212, 0);
+    text-align: center;
+    font-size: 50px;
+    text-shadow: 5px 2px rgb(0, 0, 0);
+    margin-top: 10px;
+}
+
+#ola, #opcoes, p, .dados{
+    color: rgb(227, 212, 0);
+}
+
+#voltar, #maiorPont{
+    text-align: justify;
+    font-weight: bold;
+}
+
+#maiorPont{
+    color: rgb(227, 212, 0);
+}
+
+#ola{
+    font-size: 22px;
+    font-weight: bold;
+    text-shadow: 3.5px 2px rgb(0, 0, 0);
+}
+
+input[type=text], input[type=password], input[type=email]{
+    margin: 8px 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Secular One', sans-serif;
+}
+
+input[type=text], input[type=password], input[type=email]{
+    background-color: black;
+    color: white;
+    padding: 10px 15px;
+    width: 50%;
+    border-radius: 10px;
+    border: 3px solid rgb(227, 212, 0);
+}
+
+button, a{
+    padding: 5px 10px;
+    font-size: 20px;
+    background-color:rgb(227, 212, 0);
+    border-radius: 5px;
+    border: 3px solid rgb(0, 0, 0);
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    margin: 8px 0;
+    box-sizing: border-box;
+    font-family: 'Secular One', sans-serif;
+}
+
+
+input[type=radio]{
+    width: 1.15em;
+    height: 1.15em;
+    margin: 0;
+}
+
+
+footer{
+    font-style: italic;
+    font-size: 13px;
+    color: rgb(173, 161, 1);
+    margin-top: 40px;
+}
+
+form{
+    text-align: center;
+    margin: auto;
+}
+
+#opcoes{
+    text-align: justify;
+    padding: 20px 15px;
+    font-size: 20px;
+}
+
+.dados{
+    font-size: 23px;
+}
+
+#faustao{
+    margin: auto;
+    margin-bottom: 40px;
+    margin-top: 60px;
+}
+
+#rick{
+    margin: auto;
+    margin-top: 60px;
+}
+
+#dolla{
+    margin: auto;
+    margin-top: 30px;
+}
