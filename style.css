@@ -27,7 +27,7 @@ th {
     height: 100%;
     margin: auto;
     background: rgb(5,5,66);
-    background: linear-gradient(0deg, rgba(5,5,66,1) 20%, rgba(80,0,0,1) 80%);
+    background: linear-gradient(0deg, rgb(135, 155, 25) 20%, rgb(45, 143, 58) 80%);
     background-repeat: no-repeat;
     background-attachment: fixed;
     text-align: center;

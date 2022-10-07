@@ -24,6 +24,7 @@
     
 
     $teste = new Exercicio($exercicio, $repeticoes, $tipo, $equipamento, $parte_afetada);
+    
     function guardaExercicio($nome_arquivo, Exercicio $exercicio)
     {
         $lista_usuarios = json_decode(file_get_contents($nome_arquivo));

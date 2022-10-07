@@ -1,66 +1,66 @@
 [
     {
-        "nome": "gabriel",
-        "email": "g@g",
-        "nome_usuario": "gabrielR",
+        "nome": "enzo",
+        "email": "a@a",
+        "nome_usuario": "enzo",
         "senha": "123",
         "listaExercicios": [
             {
-                "nome": "programar",
-                "repeticoes": 99999999999999999,
-                "tipo": "Ambos",
-                "equipamento": "Bicicleta",
-                "parte_afetada": "Ambas"
-            },
-            {
-                "nome": "sdhtryjs",
+                "nome": "flex\u00e3o",
                 "repeticoes": 5,
                 "tipo": "Ambos",
-                "equipamento": "Nenhum",
-                "parte_afetada": "Ambas"
+                "equipamento": "Bicicleta",
+                "parte_afetada": "Tronco"
             },
             {
-                "nome": "sexo",
-                "repeticoes": 42342352,
+                "nome": "Barra",
+                "repeticoes": 8,
                 "tipo": "Ambos",
-                "equipamento": "Nenhum",
+                "equipamento": "Esteira",
+                "parte_afetada": "Tronco"
+            },
+            {
+                "nome": "correr",
+                "repeticoes": 7858,
+                "tipo": "Aer\u00f3bico",
+                "equipamento": "El\u00edptico",
                 "parte_afetada": "Ambas"
             }
         ]
     },
     {
-        "nome": "asfd",
-        "email": "sexo@hotsexo.com",
-        "nome_usuario": "te",
+        "nome": "enzo2",
+        "email": "b@b",
+        "nome_usuario": "enzo2",
         "senha": "123",
         "listaExercicios": [
             {
-                "nome": "sim",
-                "repeticoes": 25,
-                "tipo": "Anaer\u00f3bico",
-                "equipamento": "Bicicleta",
+                "nome": "caminhar",
+                "repeticoes": 4,
+                "tipo": "Ambos",
+                "equipamento": "Esteira",
                 "parte_afetada": "Tronco"
             }
         ]
     },
     {
-        "nome": "lulu",
-        "email": "lulu@outlook.com",
-        "nome_usuario": "lulu",
-        "senha": "lulu",
+        "nome": "joao",
+        "email": "joao@email",
+        "nome_usuario": "joaologin",
+        "senha": "123",
         "listaExercicios": [
             {
-                "nome": "qwerty",
-                "repeticoes": 3,
-                "tipo": "Ambos",
-                "equipamento": "Bicicleta",
+                "nome": "flex\u00e3o",
+                "repeticoes": 4,
+                "tipo": "Aer\u00f3bico",
+                "equipamento": "Nenhum",
                 "parte_afetada": "Tronco"
             },
             {
-                "nome": "erty",
-                "repeticoes": 3,
+                "nome": "correr",
+                "repeticoes": 5,
                 "tipo": "Aer\u00f3bico",
-                "equipamento": "Esteira",
+                "equipamento": "Nenhum",
                 "parte_afetada": "Pernas"
             }
         ]

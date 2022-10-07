@@ -52,7 +52,6 @@ if($ERRO)
     <body class="container">
         <h1>Usuário ou E-mail já utilizados</h1>
         <h2>Tente se cadastrar novamente</h2>
-        <img id="faustao" src="https://c.tenor.com/csb2e86unZcAAAAM/ardcollegeno000%21-god%21-no-god.gif" alt="this slowpoke moves"  width="400" /><br>
         <a href="cadastro_usuario.php">Voltar</a>
     </body>
     </html>

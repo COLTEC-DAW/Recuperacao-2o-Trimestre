@@ -11,7 +11,7 @@
         <title>Cadastro</title>
     </head>
     <body class="container"> 
-        <h1>Show do Bilhão!</h1>
+        <h1>Cadastre-se</h1>
         <h2>Efetue o cadastro:</h2>
         <form action="verifica_cadastro.php" method='post'>
 

@@ -37,7 +37,7 @@
             <option name = "tipo" value="Anaeróbico">Anaeróbico</option>
             <option name = "tipo" value="Ambos">Ambos</option>
 
-        </select><br/><br/><br/><br/>
+        </select><br/><br/><br/>
 
 
         <label class="dados" for="equipamento">Selecione o equipamento necessário do exercicio</label>
@@ -48,7 +48,7 @@
             <option name = "equipamento" value="Elíptico">Elíptico</option>
             <option name = "equipamento" value="Nenhum">Nenhum</option>
 
-        </select><br/><br/><br/><br/>
+        </select><br/><br/><br/>
 
         <label class="dados" for="parte_afetada">Selecione o parte do corpo afetada necessário do exercicio</label>
         <select required class="form-select" aria-label="Default select example" name="parte_afetada">
