@@ -1,0 +1,68 @@
+[
+    {
+        "nome": "enzo",
+        "email": "a@a",
+        "nome_usuario": "enzo",
+        "senha": "123",
+        "listaExercicios": [
+            {
+                "nome": "flex\u00e3o",
+                "repeticoes": 5,
+                "tipo": "Ambos",
+                "equipamento": "Bicicleta",
+                "parte_afetada": "Tronco"
+            },
+            {
+                "nome": "Barra",
+                "repeticoes": 8,
+                "tipo": "Ambos",
+                "equipamento": "Esteira",
+                "parte_afetada": "Tronco"
+            },
+            {
+                "nome": "correr",
+                "repeticoes": 7858,
+                "tipo": "Aer\u00f3bico",
+                "equipamento": "El\u00edptico",
+                "parte_afetada": "Ambas"
+            }
+        ]
+    },
+    {
+        "nome": "enzo2",
+        "email": "b@b",
+        "nome_usuario": "enzo2",
+        "senha": "123",
+        "listaExercicios": [
+            {
+                "nome": "caminhar",
+                "repeticoes": 4,
+                "tipo": "Ambos",
+                "equipamento": "Esteira",
+                "parte_afetada": "Tronco"
+            }
+        ]
+    },
+    {
+        "nome": "joao",
+        "email": "joao@email",
+        "nome_usuario": "joaologin",
+        "senha": "123",
+        "listaExercicios": [
+            {
+                "nome": "flex\u00e3o",
+                "repeticoes": 4,
+                "tipo": "Aer\u00f3bico",
+                "equipamento": "Nenhum",
+                "parte_afetada": "Tronco"
+            },
+            {
+                "nome": "correr",
+                "repeticoes": 5,
+                "tipo": "Aer\u00f3bico",
+                "equipamento": "Nenhum",
+                "parte_afetada": "Pernas"
+            }
+        ]
+    }
+]
