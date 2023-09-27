@@ -1,6 +1,6 @@
 # Desenvolvimento de Aplicações Web
 
-**Data de Apresentação: 16/10/2022**
+**Data de Apresentação: 16/10/2023**
 
 **Valor: 35 pontos**
 
@@ -31,7 +31,7 @@ Cada registro do log deverá conter a data e hora da atividade, junto da ação 
 
 ## Entrega
 
-A apresentação do trabalho ocorrerá no dia **16/10/2022**, por meio de uma apresentação no laboratório amarelo.
+A apresentação do trabalho ocorrerá no dia **16/10/2023**, por meio de uma apresentação no laboratório amarelo.
 É imprescindível a presença da dupla no momento da apresentação.
 **OBS: O código quanto e apresentação serão levados em consideração no momento da avaliação!**
 
