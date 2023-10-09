@@ -1,1 +1,15 @@
+Recuperação DAW
+- Neste trabalho de recuperação, você deverá utilizar os conhecimentos adquiridos no tópico de PHP para desenvolver um protótipo de um sistema de informação.
+Especificamente, você irá desenvolver um sistema web de gerenciamento de tarefas simples, que permitirá aos usuários criar, visualizar, atualizar e excluir tarefas. 
+O sistema deve ser intuitivo e de fácil utilização.
+
+
+* Como salva o login do usuário;
+* Como associar uma lista de tarefas específica para cada usuário;
+
+Requisitos
+- Os usuários devem ser capazes de se cadastrar, fazer login e redefinir suas senhas.
+- Os usuários autenticados podem criar tarefas com os seguintes campos: título, descrição, data de vencimento e prioridade. Eles podem visualizar todas as suas 
+tarefas em uma lista, ordenadas por prioridade e data de vencimento. As tarefas devem ser atualizáveis e excluíveis pelos seus criadores.
+- O sistema deve manter um arquivo de log de todas as atividades realizadas por todos os usuários, incluindo login, logout, criação, atualização e exclusão de tarefas. Cada registro do log deverá conter a data e hora da atividade, junto da ação e do usuário responsável por essa atividade.
 
