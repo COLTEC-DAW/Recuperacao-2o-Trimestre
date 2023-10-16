@@ -34,7 +34,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION["user"] = $user;
         $_SESSION["existing"] = $usersExisting;
         //header - direciona a página para o Pré-jogo
-        header("Location: preGame.php");
+        header("Location: index.php");
         exit;
     }
 }
