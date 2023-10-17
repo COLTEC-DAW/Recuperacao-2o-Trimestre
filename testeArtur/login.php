@@ -1,13 +1,10 @@
 <?php
 session_start();
-if (isset($_COOKIE['session_id'])) {
-    // unset o cookie dá sessão do usuário
-    setcookie('session_id');
-}
-function checkUser($email, $senha, $usersExisting)
+
+function checkUser($email, $password, $usersExisting)
 {
     foreach ($usersExisting as $user) {
-        if ($user['email'] === $email && $user['password'] === $senha) {
+        if ($user['email'] === $email && $user['password'] === $password) {
             return $user;
         }
     }
@@ -23,21 +20,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (isset($_POST["login"])) {
         $email = isset($_POST["email"]) ? $_POST["email"] : "";
-        $senha = isset($_POST["senha"]) ? $_POST["senha"] : "";
+        $password = isset($_POST["password"]) ? $_POST["password"] : "";
 
-        $user = checkUser($email, $senha, $usersExisting);
+        $user = checkUser($email, $password, $usersExisting);
 
         if ($user) {
+            // Definindo cookies
+            setcookie("user_email", $email, time() + (86400 * 30), "/");  //Cookie válido por 30 dias
+            setcookie("user_id", $user['id'], time() + (86400 * 30), "/");  //Cookie válido por 30 dias
+
             $_SESSION["user"] = $user;
             $_SESSION["existing"] = $usersExisting;
-
-            setcookie("session_id", session_id());
-
-            /*   
-            setcookie("session_user",$user);
-            setcookie("user_exist", $usersExisting);
-            */
-
+            $_SESSION["usuario_logado"] = $email;
             header("Location: index.php");
             exit();
         } else {
@@ -55,7 +49,6 @@ if (isset($_POST["cadastro"])) {
 <!DOCTYPE html>
 <html lang="pt-br">
 
-
 <head>
     <link rel="stylesheet" href="./style.css">
     <meta charset="UTF-8">
@@ -63,29 +56,22 @@ if (isset($_POST["cadastro"])) {
     <title>tela-login</title>
 </head>
 
-
 <body>
-
-
     <div class="bloco-login">
         <img src="logo.png" />
-
-
         <div class="ItensLogin">
-
-
             <form method="post" action="<?php echo $_SERVER["PHP_SELF"]; ?>">
                 <label for="email">Email:</label>
                 <input type="email" name="email" required><br><br>
-                <label for="senha">Senha:</label>
-                <input type="password" name="senha" required><br><br>
-
+                <label for="password">Senha:</label>
+                <input type="password" name="password" required><br><br>
 
                 <input class="iniciar" type="submit" name="login" value="Login"><br><br>
             </form>
             <a href="cadastro.php" class="btn">Ainda não sou cadastrado</a><br><br>
-            <a href="redefinirSenha.php" class="btn">Esqueci a senha</a>
+            <a href="redefinirpassword.php" class="btn">Esqueci a senha</a>
         </div>
         </form>
+    </div>
 </body>
 </html>
