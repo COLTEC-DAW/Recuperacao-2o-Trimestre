@@ -5,27 +5,43 @@ if (isset($_COOKIE['session_id'])) {
     session_id($_COOKIE['session_id']);
 }
 
-echo '<pre>';
+echo '<pre style="background-color:gray">';
     echo "<h3> PHP List All Session Variables</h3>";
     foreach ($_SESSION as $key=>$val)
     echo $key." ".$val."<br/>";
 echo '</pre>';
 
-$nameFile = $_SESSION["user"]["userName"] . ".json";
+$file_name = "./json/".$_SESSION["user"]["userName"] . ".json";
 $actualUser = $_SESSION["user"]["userName"];
 
-$userFile = fopen("./json/".$nameFile, 'a');
-
 echo '<h1> Tarefas de <i>'. $_SESSION["user"]["userName"].'</i></h1>';
-if ( 0 == filesize( $file_path ) )
+
+if (file_exists($file_name))
+{   // Verifique se a decodificação foi bem-sucedida
+    $tarefas = json_decode(file_get_contents($file_name), true);
+    foreach ($tarefas as $t)
+    {
+        echo '<h3>'.$t["titulo"].'</h3>';
+        echo '<p>'.$t["descricao"].'</p>';
+    }
+} 
+else 
 {
     echo 'Nehuma tarefa registrada <br>';
 }
 /*
+$userFile = fopen("./json/".$file_name, 'a');
+*/
+
+/*
+if ( 0 == filesize( $file_path ) )
+{
+    echo 'Nehuma tarefa registrada <br>';
+}
+*/
 if(!isset($_SESSION["usuario_logado"])){
     header("Location: login.php");
 }
-*/
 ?>
 
 <!DOCTYPE html>
@@ -37,18 +53,12 @@ if(!isset($_SESSION["usuario_logado"])){
     <title>Pagina-Princial</title>
 </head>
 <body>
-    <li> 
     <hr>
-        <ul> <a href="novaTarefa.php">Registrar nova tarefa</a></ul>
-        <ul> <a href="excluirTarefa.php">Excluir tarefa</a></ul>
-        <ul> <a href="alterarSenha.php">Alterar Senha</a></ul>
-    </li>
+    <button><a href="novaTarefa.php">Registrar nova tarefa</a></button>
+    <button><a href="excluirTarefa.php">Excluir tarefa</a></button>
+    <button><a href="alterarSenha.php">Alterar Senha</a></button>
     <form method="post" action="login.php">
         <button type="submit">Sair</button>
     </form>
 </body>
 </html>
-
-<?php
-    fclose($userFile);
-?>
