@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $indiceUsuario = array_search($usuarioLogado, array_column($usuarios, 'userName'));
 
         // Atualizar a senha
-        $usuarios[$indiceUsuario]["senha"] = password_hash($_POST["nova_senha"], PASSWORD_DEFAULT);
+        $usuarios[$indiceUsuario]["password"] = password_hash($_POST["nova_senha"], PASSWORD_DEFAULT);
 
         // Salvar os dados atualizados no arquivo JSON
         file_put_contents('usersJson.json', json_encode($usuarios, JSON_PRETTY_PRINT));

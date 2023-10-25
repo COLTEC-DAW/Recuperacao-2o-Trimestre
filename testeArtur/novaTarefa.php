@@ -22,13 +22,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Evitar repetir dados (mudar para o título)
         foreach ($tarefas as $t) {
             if ($t["titulo"] === $titulo) {
-                echo "Já existe uma tarefa com este título. Mude.";
+
+                echo 'O título <strong>'. $titulo .'</strong> já é utilizado por uma outra tarefa.<br>';
+                echo '<button><a href="novaTarefa.php">Voltar</a></button>';
+                exit;
+                
 
             }
         }
 
         // Trata dados para escrita em arquivo
-        $data = date("d/m/Y H:i");
+        $data = date("d.m.Y");
         $nova_tarefa = array(
             "titulo" => $titulo,
             "prioridade" => $prioridade,
@@ -37,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         );
         
         $tarefas[] = $nova_tarefa;
-        file_put_contents($file_name, json_encode($tarefas, JSON_PRETTY_PRINT),JSON_UNESCAPED_SLASHES);
+        file_put_contents($file_name, json_encode($tarefas, JSON_PRETTY_PRINT));
 
         header("Location: index.php");
         exit;
@@ -54,7 +58,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <h1>Nova tarefa </h1>
 
-    <form method="post" action="<?php echo $_SERVER["PHP_SELF"]; ?>">
+    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
 
         <label for="titulo">Título</label><br>
         <input type="text" name="titulo" required><br><br>

@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION["user"] = $user;
             $_SESSION["existing"] = $usersExisting;
             $_SESSION["usuario_logado"] = $email;
-            header("Location: index.php");
+            header("Location: ./index.php");
             exit();
         } else {
             echo "Senha ou email incorretos";
@@ -41,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 if (isset($_POST["cadastro"])) {
-    header("Location: cadastro.php");
+    header("Location: ./cadastro.php");
     exit();
 }
 ?>

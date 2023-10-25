@@ -2,7 +2,7 @@
     {
         "email": "vivi@gmail.com",
         "userName": "vitoria",
-        "password": "$2y$10$90qFEK1.zvlpBOrtfSPP2.4LAGgD8reFx1nuTRDVUQgANyXE7omLW",
+        "password": "$2y$10$b2qzKRNohiLVlwnKlRXz9eMGAcKPHPEyLEqmCBreBvWq69j9rrQuG",
         "senha": "$2y$10$\/mxgT6iRW\/aCBRcAKqKj9.WRlRRlKCL95D.QFPI3mr9.8y4AGnZZa"
     },
     {
@@ -14,5 +14,10 @@
         "email": "artu@gmail.com",
         "userName": "artu",
         "password": "qwert"
+    },
+    {
+        "email": "sira@gmail.com",
+        "userName": "sira",
+        "password": "asd"
     }
 ]

@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION["user"] = $user;
         $_SESSION["existing"] = $usersExisting;
 
-        header("Location: index.php");
+        header("Location: ./index.php");
         exit;
     }
 }
@@ -67,7 +67,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <input type="password" name="password" required><br><br>
                 <input class="iniciar" type="submit" name="signUp" value="Enviar" />
             </form>
-            <a href="login.php" class="btn">Voltar à tela de login</a>
+            <a href="./login.php" class="btn">Voltar à tela de login</a>
         </div>
     </div>
 </body>
