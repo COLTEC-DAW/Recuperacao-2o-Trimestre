@@ -1,0 +1,101 @@
+*
+{
+    transition: 0.3s;
+}
+body 
+{
+    background-color: #181a1b;
+    color: #e8e6e3;
+    font-family: Trebuchet MS;
+}
+
+.main 
+{
+    display: flex;
+}
+.view-actions
+{
+    margin-left: 20px;
+    width: 25%;
+}
+.view-content
+{
+    width: 60%;
+}
+
+.row-tarefas
+{
+    background-color: #008060;
+    border-radius: 8px;
+    margin: 15px 0px;
+    padding: 15px;
+
+    strong
+    {
+        font-size: 120%;
+    }
+}
+
+
+.entrega
+{
+    margin: 0px;
+}
+
+div.bloco-login 
+{
+    background-color: #101010;
+    height: auto;
+    display: flex;
+    margin-top: 90px;
+    margin-left: 320px;
+    margin-right: 320px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px #101010;
+    border: solid 6px #252525;
+    padding-bottom: 20px;
+}
+
+img
+{
+    scale: 90%;
+    margin: 10px 120px;
+}
+
+.ItensLogin
+{
+    padding-top: 10%;
+}
+button, input
+{
+    text-decoration: none;
+    color: orange;
+    background-color: #333337;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 2px;
+
+}
+button:hover, input:hover
+{
+    scale: 110%;
+}
+a{
+    text-decoration: none;
+    color: orange;
+}
+.radio
+{
+    margin: 15px 10px;
+}
+textarea
+{
+    width: 380px;
+    height: 140px;
+    margin: 10px 0px;
+}
+.form-tarefa
+{
+    margin: 20px;
+}
