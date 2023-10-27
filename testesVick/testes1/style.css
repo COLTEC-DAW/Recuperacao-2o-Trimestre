@@ -1,0 +1,41 @@
+body {
+    background-color: #1E1E1E;
+    color: aliceblue;
+    font-family: Trebuchet MS;
+    text-align: center;
+  }
+  
+  div.bloco-login {
+    background-color: #101010;
+    height: auto;
+    display: block;
+    margin-top: 90px;
+    margin-left: 320px;
+    margin-right: 320px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px #101010;
+    border: solid 6px #252525;
+  }
+  
+  div.primeira-parte {
+    background-color: #3b67a1;
+    height: auto;
+    display: block;
+    margin-top: 90px;
+    margin-left: 320px;
+    margin-right: 320px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px #101010;
+    border: solid 7px #232323;
+  }
+  
+  img {
+    max-width: 35%;
+    width: auto;
+    height: auto;
+  }
+  
+  h1 {
+    font-size: 20px;
+  }
+  

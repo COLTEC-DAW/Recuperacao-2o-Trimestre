@@ -1,0 +1,76 @@
+body {
+    background-color: #1E1E1E;
+    color: aliceblue;
+    font-family: Trebuchet MS;
+    text-align: center;
+    font-size: 20px;
+  }
+  
+  div.bloco-login {
+    background-color: #101010;
+    height: auto;
+    display: block;
+    margin-top: 90px;
+    margin-left: 320px;
+    margin-right: 320px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px #101010;
+    border: solid 6px #252525;
+    padding-bottom: 20px;
+  }
+
+  div.ItensLogin {
+    text-shadow: 0.1em 0.1em 0.2em #373636;
+    color: #ffffff;
+  }
+  
+  
+  div.primeira-parte {
+    background-color: #3b67a1;
+    height: auto;
+    display: block;
+    margin-top: 90px;
+    margin-left: 320px;
+    margin-right: 320px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px #101010;
+    border: solid 7px #232323;
+  }
+  
+  img {
+    max-width: 20%;
+    width: auto;
+    height: auto;
+  }
+
+  input {
+    font-family: Trebuchet MS;
+    font-size: 15px;
+    text-shadow: 0.1em 0.1em 0.2em rgb(106, 117, 117);
+  
+    border-radius: 10px;
+    background-color: #5e5a5a;
+    color: #ffffff;
+  }
+
+  button {
+    font-family: Trebuchet MS;
+    font-size: 15px;
+    text-shadow: 0.1em 0.1em 0.2em rgb(106, 117, 117);
+  
+    border-radius: 10px;
+    background-color: #5e5a5a;
+    color: #ffffff;
+  }
+  
+  a {
+    color: white;
+  }
+
+  #newpass {
+    padding-left: 0px;
+  }
+
+  #confirm {
+    padding-left: 0px;
+  }

@@ -1,0 +1,17 @@
+[
+    {
+        "email": "artu@gmail.com",
+        "userName": "artu",
+        "password": "qwert"
+    },
+    {
+        "email": "sira@gmail.com",
+        "userName": "sira",
+        "password": "iop"
+    },
+    {
+        "email": "tutu@gmail.com",
+        "userName": "tutu",
+        "password": "wasd"
+    }
+]
